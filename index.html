@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<!-- EXIOME 2026 v6 - Nouveau programme PDF - Mai 2026 - Vercel -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eXIOME 2026 — eXpert International Oncology MEeting</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a1628;
+  --blue: #1a3a6b;
+  --gold: #c8972a;
+  --gold-light: #e8b84b;
+  --teal: #1a7a8a;
+  --cream: #f8f5ef;
+  --white: #ffffff;
+  --gray: #6b7280;
+  --light-gray: #f3f4f6;
+  --border: #e5e7eb;
+  
+  --s1-color: #1a3a6b;
+  --s2-color: #2d6a4f;
+  --s3-color: #7b2d8b;
+  --s4-color: #c8390a;
+  --s5-color: #0a6b8a;
+  --s6-color: #6b4e0a;
+  --s7-color: #3d1a6b;
+  --s8-color: #1a6b3a;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:var(--navy);background:#fff;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,151,42,0.3);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-logo{display:flex;align-items:center;gap:12px;}
+.logo-badge{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;padding:6px 14px;border-radius:4px;letter-spacing:1px;}
+.logo-sub{color:rgba(255,255,255,0.6);font-size:11px;font-weight:300;letter-spacing:2px;text-transform:uppercase;line-height:1.3;}
+.nav-links{display:flex;gap:8px;align-items:center;}
+.nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:13px;font-weight:500;padding:8px 14px;border-radius:6px;transition:all .2s;letter-spacing:.3px;}
+.nav-links a:hover{color:#fff;background:rgba(200,151,42,0.2);}
+.btn-admin{background:rgba(200,151,42,0.15);border:1px solid rgba(200,151,42,0.4);color:var(--gold-light) !important;font-size:12px !important;cursor:pointer;}
+.btn-admin:hover{background:rgba(200,151,42,0.3) !important;}
+
+/* HERO */
+.hero{background:linear-gradient(160deg, var(--navy) 0%, #0e2040 40%, #0d3050 70%, #0a4060 100%);min-height:100vh;display:flex;align-items:center;padding:100px 24px 60px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8972a' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+.hero-inner{max-width:900px;margin:0 auto;text-align:center;position:relative;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(200,151,42,0.15);border:1px solid rgba(200,151,42,0.3);color:var(--gold-light);font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:8px 20px;border-radius:50px;margin-bottom:32px;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7vw,80px);font-weight:600;color:#fff;line-height:1.05;margin-bottom:16px;}
+.hero h1 span{color:var(--gold-light);}
+.hero-tagline{font-size:15px;color:rgba(255,255,255,0.6);letter-spacing:3px;text-transform:uppercase;font-weight:300;margin-bottom:40px;}
+.hero-meta{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;}
+.hero-meta-item{display:flex;flex-direction:column;align-items:center;gap:4px;}
+.hero-meta-icon{font-size:20px;}
+.hero-meta-label{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;}
+.hero-meta-value{font-size:16px;color:#fff;font-weight:600;}
+.hero-meta-value.sm{font-size:13px;font-weight:400;color:rgba(255,255,255,0.8);}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.5px;transition:all .3s;display:inline-block;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,151,42,0.4);}
+.btn-outline{border:1.5px solid rgba(255,255,255,0.35);color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:500;font-size:14px;letter-spacing:.5px;transition:all .3s;display:inline-block;}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
+.hero-scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.3);font-size:12px;letter-spacing:2px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px;}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(200,151,42,0.6),transparent);}
+
+/* SECTIONS */
+section{padding:80px 24px;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-header{margin-bottom:56px;}
+.section-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.section-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,48px);font-weight:600;color:var(--navy);line-height:1.15;}
+.section-header p{font-size:15px;color:var(--gray);margin-top:12px;max-width:600px;line-height:1.7;}
+
+/* PROGRAMME TABS */
+.prog-tabs{display:flex;gap:4px;background:#f1f5f9;border-radius:12px;padding:4px;margin-bottom:40px;}
+.prog-tab{flex:1;padding:12px 16px;border:none;background:transparent;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--gray);cursor:pointer;transition:all .2s;text-align:center;}
+.prog-tab.active{background:#fff;color:var(--navy);box-shadow:0 2px 8px rgba(0,0,0,0.08);font-weight:600;}
+.prog-day{display:none;}
+.prog-day.active{display:block;}
+
+/* DAY HEADER */
+.day-header{background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:12px;padding:28px 32px;margin-bottom:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.day-header-left h3{font-family:'Cormorant Garamond',serif;font-size:28px;color:#fff;font-weight:600;}
+.day-header-left p{font-size:13px;color:rgba(255,255,255,0.6);margin-top:4px;letter-spacing:.5px;}
+.day-header-badge{background:rgba(200,151,42,0.2);border:1px solid rgba(200,151,42,0.4);color:var(--gold-light);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:8px 16px;border-radius:6px;}
+
+/* SESSION BLOCK */
+.session-block{margin-bottom:28px;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+.session-header{padding:18px 24px;display:flex;align-items:center;gap:16px;}
+.session-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;}
+.session-title-wrap h4{font-size:16px;font-weight:600;color:#fff;}
+.session-title-wrap p{font-size:12px;color:rgba(255,255,255,0.7);margin-top:2px;}
+.session-items{padding:0;}
+
+/* ITEMS */
+.prog-item{display:grid;grid-template-columns:80px 90px 1fr;gap:0;border-top:1px solid var(--border);}
+.prog-item:hover{background:#fafbff;}
+.prog-time{padding:16px 12px 16px 20px;font-size:12px;font-weight:600;color:var(--gray);font-variant-numeric:tabular-nums;white-space:nowrap;align-self:start;padding-top:18px;}
+.prog-type-badge{padding:14px 8px;align-self:start;padding-top:18px;}
+.type-tag{display:inline-block;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 7px;border-radius:3px;}
+.type-keynote{background:#fef3c7;color:#92400e;}
+.type-case{background:#dbeafe;color:#1e40af;}
+.type-lecture{background:#d1fae5;color:#065f46;}
+.type-panel{background:#ede9fe;color:#5b21b6;}
+.type-symposium{background:#fce7f3;color:#9d174d;}
+.type-oral{background:#ecfdf5;color:#047857;}
+.type-keynote-special{background:#fef9c3;color:#713f12;}
+.type-opening{background:#f0fdf4;color:#166534;}
+.type-closing{background:#f8fafc;color:#475569;}
+.type-break{background:#f1f5f9;color:#64748b;}
+.prog-content{padding:14px 20px 14px 8px;}
+.prog-content strong{font-size:14px;font-weight:600;color:var(--navy);line-height:1.4;display:block;}
+.prog-content .prog-speaker{font-size:12px;color:var(--gray);margin-top:4px;line-height:1.4;}
+.prog-content .prog-sub{font-size:11px;color:var(--teal);margin-top:3px;font-style:italic;}
+
+/* BREAK ROW */
+.break-row{background:linear-gradient(135deg,#f8f9fa,#f1f5f9);border-top:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--gray);}
+.break-icon{font-size:18px;}
+.social-row{background:linear-gradient(135deg,#fef9ec,#fef3c7);border-top:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:12px;font-size:13px;color:#92400e;font-weight:500;}
+
+/* ABSTRACT */
+.abstract-section{background:linear-gradient(135deg,var(--navy) 0%,#0e2040 100%);padding:80px 24px;}
+.abstract-inner{max-width:900px;margin:0 auto;}
+.abstract-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;}
+.abstract-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:28px;}
+.abstract-card h4{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-light);margin-bottom:12px;}
+.abstract-card p,
+.abstract-card li{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.7;}
+.abstract-card ul{padding-left:18px;margin-top:8px;}
+.abstract-card li{margin-bottom:4px;}
+.abstract-deadline{background:rgba(200,151,42,0.15);border:1px solid rgba(200,151,42,0.35);border-radius:10px;padding:20px 24px;text-align:center;margin-top:28px;}
+.abstract-deadline .date{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--gold-light);}
+.abstract-deadline .label{font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;margin-top:4px;}
+.abstract-email{text-align:center;margin-top:20px;}
+.abstract-email a{color:var(--gold-light);font-size:14px;text-decoration:none;border-bottom:1px solid rgba(200,151,42,0.4);}
+
+/* PRACTICAL */
+.practical-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+.practical-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;transition:box-shadow .2s;}
+.practical-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.08);}
+.practical-icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;}
+.practical-card h4{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:10px;}
+.practical-card p{font-size:13px;color:var(--gray);line-height:1.7;}
+.practical-card a{color:var(--blue);text-decoration:none;font-weight:500;}
+.practical-card a:hover{text-decoration:underline;}
+
+/* ORGA */
+.orga-section{background:var(--cream);}
+.orga-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.orga-card{background:#fff;border-radius:10px;padding:20px 24px;border:1px solid var(--border);}
+.orga-card .orga-name{font-size:15px;font-weight:600;color:var(--navy);}
+.orga-card .orga-country{font-size:12px;color:var(--gray);margin-top:2px;}
+.orga-card .orga-role{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-top:8px;}
+.logistics-box{background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;margin-top:32px;}
+.logistics-box h4{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px;}
+.logistics-box p{font-size:13px;color:var(--gray);line-height:1.7;}
+.logistics-box a{color:var(--blue);}
+.unicon-badge{display:inline-flex;align-items:center;gap:8px;background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:6px 14px;margin-bottom:12px;}
+.unicon-badge span{font-size:14px;font-weight:700;color:var(--navy);letter-spacing:2px;}
+
+/* FOOTER */
+footer{background:var(--navy);padding:40px 24px;}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:gap:20px;}
+.footer-logo .logo-badge{font-size:16px;}
+.footer-info{font-size:12px;color:rgba(255,255,255,0.4);text-align:center;line-height:1.8;}
+.footer-info a{color:rgba(255,255,255,0.6);text-decoration:none;}
+
+/* ADMIN MODAL */
+.admin-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;}
+.admin-overlay.open{display:flex;}
+.admin-modal{background:#fff;border-radius:16px;width:90%;max-width:400px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.3);}
+.admin-modal-header{background:linear-gradient(135deg,var(--navy),var(--blue));padding:24px 28px;}
+.admin-modal-header h3{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;}
+.admin-modal-header p{font-size:12px;color:rgba(255,255,255,0.6);margin-top:4px;}
+.admin-modal-body{padding:28px;}
+.admin-modal-body label{font-size:12px;font-weight:600;color:var(--gray);letter-spacing:.5px;text-transform:uppercase;display:block;margin-bottom:8px;}
+.admin-modal-body input{width:100%;border:1.5px solid var(--border);border-radius:8px;padding:12px 16px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s;}
+.admin-modal-body input:focus{border-color:var(--gold);}
+.admin-modal-footer{padding:0 28px 28px;display:flex;gap:12px;}
+.btn-modal-primary{flex:1;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);border:none;border-radius:8px;padding:12px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.btn-modal-cancel{flex:1;background:#f3f4f6;color:var(--gray);border:none;border-radius:8px;padding:12px;font-size:14px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.admin-error{color:#dc2626;font-size:12px;margin-top:8px;display:none;}
+/* ADMIN PANEL */
+.admin-panel-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9998;align-items:flex-start;justify-content:center;padding-top:80px;overflow-y:auto;}
+.admin-panel-overlay.open{display:flex;}
+.admin-panel{background:#fff;border-radius:16px;width:90%;max-width:700px;padding:36px;margin-bottom:40px;}
+.admin-panel h2{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--navy);margin-bottom:6px;}
+.admin-panel p.subtitle{font-size:13px;color:var(--gray);margin-bottom:28px;}
+.admin-section{border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:20px;}
+.admin-section h4{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px;}
+.admin-section p{font-size:12px;color:var(--gray);margin-bottom:14px;}
+.admin-section textarea{width:100%;border:1.5px solid var(--border);border-radius:6px;padding:10px 12px;font-size:12px;font-family:'DM Sans',sans-serif;resize:vertical;min-height:80px;outline:none;}
+.admin-section textarea:focus{border-color:var(--gold);}
+.btn-save{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);border:none;border-radius:6px;padding:10px 20px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:10px;}
+.btn-close-admin{background:#f3f4f6;color:var(--gray);border:none;border-radius:6px;padding:10px 20px;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;margin-left:8px;}
+@media(max-width:768px){
+  .nav-links a:not(.btn-admin){display:none;}
+  .abstract-grid{grid-template-columns:1fr;}
+  .prog-item{grid-template-columns:70px 80px 1fr;}
+  .hero-meta{gap:20px;}
+  .footer-inner{flex-direction:column;text-align:center;gap:16px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="logo-badge">eXIOME</div>
+      <div class="logo-sub">2026<br>Istanbul</div>
+    </div>
+    <div class="nav-links">
+      <a href="#programme">Programme</a>
+      <a href="#abstracts">Abstracts</a>
+      <a href="#infos">Informations</a>
+      <a href="#organisation">Organisation</a>
+      <button class="nav-links a btn-admin" onclick="openAdmin()">🔑 Admin</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span>★</span> eXpert International Oncology MEeting
+    </div>
+    <h1>eXIOME<br><span>2026</span></h1>
+    <p class="hero-tagline">Istanbul · Turkey · November 2026</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="hero-meta-icon">📅</span>
+        <span class="hero-meta-label">Dates</span>
+        <span class="hero-meta-value">12–14 November 2026</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-icon">🏨</span>
+        <span class="hero-meta-label">Venue</span>
+        <span class="hero-meta-value">Marmara Taksim Hotel</span>
+        <span class="hero-meta-value sm">Istanbul, Turkey</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-icon">🎯</span>
+        <span class="hero-meta-label">Focus</span>
+        <span class="hero-meta-value">Locally Advanced Cancers</span>
+        <span class="hero-meta-value sm">Neoadjuvant-to-Adjuvant Continuum</span>
+      </div>
+    </div>
+    <div class="hero-ctas">
+      <a href="#programme" class="btn-primary">View Programme</a>
+      <a href="#abstracts" class="btn-outline">Submit Abstract</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- PROGRAMME -->
+<section id="programme">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Scientific Programme</div>
+      <h2>3-Day Programme</h2>
+      <p>The Neoadjuvant-to-Adjuvant Treatment Continuum — from minimal requirements to optimal care in LMICs.</p>
+    </div>
+
+    <div class="prog-tabs">
+      <button class="prog-tab active" onclick="showDay(1,this)">Day 1 — Wed 12 Nov</button>
+      <button class="prog-tab" onclick="showDay(2,this)">Day 2 — Thu 13 Nov</button>
+      <button class="prog-tab" onclick="showDay(3,this)">Day 3 — Fri 14 Nov</button>
+    </div>
+
+    <!-- DAY 1 -->
+    <div class="prog-day active" id="day1">
+      <div class="day-header">
+        <div class="day-header-left">
+          <h3>Wednesday, 12 November 2026</h3>
+          <p>Afternoon Session · Main Room</p>
+        </div>
+        <div class="day-header-badge">Applicability of Western Guidelines in LMICs</div>
+      </div>
+
+      <!-- Opening -->
+      <div class="session-block">
+        <div class="session-header" style="background:#1a3a6b;">
+          <div class="session-num" style="background:rgba(255,255,255,0.2);">🎙</div>
+          <div class="session-title-wrap">
+            <h4>Opening Ceremony</h4>
+            <p>Welcome Address · 13:30</p>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">13:30–14:00</div>
+          <div class="prog-type-badge"><span class="type-tag type-opening">Opening</span></div>
+          <div class="prog-content">
+            <strong>Opening Ceremony and Welcome Address</strong>
+            <div class="prog-speaker">B. Atalar (Turkey) · Y. Belkacemi (France) · A. Bounedjar (Algeria) · J. Gligorov (France) · E. Özyar (Turkey) · R. Samlali (Morocco) · S. Turkan (Turkey)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session 1 -->
+      <div class="session-block">
+        <div class="session-header" style="background:var(--s1-color);">
+          <div class="session-num" style="background:rgba(255,255,255,0.2);">S1</div>
+          <div class="session-title-wrap">
+            <h4>Session 1 · Primary Local Treatment Followed by Adjuvant Therapy</h4>
+            <p>Interactive Case-Based Discussion · Limited Evidence Settings</p>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">14:00–14:20</div>
+          <div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 1</span></div>
+          <div class="prog-content">
+            <strong>Locally Advanced Cancers in LMICs: Epidemiology, Diagnostic Tools, and Therapeutic Strategy</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">14:20–14:40</div>
+          <div class="prog-type-badge"><span class="type-tag type-case">Case 1</span></div>
+          <div class="prog-content">
+            <strong>Stage II Colon Cancer: Role of Tumour Biology in Guiding Adjuvant Chemotherapy vs. Surveillance</strong>
+            <div class="prog-speaker">Panellists &amp; Case Presenter TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">15:00–15:20</div>
+          <div class="prog-type-badge"><span class="type-tag type-case">Case 2</span></div>
+          <div class="prog-content">
+            <strong>Stage III Colon Cancer: Is There a Rationale for Adjuvant Therapy De-escalation Based on Tumour Biology?</strong>
+            <div class="prog-speaker">Panellists &amp; Case Presenter TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">15:20–16:00</div>
+          <div class="prog-type-badge"><span class="type-tag type-case">Case 3</span></div>
+          <div class="prog-content">
+            <strong>High-Risk Hepatocellular Carcinoma: Evidence for Anti-PD-L1/Anti-VEGF Therapy After Surgery or Ablation</strong>
+            <div class="prog-speaker">Panellists &amp; Case Presenter TBC</div>
+          </div>
+        </div>
+        <div class="break-row"><span class="break-icon">☕</span><span>Coffee Break · 16:00–16:30</span></div>
+      </div>
+
+      <!-- Session 2 -->
+      <div class="session-block">
+        <div class="session-header" style="background:var(--s2-color);">
+          <div class="session-num" style="background:rgba(255,255,255,0.2);">S2</div>
+          <div class="session-title-wrap">
+            <h4>Session 2 · Neoadjuvant Systemic Therapy Followed by Adjuvant Therapy</h4>
+            <p>Interactive Case-Based Discussion · Limited Evidence Settings</p>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">16:30–16:50</div>
+          <div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 2</span></div>
+          <div class="prog-content">
+            <strong>The Neoadjuvant-to-Adjuvant Continuum in Prostate Cancer: Current Status and Future Directions</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+            <div class="prog-sub">Sponsored Session</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">16:50–17:10</div>
+          <div class="prog-type-badge"><span class="type-tag type-case">Case 4</span></div>
+          <div class="prog-content">
+            <strong>Locally Advanced Oesophagogastric Cancer: Role of Immunotherapy After Perioperative Chemotherapy</strong>
+            <div class="prog-speaker">Panellists &amp; Case Presenter TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">17:10–17:30</div>
+          <div class="prog-type-badge"><span class="type-tag type-case">Case 5</span></div>
+          <div class="prog-content">
+            <strong>Rectal Adenocarcinoma (dMMR/MSI-H), Stage II–III: Anti-PD-1 Therapy (Dostarlimab) in the Neoadjuvant Setting</strong>
+            <div class="prog-speaker">Panellists &amp; Case Presenter TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">17:30–17:50</div>
+          <div class="prog-type-badge"><span class="type-tag type-case">Case 6</span></div>
+          <div class="prog-content">
+            <strong>Locally Advanced Soft Tissue Sarcoma: Multimodal Treatment Strategies and Emerging Approaches</strong>
+            <div class="prog-speaker">Panellists &amp; Case Presenter TBC</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session 3 -->
+      <div class="session-block">
+        <div class="session-header" style="background:var(--s3-color);">
+          <div class="session-num" style="background:rgba(255,255,255,0.2);">S3</div>
+          <div class="session-title-wrap">
+            <h4>Session 3 · Artificial Intelligence in Oncology</h4>
+            <p>Special Keynote Session · Sponsored Session</p>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">17:50–18:50</div>
+          <div class="prog-type-badge"><span class="type-tag type-keynote-special">Keynote 3</span></div>
+          <div class="prog-content">
+            <strong>AI in Oncology — A Multidisciplinary Perspective</strong>
+            <div class="prog-speaker">• The Pathologist's Perspective · • The Radiologist's Perspective · • The Radiation &amp; Medical Oncologist's Perspective</div>
+            <div class="prog-speaker">Speakers TBC · 60 min</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">18:50–19:00</div>
+          <div class="prog-type-badge"><span class="type-tag type-closing">Closing</span></div>
+          <div class="prog-content">
+            <strong>Closing Remarks — Day 1</strong>
+          </div>
+        </div>
+        <div class="social-row"><span class="break-icon">🍽</span><span>Mediterranean Scientific Societies Exchange Dinner · 20:00</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="prog-day" id="day2">
+      <div class="day-header">
+        <div class="day-header-left">
+          <h3>Thursday, 13 November 2026</h3>
+          <p>Full-Day Programme · Main Room</p>
+        </div>
+        <div class="day-header-badge">High-Level Evidence in Locally Advanced Cancers</div>
+      </div>
+
+      <!-- Session 4 -->
+      <div class="session-block">
+        <div class="session-header" style="background:var(--s4-color);">
+          <div class="session-num" style="background:rgba(255,255,255,0.2);">S4</div>
+          <div class="session-title-wrap">
+            <h4>Session 4 · Locally Advanced Breast Cancer</h4>
+            <p>Neoadjuvant-to-Adjuvant Treatment Continuum: High-Level Evidence</p>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">08:30–08:50</div>
+          <div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 4</span></div>
+          <div class="prog-content">
+            <strong>Biomarker-Guided Treatment Strategy Across the Neoadjuvant-to-Adjuvant Continuum According to Breast Cancer Molecular Subtypes</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+            <div class="prog-sub">Sponsored Session</div>
+          </div>
+        </div>
+        <!-- HER2+ -->
+        <div style="background:#fff4f4;padding:8px 20px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c8390a;border-top:1px solid var(--border);">🎗 HER2-Positive Stage II–III Locally Advanced Breast Cancer</div>
+        <div class="prog-item">
+          <div class="prog-time">08:50–09:10</div>
+          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
+          <div class="prog-content">
+            <strong>Pathological Complete Response After Optimal Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">09:10–09:30</div>
+          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
+          <div class="prog-content">
+            <strong>Invasive Residual Disease After Optimal Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">09:30–10:00</div>
+          <div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div>
+          <div class="prog-content">
+            <strong>Expert Panel &amp; Audience Vote: Optimising the Neoadjuvant-to-Adjuvant Strategy in HER2+ LABC — Minimal Requirements vs. Optimal Care in LMICs</strong>
+            <div class="prog-speaker">Discussant: J. Gligorov (France) + Audience Interactive Vote</div>
+          </div>
+        </div>
+        <div class="break-row"><span class="break-icon">☕</span><span>Coffee Break · 10:00–10:30</span></div>
+        <!-- TNBC -->
+        <div style="background:#f4f0ff;padding:8px 20px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#5b21b6;border-top:1px solid var(--border);">🔵 Triple-Negative Stage II–III Locally Advanced Breast Cancer</div>
+        <div class="prog-item">
+          <div class="prog-time">10:30–10:50</div>
+          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
+          <div class="prog-content">
+            <strong>Pathological Complete Response After Optimal Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">10:50–11:10</div>
+          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
+          <div class="prog-content">
+            <strong>Invasive Residual Disease After Optimal Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">11:10–11:40</div>
+          <div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div>
+          <div class="prog-content">
+            <strong>Expert Panel &amp; Audience Vote: Optimising the Neoadjuvant-to-Adjuvant Strategy in TNBC — Minimal Requirements vs. Optimal Care in LMICs</strong>
+            <div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div>
+          </div>
+        </div>
+        <!-- HR+ -->
+        <div style="background:#f0fdf4;padding:8px 20px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#065f46;border-top:1px solid var(--border);">🌿 Hormone Receptor-Positive Stage II–III Locally Advanced Breast Cancer</div>
+        <div class="prog-item">
+          <div class="prog-time">11:40–12:00</div>
+          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
+          <div class="prog-content">
+            <strong>High-Risk HR+ Breast Cancer Without Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">12:00–12:20</div>
+          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
+          <div class="prog-content">
+            <strong>High-Risk HR+ Breast Cancer After Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">12:20–12:50</div>
+          <div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div>
+          <div class="prog-content">
+            <strong>Expert Panel &amp; Audience Vote: Optimising Type and Duration of Adjuvant Endocrine Therapy in HR+ LABC — Challenges in LMICs</strong>
+            <div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div>
+          </div>
+        </div>
+        <div class="break-row"><span class="break-icon">🍽</span><span>Lunch Break · 12:50–14:00</span></div>
+      </div>
+
+      <!-- Session 5 -->
+      <div class="session-block">
+        <div class="session-header" style="background:var(--s5-color);">
+          <div class="session-num" style="background:rgba(255,255,255,0.2);">S5</div>
+          <div class="session-title-wrap">
+            <h4>Session 5 · Non-Small Cell Lung Cancer (NSCLC)</h4>
+            <p>Neoadjuvant-to-Adjuvant Treatment Continuum: High-Level Evidence</p>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">14:00–14:30</div>
+          <div class="prog-type-badge"><span class="type-tag type-symposium">Symposium</span></div>
+          <div class="prog-content">
+            <strong>Industry Symposium</strong>
+            <div class="prog-sub">Sponsored Session</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">14:30–14:50</div>
+          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
+          <div class="prog-content">
+            <strong>NSCLC Stage IB–IIIA: Combined Chemo-Immunotherapy in the Neoadjuvant and Adjuvant Settings — Standard of Care</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">14:50–15:10</div>
+          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
+          <div class="prog-content">
+            <strong>NSCLC Stage IB–IIIA: Surgical Considerations Following Neoadjuvant Chemo-Immunotherapy</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">15:10–15:40</div>
+          <div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div>
+          <div class="prog-content">
+            <strong>Expert Panel &amp; Audience Vote: Optimising Immunotherapy Type and Duration in NSCLC — Challenges and Adaptations for LMICs</strong>
+            <div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">15:40–16:00</div>
+          <div class="prog-type-badge"><span class="type-tag type-symposium">Symposium</span></div>
+          <div class="prog-content">
+            <strong>Industry Symposium: Anti-PD-1/Anti-PD-L1 Therapy</strong>
+            <div class="prog-sub">Sponsored Session</div>
+          </div>
+        </div>
+        <div class="break-row"><span class="break-icon">☕</span><span>Coffee Break · 16:00–16:30</span></div>
+      </div>
+
+      <!-- Session 6 -->
+      <div class="session-block">
+        <div class="session-header" style="background:var(--s6-color);">
+          <div class="session-num" style="background:rgba(255,255,255,0.2);">S6</div>
+          <div class="session-title-wrap">
+            <h4>Session 6 · Resectable Melanoma</h4>
+            <p>Neoadjuvant-to-Adjuvant Treatment Continuum: High-Level Evidence</p>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">16:30–16:50</div>
+          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
+          <div class="prog-content">
+            <strong>Stage III Resectable Melanoma: Immunotherapy in the Neoadjuvant-to-Adjuvant Continuum — Standard of Care</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">16:50–17:10</div>
+          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
+          <div class="prog-content">
+            <strong>Stage III Resectable Melanoma: Criteria for Immunotherapy Optimisation and Alternative Therapeutic Options</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">17:10–17:40</div>
+          <div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div>
+          <div class="prog-content">
+            <strong>Expert Panel &amp; Audience Vote: Optimising Immunotherapy Type and Duration in Resectable Melanoma — Challenges and Adaptations for LMICs</strong>
+            <div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">17:40–18:00</div>
+          <div class="prog-type-badge"><span class="type-tag type-symposium">Symposium</span></div>
+          <div class="prog-content">
+            <strong>Industry Symposium</strong>
+            <div class="prog-sub">Sponsored Session</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">18:00–18:30</div>
+          <div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 5</span></div>
+          <div class="prog-content">
+            <strong>Closing Keynote Lecture — Day 2</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="social-row"><span class="break-icon">🍽</span><span>Meet-the-Expert Dinner · 20:00</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="prog-day" id="day3">
+      <div class="day-header">
+        <div class="day-header-left">
+          <h3>Friday, 14 November 2026</h3>
+          <p>Morning Session · Main Room</p>
+        </div>
+        <div class="day-header-badge">Bladder Cancer &amp; AROME Oral Communications</div>
+      </div>
+
+      <!-- Session 7 -->
+      <div class="session-block">
+        <div class="session-header" style="background:var(--s7-color);">
+          <div class="session-num" style="background:rgba(255,255,255,0.2);">S7</div>
+          <div class="session-title-wrap">
+            <h4>Session 7 · Muscle-Invasive Bladder Cancer</h4>
+            <p>Neoadjuvant-to-Adjuvant Treatment Continuum: High-Level Evidence</p>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">08:30–08:50</div>
+          <div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 6</span></div>
+          <div class="prog-content">
+            <strong>Robotic Surgery in Urothelial Cancers: State of the Art</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+            <div class="prog-sub">Sponsored Session</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">08:50–09:10</div>
+          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
+          <div class="prog-content">
+            <strong>High-Risk Bladder Cancer: Standard of Care in the Neoadjuvant-to-Adjuvant Continuum</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">09:10–09:30</div>
+          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
+          <div class="prog-content">
+            <strong>Post-Cystectomy Management: Patient Selection and Optimisation of Adjuvant Therapy in the Immunotherapy Era</strong>
+            <div class="prog-speaker">Speaker TBC</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">09:30–10:00</div>
+          <div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div>
+          <div class="prog-content">
+            <strong>Expert Panel &amp; Audience Vote: Optimising the Neoadjuvant-to-Adjuvant Strategy in High-Risk Bladder Cancer — Challenges and Adaptations for LMICs</strong>
+            <div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">10:00–10:30</div>
+          <div class="prog-type-badge"><span class="type-tag type-symposium">Symposium</span></div>
+          <div class="prog-content">
+            <strong>Industry Symposium</strong>
+            <div class="prog-sub">Sponsored Session</div>
+          </div>
+        </div>
+        <div class="break-row"><span class="break-icon">☕</span><span>Coffee Break · 10:30–11:00</span></div>
+      </div>
+
+      <!-- Session 8 -->
+      <div class="session-block">
+        <div class="session-header" style="background:var(--s8-color);">
+          <div class="session-num" style="background:rgba(255,255,255,0.2);">S8</div>
+          <div class="session-title-wrap">
+            <h4>Session 8 · AROME Junior Proffered Oral Communications</h4>
+            <p>Plenary Session · 10 Communications · 11:00–12:40</p>
+          </div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">11:00–11:10</div>
+          <div class="prog-type-badge"><span class="type-tag type-oral">C01</span></div>
+          <div class="prog-content"><strong>Oral Communication 01</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">11:10–11:20</div>
+          <div class="prog-type-badge"><span class="type-tag type-oral">C02</span></div>
+          <div class="prog-content"><strong>Oral Communication 02</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">11:20–11:30</div>
+          <div class="prog-type-badge"><span class="type-tag type-oral">C03</span></div>
+          <div class="prog-content"><strong>Oral Communication 03</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">11:30–11:40</div>
+          <div class="prog-type-badge"><span class="type-tag type-oral">C04</span></div>
+          <div class="prog-content"><strong>Oral Communication 04</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">11:40–11:50</div>
+          <div class="prog-type-badge"><span class="type-tag type-oral">C05</span></div>
+          <div class="prog-content"><strong>Oral Communication 05</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">11:50–12:00</div>
+          <div class="prog-type-badge"><span class="type-tag type-oral">C06</span></div>
+          <div class="prog-content"><strong>Oral Communication 06</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">12:00–12:10</div>
+          <div class="prog-type-badge"><span class="type-tag type-oral">C07</span></div>
+          <div class="prog-content"><strong>Oral Communication 07</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">12:10–12:20</div>
+          <div class="prog-type-badge"><span class="type-tag type-oral">C08</span></div>
+          <div class="prog-content"><strong>Oral Communication 08</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">12:20–12:30</div>
+          <div class="prog-type-badge"><span class="type-tag type-oral">C09</span></div>
+          <div class="prog-content"><strong>Oral Communication 09</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
+        </div>
+        <div class="prog-item">
+          <div class="prog-time">12:30–12:40</div>
+          <div class="prog-type-badge"><span class="type-tag type-oral">C10</span></div>
+          <div class="prog-content"><strong>Oral Communication 10</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABSTRACT -->
+<section class="abstract-section" id="abstracts">
+  <div class="abstract-inner">
+    <div class="section-header">
+      <div class="section-tag" style="color:var(--gold-light);">Abstract Submission</div>
+      <h2 style="color:#fff;">Submit Your Abstract</h2>
+      <p style="color:rgba(255,255,255,0.6);">AROME Junior investigators are invited to submit abstracts for oral communications at eXIOME 2026.</p>
+    </div>
+    <div class="abstract-grid">
+      <div class="abstract-card">
+        <h4>Format &amp; Requirements</h4>
+        <ul>
+          <li>Word document (.doc/.docx)</li>
+          <li>Maximum 350 words</li>
+          <li>Times New Roman, 12pt, 1.5 spacing</li>
+          <li>Title (max 70 characters)</li>
+          <li>Authors + affiliations</li>
+          <li>Structured: Background, Methods, Results, Conclusions</li>
+          <li>No images, tables or references</li>
+        </ul>
+      </div>
+      <div class="abstract-card">
+        <h4>Scientific Themes</h4>
+        <ul>
+          <li>Locally advanced cancers in LMICs</li>
+          <li>Neoadjuvant-to-adjuvant treatment continuum</li>
+          <li>Artificial intelligence in oncology</li>
+          <li>Clinical cases with therapeutic innovation</li>
+        </ul>
+        <h4 style="margin-top:16px;">Selection Criteria</h4>
+        <ul>
+          <li>Scientific quality &amp; originality</li>
+          <li>Clinical relevance for LMICs</li>
+          <li>Clarity of presentation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="abstract-deadline">
+      <div class="date">26 October 2026</div>
+      <div class="label">Abstract Submission Deadline</div>
+    </div>
+    <div class="abstract-email">
+      <p style="color:rgba(255,255,255,0.6);font-size:13px;margin-bottom:8px;">Send your abstract by email to:</p>
+      <a href="mailto:yazid.belkacemi@aphp.fr">yazid.belkacemi@aphp.fr</a>
+      <span style="color:rgba(255,255,255,0.4);font-size:13px;"> (CC: </span>
+      <a href="mailto:fadila.chekiri@aphp.fr">fadila.chekiri@aphp.fr</a>
+      <span style="color:rgba(255,255,255,0.4);font-size:13px;">)</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICAL INFO -->
+<section id="infos">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Practical Information</div>
+      <h2>Venue &amp; Logistics</h2>
+    </div>
+    <div class="practical-grid">
+      <div class="practical-card">
+        <div class="practical-icon">🏨</div>
+        <h4>Venue</h4>
+        <p><strong>Marmara Taksim Hotel</strong><br>Taksim Meydani, Istanbul, Turkey<br><br>12–14 November 2026</p>
+      </div>
+      <div class="practical-card">
+        <div class="practical-icon">✈️</div>
+        <h4>Getting There</h4>
+        <p>Istanbul is served by two international airports:<br><strong>Istanbul Airport (IST)</strong> — main hub<br><strong>Sabiha Gökçen (SAW)</strong> — Asian side<br><br>The hotel is centrally located near Taksim Square.</p>
+      </div>
+      <div class="practical-card">
+        <div class="practical-icon">📋</div>
+        <h4>Registration</h4>
+        <p>Registration details will be communicated shortly.<br><br>For enquiries:<br><a href="mailto:hande@uniconmice.com">hande@uniconmice.com</a></p>
+      </div>
+      <div class="practical-card">
+        <div class="practical-icon">📧</div>
+        <h4>Contact</h4>
+        <p>Scientific:<br><a href="mailto:yazid.belkacemi@aphp.fr">yazid.belkacemi@aphp.fr</a><br><br>Organisation:<br><a href="mailto:fadila.chekiri@aphp.fr">fadila.chekiri@aphp.fr</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANISATION -->
+<section class="orga-section" id="organisation">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Organisation</div>
+      <h2>Scientific Committee &amp; Logistics</h2>
+    </div>
+    <div class="orga-grid">
+      <div class="orga-card">
+        <div class="orga-name">Yazid Belkacemi</div>
+        <div class="orga-country">France</div>
+        <div class="orga-role">Scientific Chair</div>
+      </div>
+      <div class="orga-card">
+        <div class="orga-name">Abdelkader Bounedjar</div>
+        <div class="orga-country">Algeria</div>
+        <div class="orga-role">Co-Chair</div>
+      </div>
+      <div class="orga-card">
+        <div class="orga-name">Joseph Gligorov</div>
+        <div class="orga-country">France</div>
+        <div class="orga-role">Co-Chair</div>
+      </div>
+      <div class="orga-card">
+        <div class="orga-name">Rachid Samlali</div>
+        <div class="orga-country">Morocco</div>
+        <div class="orga-role">Co-Chair</div>
+      </div>
+      <div class="orga-card">
+        <div class="orga-name">Berna Atalar</div>
+        <div class="orga-country">Turkey</div>
+        <div class="orga-role">Co-Chair</div>
+      </div>
+      <div class="orga-card">
+        <div class="orga-name">Enis Özyar</div>
+        <div class="orga-country">Turkey</div>
+        <div class="orga-role">Co-Chair</div>
+      </div>
+      <div class="orga-card">
+        <div class="orga-name">Serap Turkan</div>
+        <div class="orga-country">Turkey</div>
+        <div class="orga-role">Co-Chair</div>
+      </div>
+    </div>
+    <div class="logistics-box">
+      <div class="unicon-badge"><span>UNICON</span></div>
+      <h4>Congress Logistics — UNICON MICE</h4>
+      <p>For all logistical enquiries regarding accommodation, transfers, and on-site organisation:<br>
+      <strong>Hande Boyacioglu</strong> · <a href="mailto:hande@uniconmice.com">hande@uniconmice.com</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;max-width:1100px;margin:0 auto;">
+    <div class="footer-logo">
+      <div class="logo-badge">eXIOME</div>
+    </div>
+    <div class="footer-info">
+      eXpert International Oncology MEeting · Istanbul, Turkey · 12–14 November 2026<br>
+      <a href="mailto:yazid.belkacemi@aphp.fr">yazid.belkacemi@aphp.fr</a> · 
+      <a href="mailto:hande@uniconmice.com">hande@uniconmice.com</a>
+    </div>
+    <div style="font-size:11px;color:rgba(255,255,255,0.3);">© 2026 eXIOME</div>
+  </div>
+</footer>
+
+<!-- ADMIN LOGIN MODAL -->
+<div class="admin-overlay" id="adminOverlay">
+  <div class="admin-modal">
+    <div class="admin-modal-header">
+      <h3>Administration</h3>
+      <p>Accès réservé aux organisateurs</p>
+    </div>
+    <div class="admin-modal-body">
+      <label>Mot de passe</label>
+      <input type="password" id="adminPass" placeholder="••••••••" onkeypress="if(event.key==='Enter')checkAdmin()">
+      <div class="admin-error" id="adminError">Mot de passe incorrect.</div>
+    </div>
+    <div class="admin-modal-footer">
+      <button class="btn-modal-primary" onclick="checkAdmin()">Accéder</button>
+      <button class="btn-modal-cancel" onclick="closeAdminModal()">Annuler</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-panel-overlay" id="adminPanel">
+  <div class="admin-panel">
+    <h2>Panneau Administration</h2>
+    <p class="subtitle">Bienvenue. Utilisez ce panneau pour noter les modifications à apporter au site.</p>
+    <div class="admin-section">
+      <h4>📝 Notes de modification</h4>
+      <p>Notez ici les changements à transmettre pour mise à jour du site :</p>
+      <textarea placeholder="Ex: Ajouter le nom du conférencier pour Keynote 1 : Dr. Smith (Harvard)..."></textarea>
+      <button class="btn-save">Enregistrer les notes</button>
+      <button class="btn-close-admin" onclick="closeAdminPanel()">Fermer</button>
+    </div>
+    <div class="admin-section">
+      <h4>🔑 Mot de passe admin</h4>
+      <p>Mot de passe actuel : <strong>admin2026</strong><br>Pour le modifier, contactez le webmaster.</p>
+    </div>
+    <div class="admin-section">
+      <h4>📧 Contact webmaster</h4>
+      <p>Pour toute modification du site, envoyez vos demandes à :<br>
+      <strong>fadila.chekiri@aphp.fr</strong></p>
+    </div>
+  </div>
+</div>
+
+<script>
+function showDay(n,btn){
+  document.querySelectorAll('.prog-day').forEach(d=>d.classList.remove('active'));
+  document.querySelectorAll('.prog-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('day'+n).classList.add('active');
+  btn.classList.add('active');
+}
+function openAdmin(){
+  document.getElementById('adminOverlay').classList.add('open');
+  setTimeout(()=>document.getElementById('adminPass').focus(),100);
+}
+function closeAdminModal(){
+  document.getElementById('adminOverlay').classList.remove('open');
+  document.getElementById('adminPass').value='';
+  document.getElementById('adminError').style.display='none';
+}
+function checkAdmin(){
+  if(document.getElementById('adminPass').value==='admin2026'){
+    closeAdminModal();
+    document.getElementById('adminPanel').classList.add('open');
+  } else {
+    document.getElementById('adminError').style.display='block';
+  }
+}
+function closeAdminPanel(){
+  document.getElementById('adminPanel').classList.remove('open');
+}
+document.getElementById('adminOverlay').addEventListener('click',function(e){
+  if(e.target===this)closeAdminModal();
+});
+</script>
+</body>
+</html>

@@ -1,32 +1,17 @@
 <!DOCTYPE html>
-<!-- EXIOME 2026 v6 - Nouveau programme PDF - Mai 2026 - Vercel -->
-<html lang="fr">
+<!-- EXIOME 2026 v8 - Logos + Abstracts complets - Vercel -->
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>eXIOME 2026 — eXpert International Oncology MEeting</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --navy: #0a1628;
-  --blue: #1a3a6b;
-  --gold: #c8972a;
-  --gold-light: #e8b84b;
-  --teal: #1a7a8a;
-  --cream: #f8f5ef;
-  --white: #ffffff;
-  --gray: #6b7280;
-  --light-gray: #f3f4f6;
-  --border: #e5e7eb;
-  
-  --s1-color: #1a3a6b;
-  --s2-color: #2d6a4f;
-  --s3-color: #7b2d8b;
-  --s4-color: #c8390a;
-  --s5-color: #0a6b8a;
-  --s6-color: #6b4e0a;
-  --s7-color: #3d1a6b;
-  --s8-color: #1a6b3a;
+:root{
+  --navy:#0a1628;--blue:#1a3a6b;--gold:#c8972a;--gold-light:#e8b84b;
+  --teal:#1a7a8a;--cream:#f8f5ef;--gray:#6b7280;--border:#e5e7eb;
+  --s1:#1a3a6b;--s2:#2d6a4f;--s3:#7b2d8b;
+  --s4:#c8390a;--s5:#0a6b8a;--s6:#6b4e0a;--s7:#3d1a6b;--s8:#1a6b3a;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -34,73 +19,72 @@ body{font-family:'DM Sans',sans-serif;color:var(--navy);background:#fff;}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,151,42,0.3);}
-.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
-.nav-logo{display:flex;align-items:center;gap:12px;}
-.logo-badge{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;padding:6px 14px;border-radius:4px;letter-spacing:1px;}
-.logo-sub{color:rgba(255,255,255,0.6);font-size:11px;font-weight:300;letter-spacing:2px;text-transform:uppercase;line-height:1.3;}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav-left{display:flex;align-items:center;gap:14px;}
+.nav-logo-pill{background:rgba(255,255,255,.92);border-radius:7px;padding:5px 12px;display:flex;align-items:center;}
+.nav-logo-pill img{height:32px;display:block;}
+.nav-logo-pill.unicon img{height:24px;}
+.nav-sep{width:1px;height:28px;background:rgba(255,255,255,.18);}
 .nav-links{display:flex;gap:8px;align-items:center;}
-.nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:13px;font-weight:500;padding:8px 14px;border-radius:6px;transition:all .2s;letter-spacing:.3px;}
+.nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:13px;font-weight:500;padding:8px 14px;border-radius:6px;transition:all .2s;}
 .nav-links a:hover{color:#fff;background:rgba(200,151,42,0.2);}
 .btn-admin{background:rgba(200,151,42,0.15);border:1px solid rgba(200,151,42,0.4);color:var(--gold-light) !important;font-size:12px !important;cursor:pointer;}
 .btn-admin:hover{background:rgba(200,151,42,0.3) !important;}
 
 /* HERO */
-.hero{background:linear-gradient(160deg, var(--navy) 0%, #0e2040 40%, #0d3050 70%, #0a4060 100%);min-height:100vh;display:flex;align-items:center;padding:100px 24px 60px;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8972a' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
-.hero-inner{max-width:900px;margin:0 auto;text-align:center;position:relative;}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(200,151,42,0.15);border:1px solid rgba(200,151,42,0.3);color:var(--gold-light);font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:8px 20px;border-radius:50px;margin-bottom:32px;}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7vw,80px);font-weight:600;color:#fff;line-height:1.05;margin-bottom:16px;}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,#0e2040 40%,#0d3050 70%,#0a4060 100%);min-height:100vh;display:flex;align-items:center;padding:100px 24px 60px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c8972a' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");}
+.hero-inner{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:1;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(200,151,42,0.15);border:1px solid rgba(200,151,42,0.3);color:var(--gold-light);font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:8px 20px;border-radius:50px;margin-bottom:28px;}
+.hero-logo-box{background:rgba(255,255,255,.92);border-radius:12px;padding:12px 28px;display:inline-block;margin-bottom:24px;}
+.hero-logo-box img{height:56px;display:block;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7vw,80px);font-weight:600;color:#fff;line-height:1.05;margin-bottom:12px;}
 .hero h1 span{color:var(--gold-light);}
-.hero-tagline{font-size:15px;color:rgba(255,255,255,0.6);letter-spacing:3px;text-transform:uppercase;font-weight:300;margin-bottom:40px;}
-.hero-meta{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;}
+.hero-tagline{font-size:14px;color:rgba(255,255,255,0.55);letter-spacing:3px;text-transform:uppercase;margin-bottom:36px;}
+.hero-meta{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-bottom:44px;}
 .hero-meta-item{display:flex;flex-direction:column;align-items:center;gap:4px;}
 .hero-meta-icon{font-size:20px;}
-.hero-meta-label{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;}
-.hero-meta-value{font-size:16px;color:#fff;font-weight:600;}
-.hero-meta-value.sm{font-size:13px;font-weight:400;color:rgba(255,255,255,0.8);}
-.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
-.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.5px;transition:all .3s;display:inline-block;}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,151,42,0.4);}
-.btn-outline{border:1.5px solid rgba(255,255,255,0.35);color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:500;font-size:14px;letter-spacing:.5px;transition:all .3s;display:inline-block;}
-.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
-.hero-scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.3);font-size:12px;letter-spacing:2px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px;}
-.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(200,151,42,0.6),transparent);}
+.hero-meta-label{font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;}
+.hero-meta-value{font-size:15px;color:#fff;font-weight:600;}
+.hero-meta-value.sm{font-size:12px;font-weight:400;color:rgba(255,255,255,.75);}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:44px;}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);padding:13px 30px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.4px;transition:all .3s;display:inline-block;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,151,42,.4);}
+.btn-outline{border:1.5px solid rgba(255,255,255,.35);color:#fff;padding:13px 30px;border-radius:8px;text-decoration:none;font-weight:500;font-size:14px;transition:all .3s;display:inline-block;}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+.hero-partner-row{display:flex;align-items:center;justify-content:center;gap:12px;}
+.hero-partner-label{font-size:9px;color:rgba(255,255,255,.3);letter-spacing:2px;text-transform:uppercase;margin-right:4px;}
+.hero-partner-pill{background:rgba(255,255,255,.88);border-radius:8px;padding:7px 16px;display:flex;align-items:center;}
+.hero-partner-pill img{height:24px;display:block;}
 
-/* SECTIONS */
+/* SECTIONS COMMUNES */
 section{padding:80px 24px;}
 .section-inner{max-width:1100px;margin:0 auto;}
-.section-header{margin-bottom:56px;}
+.section-header{margin-bottom:52px;}
 .section-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
 .section-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,48px);font-weight:600;color:var(--navy);line-height:1.15;}
-.section-header p{font-size:15px;color:var(--gray);margin-top:12px;max-width:600px;line-height:1.7;}
+.section-header p{font-size:14px;color:var(--gray);margin-top:12px;max-width:600px;line-height:1.7;}
 
-/* PROGRAMME TABS */
+/* PROGRAMME */
 .prog-tabs{display:flex;gap:4px;background:#f1f5f9;border-radius:12px;padding:4px;margin-bottom:40px;}
-.prog-tab{flex:1;padding:12px 16px;border:none;background:transparent;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--gray);cursor:pointer;transition:all .2s;text-align:center;}
-.prog-tab.active{background:#fff;color:var(--navy);box-shadow:0 2px 8px rgba(0,0,0,0.08);font-weight:600;}
+.prog-tab{flex:1;padding:11px 14px;border:none;background:transparent;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--gray);cursor:pointer;transition:all .2s;text-align:center;}
+.prog-tab.active{background:#fff;color:var(--navy);box-shadow:0 2px 8px rgba(0,0,0,.08);font-weight:600;}
 .prog-day{display:none;}
 .prog-day.active{display:block;}
-
-/* DAY HEADER */
-.day-header{background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:12px;padding:28px 32px;margin-bottom:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
-.day-header-left h3{font-family:'Cormorant Garamond',serif;font-size:28px;color:#fff;font-weight:600;}
-.day-header-left p{font-size:13px;color:rgba(255,255,255,0.6);margin-top:4px;letter-spacing:.5px;}
-.day-header-badge{background:rgba(200,151,42,0.2);border:1px solid rgba(200,151,42,0.4);color:var(--gold-light);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:8px 16px;border-radius:6px;}
-
-/* SESSION BLOCK */
-.session-block{margin-bottom:28px;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
-.session-header{padding:18px 24px;display:flex;align-items:center;gap:16px;}
-.session-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;}
-.session-title-wrap h4{font-size:16px;font-weight:600;color:#fff;}
-.session-title-wrap p{font-size:12px;color:rgba(255,255,255,0.7);margin-top:2px;}
-.session-items{padding:0;}
-
-/* ITEMS */
-.prog-item{display:grid;grid-template-columns:80px 90px 1fr;gap:0;border-top:1px solid var(--border);}
+.day-header{background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:12px;padding:24px 28px;margin-bottom:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+.day-header-left h3{font-family:'Cormorant Garamond',serif;font-size:26px;color:#fff;font-weight:600;}
+.day-header-left p{font-size:12px;color:rgba(255,255,255,.6);margin-top:4px;}
+.day-header-badge{background:rgba(200,151,42,.2);border:1px solid rgba(200,151,42,.4);color:var(--gold-light);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:7px 14px;border-radius:6px;}
+.session-block{margin-bottom:24px;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+.session-header{padding:16px 22px;display:flex;align-items:center;gap:14px;}
+.session-num{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0;background:rgba(255,255,255,.2);}
+.session-title-wrap h4{font-size:15px;font-weight:600;color:#fff;}
+.session-title-wrap p{font-size:11px;color:rgba(255,255,255,.65);margin-top:2px;}
+.prog-item{display:grid;grid-template-columns:78px 88px 1fr;border-top:1px solid #f3f4f6;}
 .prog-item:hover{background:#fafbff;}
-.prog-time{padding:16px 12px 16px 20px;font-size:12px;font-weight:600;color:var(--gray);font-variant-numeric:tabular-nums;white-space:nowrap;align-self:start;padding-top:18px;}
-.prog-type-badge{padding:14px 8px;align-self:start;padding-top:18px;}
-.type-tag{display:inline-block;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 7px;border-radius:3px;}
+.prog-time{padding:15px 10px 15px 18px;font-size:11px;font-weight:600;color:var(--gray);white-space:nowrap;align-self:start;padding-top:17px;}
+.prog-type-badge{padding:13px 6px;align-self:start;padding-top:17px;}
+.type-tag{display:inline-block;font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 7px;border-radius:3px;}
 .type-keynote{background:#fef3c7;color:#92400e;}
 .type-case{background:#dbeafe;color:#1e40af;}
 .type-lecture{background:#d1fae5;color:#065f46;}
@@ -110,155 +94,159 @@ section{padding:80px 24px;}
 .type-keynote-special{background:#fef9c3;color:#713f12;}
 .type-opening{background:#f0fdf4;color:#166534;}
 .type-closing{background:#f8fafc;color:#475569;}
-.type-break{background:#f1f5f9;color:#64748b;}
-.prog-content{padding:14px 20px 14px 8px;}
-.prog-content strong{font-size:14px;font-weight:600;color:var(--navy);line-height:1.4;display:block;}
-.prog-content .prog-speaker{font-size:12px;color:var(--gray);margin-top:4px;line-height:1.4;}
-.prog-content .prog-sub{font-size:11px;color:var(--teal);margin-top:3px;font-style:italic;}
+.prog-content{padding:13px 18px 13px 6px;}
+.prog-content strong{font-size:13px;font-weight:600;color:var(--navy);line-height:1.4;display:block;}
+.prog-content .prog-speaker{font-size:11px;color:var(--gray);margin-top:4px;line-height:1.4;}
+.prog-content .prog-sub{font-size:10px;color:var(--teal);margin-top:2px;font-style:italic;}
+.break-row{background:#f8f9fa;border-top:1px solid #f3f4f6;padding:12px 22px;display:flex;align-items:center;gap:10px;font-size:12px;color:var(--gray);}
+.social-row{background:#fffbeb;border-top:1px solid #fef3c7;padding:12px 22px;display:flex;align-items:center;gap:10px;font-size:12px;color:#92400e;font-weight:500;}
 
-/* BREAK ROW */
-.break-row{background:linear-gradient(135deg,#f8f9fa,#f1f5f9);border-top:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--gray);}
-.break-icon{font-size:18px;}
-.social-row{background:linear-gradient(135deg,#fef9ec,#fef3c7);border-top:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:12px;font-size:13px;color:#92400e;font-weight:500;}
-
-/* ABSTRACT */
+/* ABSTRACTS */
 .abstract-section{background:linear-gradient(135deg,var(--navy) 0%,#0e2040 100%);padding:80px 24px;}
-.abstract-inner{max-width:900px;margin:0 auto;}
-.abstract-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;}
-.abstract-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:28px;}
-.abstract-card h4{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-light);margin-bottom:12px;}
-.abstract-card p,
-.abstract-card li{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.7;}
-.abstract-card ul{padding-left:18px;margin-top:8px;}
-.abstract-card li{margin-bottom:4px;}
-.abstract-deadline{background:rgba(200,151,42,0.15);border:1px solid rgba(200,151,42,0.35);border-radius:10px;padding:20px 24px;text-align:center;margin-top:28px;}
-.abstract-deadline .date{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--gold-light);}
-.abstract-deadline .label{font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;margin-top:4px;}
-.abstract-email{text-align:center;margin-top:20px;}
-.abstract-email a{color:var(--gold-light);font-size:14px;text-decoration:none;border-bottom:1px solid rgba(200,151,42,0.4);}
+.abstract-inner{max-width:960px;margin:0 auto;}
+.abstract-top{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;}
+.ab-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:26px;}
+.ab-card h4{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-light);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(200,151,42,.25);}
+.ab-card li,.ab-card p{font-size:12px;color:rgba(255,255,255,.75);line-height:1.75;}
+.ab-card ul{padding-left:16px;}
+.ab-card li{margin-bottom:3px;}
+/* TOPICS */
+.ab-topics{margin-top:28px;}
+.ab-topics h4{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold-light);margin-bottom:20px;text-align:center;}
+.topics-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.topic-card{background:rgba(255,255,255,.06);border:1px solid rgba(200,151,42,.2);border-radius:10px;overflow:hidden;}
+.topic-header{background:rgba(200,151,42,.18);padding:10px 16px;}
+.topic-header span{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold-light);}
+.topic-items{padding:12px 16px;}
+.topic-items li{font-size:11px;color:rgba(255,255,255,.72);line-height:1.8;list-style:none;padding-left:14px;position:relative;}
+.topic-items li::before{content:'›';position:absolute;left:0;color:var(--gold);font-weight:700;}
+/* STRUCTURE */
+.ab-structure{margin-top:24px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:24px;}
+.ab-structure h4{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-light);margin-bottom:16px;}
+.struct-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
+.struct-item{background:rgba(255,255,255,.06);border-radius:8px;padding:10px 14px;text-align:center;}
+.struct-num{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold-light);}
+.struct-label{font-size:11px;color:rgba(255,255,255,.6);margin-top:3px;}
+.struct-pres{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);}
+.struct-pres p{font-size:12px;color:rgba(255,255,255,.65);}
+.struct-pres strong{color:rgba(255,255,255,.9);}
+/* FORMAT */
+.ab-format{margin-top:20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:20px 24px;}
+.ab-format h5{font-size:12px;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;}
+.format-items{display:flex;flex-wrap:wrap;gap:8px;}
+.format-tag{background:rgba(255,255,255,.08);border-radius:6px;padding:6px 12px;font-size:11px;color:rgba(255,255,255,.7);}
+/* DEADLINE */
+.ab-deadline{background:rgba(200,151,42,.15);border:1px solid rgba(200,151,42,.35);border-radius:12px;padding:24px;text-align:center;margin-top:28px;}
+.ab-deadline .date{font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold-light);}
+.ab-deadline .label{font-size:10px;color:rgba(255,255,255,.45);letter-spacing:3px;text-transform:uppercase;margin-top:4px;}
+.ab-email{text-align:center;margin-top:20px;}
+.ab-email a{color:var(--gold-light);font-size:14px;text-decoration:none;border-bottom:1px solid rgba(200,151,42,.4);}
+.ab-email span{color:rgba(255,255,255,.4);font-size:13px;}
 
 /* PRACTICAL */
-.practical-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
-.practical-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;transition:box-shadow .2s;}
-.practical-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.08);}
-.practical-icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;}
-.practical-card h4{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:10px;}
+.practical-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.practical-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:26px;transition:box-shadow .2s;}
+.practical-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.07);}
+.practical-icon{font-size:28px;margin-bottom:12px;}
+.practical-card h4{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:8px;}
 .practical-card p{font-size:13px;color:var(--gray);line-height:1.7;}
-.practical-card a{color:var(--blue);text-decoration:none;font-weight:500;}
-.practical-card a:hover{text-decoration:underline;}
+.practical-card a{color:var(--blue);font-weight:500;text-decoration:none;}
 
 /* ORGA */
 .orga-section{background:var(--cream);}
-.orga-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
-.orga-card{background:#fff;border-radius:10px;padding:20px 24px;border:1px solid var(--border);}
-.orga-card .orga-name{font-size:15px;font-weight:600;color:var(--navy);}
-.orga-card .orga-country{font-size:12px;color:var(--gray);margin-top:2px;}
-.orga-card .orga-role{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-top:8px;}
-.logistics-box{background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;margin-top:32px;}
-.logistics-box h4{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px;}
-.logistics-box p{font-size:13px;color:var(--gray);line-height:1.7;}
-.logistics-box a{color:var(--blue);}
-.unicon-badge{display:inline-flex;align-items:center;gap:8px;background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:6px 14px;margin-bottom:12px;}
-.unicon-badge span{font-size:14px;font-weight:700;color:var(--navy);letter-spacing:2px;}
+.orga-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+.orga-card{background:#fff;border-radius:10px;padding:18px 22px;border:1px solid var(--border);}
+.orga-name{font-size:14px;font-weight:600;color:var(--navy);}
+.orga-country{font-size:11px;color:var(--gray);margin-top:2px;}
+.orga-role{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-top:7px;}
+.logistics-box{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin-top:28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.logistics-logo{background:#f9fafb;border:1px solid var(--border);border-radius:8px;padding:8px 16px;display:flex;align-items:center;}
+.logistics-logo img{height:28px;}
+.logistics-text h4{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px;}
+.logistics-text p{font-size:12px;color:var(--gray);line-height:1.6;}
+.logistics-text a{color:var(--blue);}
 
 /* FOOTER */
-footer{background:var(--navy);padding:40px 24px;}
-.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:gap:20px;}
-.footer-logo .logo-badge{font-size:16px;}
-.footer-info{font-size:12px;color:rgba(255,255,255,0.4);text-align:center;line-height:1.8;}
-.footer-info a{color:rgba(255,255,255,0.6);text-decoration:none;}
+footer{background:var(--navy);padding:36px 24px;}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+.footer-logos{display:flex;align-items:center;gap:12px;}
+.footer-logo-pill{background:rgba(255,255,255,.88);border-radius:7px;padding:5px 12px;display:flex;align-items:center;}
+.footer-logo-pill img{height:26px;}
+.footer-logo-pill.unicon img{height:20px;}
+.footer-info{font-size:11px;color:rgba(255,255,255,.35);text-align:center;line-height:1.9;}
+.footer-info a{color:rgba(255,255,255,.55);text-decoration:none;}
 
-/* ADMIN MODAL */
-.admin-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;}
+/* ADMIN */
+.admin-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;}
 .admin-overlay.open{display:flex;}
-.admin-modal{background:#fff;border-radius:16px;width:90%;max-width:400px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.3);}
-.admin-modal-header{background:linear-gradient(135deg,var(--navy),var(--blue));padding:24px 28px;}
-.admin-modal-header h3{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;}
-.admin-modal-header p{font-size:12px;color:rgba(255,255,255,0.6);margin-top:4px;}
-.admin-modal-body{padding:28px;}
-.admin-modal-body label{font-size:12px;font-weight:600;color:var(--gray);letter-spacing:.5px;text-transform:uppercase;display:block;margin-bottom:8px;}
-.admin-modal-body input{width:100%;border:1.5px solid var(--border);border-radius:8px;padding:12px 16px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s;}
-.admin-modal-body input:focus{border-color:var(--gold);}
-.admin-modal-footer{padding:0 28px 28px;display:flex;gap:12px;}
-.btn-modal-primary{flex:1;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);border:none;border-radius:8px;padding:12px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;}
-.btn-modal-cancel{flex:1;background:#f3f4f6;color:var(--gray);border:none;border-radius:8px;padding:12px;font-size:14px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;}
-.admin-error{color:#dc2626;font-size:12px;margin-top:8px;display:none;}
-/* ADMIN PANEL */
-.admin-panel-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9998;align-items:flex-start;justify-content:center;padding-top:80px;overflow-y:auto;}
-.admin-panel-overlay.open{display:flex;}
-.admin-panel{background:#fff;border-radius:16px;width:90%;max-width:700px;padding:36px;margin-bottom:40px;}
-.admin-panel h2{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--navy);margin-bottom:6px;}
-.admin-panel p.subtitle{font-size:13px;color:var(--gray);margin-bottom:28px;}
-.admin-section{border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:20px;}
-.admin-section h4{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px;}
-.admin-section p{font-size:12px;color:var(--gray);margin-bottom:14px;}
-.admin-section textarea{width:100%;border:1.5px solid var(--border);border-radius:6px;padding:10px 12px;font-size:12px;font-family:'DM Sans',sans-serif;resize:vertical;min-height:80px;outline:none;}
-.admin-section textarea:focus{border-color:var(--gold);}
-.btn-save{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);border:none;border-radius:6px;padding:10px 20px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:10px;}
-.btn-close-admin{background:#f3f4f6;color:var(--gray);border:none;border-radius:6px;padding:10px 20px;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;margin-left:8px;}
+.admin-modal{background:#fff;border-radius:14px;width:90%;max-width:390px;overflow:hidden;}
+.admin-hdr{background:linear-gradient(135deg,var(--navy),var(--blue));padding:22px 26px;}
+.admin-hdr h3{font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff;}
+.admin-hdr p{font-size:11px;color:rgba(255,255,255,.55);margin-top:3px;}
+.admin-body{padding:24px 26px;}
+.admin-body label{font-size:11px;font-weight:600;color:var(--gray);letter-spacing:.5px;text-transform:uppercase;display:block;margin-bottom:7px;}
+.admin-body input{width:100%;border:1.5px solid var(--border);border-radius:8px;padding:11px 14px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s;}
+.admin-body input:focus{border-color:var(--gold);}
+.admin-err{color:#dc2626;font-size:11px;margin-top:6px;display:none;}
+.admin-foot{padding:0 26px 24px;display:flex;gap:10px;}
+.btn-go{flex:1;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);border:none;border-radius:8px;padding:11px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.btn-cancel{flex:1;background:#f3f4f6;color:var(--gray);border:none;border-radius:8px;padding:11px;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.admin-panel-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9998;align-items:flex-start;justify-content:center;padding-top:80px;overflow-y:auto;}
+.admin-panel-ov.open{display:flex;}
+.adm-panel{background:#fff;border-radius:14px;width:90%;max-width:680px;padding:32px;margin-bottom:40px;}
+.adm-panel h2{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--navy);margin-bottom:4px;}
+.adm-sec{border:1px solid var(--border);border-radius:8px;padding:18px;margin-top:18px;}
+.adm-sec h4{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px;}
+.adm-sec p{font-size:11px;color:var(--gray);margin-bottom:10px;}
+.adm-sec textarea{width:100%;border:1px solid var(--border);border-radius:6px;padding:10px 12px;font-size:12px;font-family:'DM Sans',sans-serif;resize:vertical;min-height:70px;outline:none;}
+.btn-sv{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);border:none;border-radius:6px;padding:9px 18px;font-size:12px;font-weight:600;cursor:pointer;margin-top:8px;}
+.btn-cls{background:#f3f4f6;color:var(--gray);border:none;border-radius:6px;padding:9px 18px;font-size:12px;cursor:pointer;margin-left:8px;}
 @media(max-width:768px){
   .nav-links a:not(.btn-admin){display:none;}
-  .abstract-grid{grid-template-columns:1fr;}
-  .prog-item{grid-template-columns:70px 80px 1fr;}
-  .hero-meta{gap:20px;}
-  .footer-inner{flex-direction:column;text-align:center;gap:16px;}
+  .abstract-top,.topics-grid,.struct-grid{grid-template-columns:1fr;}
+  .prog-item{grid-template-columns:65px 75px 1fr;}
+  .footer-inner{flex-direction:column;text-align:center;}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <div class="nav-logo">
-      <div class="logo-badge">eXIOME</div>
-      <div class="logo-sub">2026<br>Istanbul</div>
+    <div class="nav-left">
+      <div class="nav-logo-pill"><img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAFqA/gDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AIyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//9k=" alt="eXIOME"></div>
+      <div class="nav-sep"></div>
+      <div class="nav-logo-pill unicon"><img src="data:image/png;base64,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" alt="UNICON"></div>
     </div>
     <div class="nav-links">
       <a href="#programme">Programme</a>
       <a href="#abstracts">Abstracts</a>
-      <a href="#infos">Informations</a>
+      <a href="#infos">Venue</a>
       <a href="#organisation">Organisation</a>
       <button class="nav-links a btn-admin" onclick="openAdmin()">🔑 Admin</button>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <span>★</span> eXpert International Oncology MEeting
-    </div>
-    <h1>eXIOME<br><span>2026</span></h1>
+    <div class="hero-eyebrow"><span>★</span> eXpert International Oncology MEeting</div>
+    <div class="hero-logo-box"><img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAFqA/gDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AIyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//9k=" alt="eXIOME 2026"></div>
+    <h1>eXIOME <span>2026</span></h1>
     <p class="hero-tagline">Istanbul · Turkey · November 2026</p>
     <div class="hero-meta">
-      <div class="hero-meta-item">
-        <span class="hero-meta-icon">📅</span>
-        <span class="hero-meta-label">Dates</span>
-        <span class="hero-meta-value">12–14 November 2026</span>
-      </div>
-      <div class="hero-meta-item">
-        <span class="hero-meta-icon">🏨</span>
-        <span class="hero-meta-label">Venue</span>
-        <span class="hero-meta-value">Marmara Taksim Hotel</span>
-        <span class="hero-meta-value sm">Istanbul, Turkey</span>
-      </div>
-      <div class="hero-meta-item">
-        <span class="hero-meta-icon">🎯</span>
-        <span class="hero-meta-label">Focus</span>
-        <span class="hero-meta-value">Locally Advanced Cancers</span>
-        <span class="hero-meta-value sm">Neoadjuvant-to-Adjuvant Continuum</span>
-      </div>
+      <div class="hero-meta-item"><span class="hero-meta-icon">📅</span><span class="hero-meta-label">Dates</span><span class="hero-meta-value">12–14 November 2026</span></div>
+      <div class="hero-meta-item"><span class="hero-meta-icon">🏨</span><span class="hero-meta-label">Venue</span><span class="hero-meta-value">Marmara Taksim Hotel</span><span class="hero-meta-value sm">Istanbul, Turkey</span></div>
+      <div class="hero-meta-item"><span class="hero-meta-icon">🎯</span><span class="hero-meta-label">Focus</span><span class="hero-meta-value">Locally Advanced Cancers</span><span class="hero-meta-value sm">Neoadjuvant-to-Adjuvant Continuum</span></div>
     </div>
     <div class="hero-ctas">
       <a href="#programme" class="btn-primary">View Programme</a>
       <a href="#abstracts" class="btn-outline">Submit Abstract</a>
     </div>
-  </div>
-  <div class="hero-scroll">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
+    <div class="hero-partner-row">
+      <span class="hero-partner-label">Congress Logistics</span>
+      <div class="hero-partner-pill"><img src="data:image/png;base64,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" alt="UNICON"></div>
+    </div>
   </div>
 </section>
 
@@ -270,580 +258,222 @@ footer{background:var(--navy);padding:40px 24px;}
       <h2>3-Day Programme</h2>
       <p>The Neoadjuvant-to-Adjuvant Treatment Continuum — from minimal requirements to optimal care in LMICs.</p>
     </div>
-
     <div class="prog-tabs">
       <button class="prog-tab active" onclick="showDay(1,this)">Day 1 — Wed 12 Nov</button>
       <button class="prog-tab" onclick="showDay(2,this)">Day 2 — Thu 13 Nov</button>
       <button class="prog-tab" onclick="showDay(3,this)">Day 3 — Fri 14 Nov</button>
     </div>
-
     <!-- DAY 1 -->
     <div class="prog-day active" id="day1">
-      <div class="day-header">
-        <div class="day-header-left">
-          <h3>Wednesday, 12 November 2026</h3>
-          <p>Afternoon Session · Main Room</p>
-        </div>
-        <div class="day-header-badge">Applicability of Western Guidelines in LMICs</div>
-      </div>
-
-      <!-- Opening -->
+      <div class="day-header"><div class="day-header-left"><h3>Wednesday, 12 November 2026</h3><p>Afternoon Session · Main Room</p></div><div class="day-header-badge">Applicability of Western Guidelines in LMICs</div></div>
       <div class="session-block">
-        <div class="session-header" style="background:#1a3a6b;">
-          <div class="session-num" style="background:rgba(255,255,255,0.2);">🎙</div>
-          <div class="session-title-wrap">
-            <h4>Opening Ceremony</h4>
-            <p>Welcome Address · 13:30</p>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">13:30–14:00</div>
-          <div class="prog-type-badge"><span class="type-tag type-opening">Opening</span></div>
-          <div class="prog-content">
-            <strong>Opening Ceremony and Welcome Address</strong>
-            <div class="prog-speaker">B. Atalar (Turkey) · Y. Belkacemi (France) · A. Bounedjar (Algeria) · J. Gligorov (France) · E. Özyar (Turkey) · R. Samlali (Morocco) · S. Turkan (Turkey)</div>
-          </div>
-        </div>
+        <div class="session-header" style="background:#1a3a6b;"><div class="session-num">🎙</div><div class="session-title-wrap"><h4>Opening Ceremony</h4><p>Welcome Address · 13:30</p></div></div>
+        <div class="prog-item"><div class="prog-time">13:30–14:00</div><div class="prog-type-badge"><span class="type-tag type-opening">Opening</span></div><div class="prog-content"><strong>Opening Ceremony and Welcome Address</strong><div class="prog-speaker">B. Atalar · Y. Belkacemi · A. Bounedjar · J. Gligorov · E. Özyar · R. Samlali · S. Turkan</div></div></div>
       </div>
-
-      <!-- Session 1 -->
       <div class="session-block">
-        <div class="session-header" style="background:var(--s1-color);">
-          <div class="session-num" style="background:rgba(255,255,255,0.2);">S1</div>
-          <div class="session-title-wrap">
-            <h4>Session 1 · Primary Local Treatment Followed by Adjuvant Therapy</h4>
-            <p>Interactive Case-Based Discussion · Limited Evidence Settings</p>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">14:00–14:20</div>
-          <div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 1</span></div>
-          <div class="prog-content">
-            <strong>Locally Advanced Cancers in LMICs: Epidemiology, Diagnostic Tools, and Therapeutic Strategy</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">14:20–14:40</div>
-          <div class="prog-type-badge"><span class="type-tag type-case">Case 1</span></div>
-          <div class="prog-content">
-            <strong>Stage II Colon Cancer: Role of Tumour Biology in Guiding Adjuvant Chemotherapy vs. Surveillance</strong>
-            <div class="prog-speaker">Panellists &amp; Case Presenter TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">15:00–15:20</div>
-          <div class="prog-type-badge"><span class="type-tag type-case">Case 2</span></div>
-          <div class="prog-content">
-            <strong>Stage III Colon Cancer: Is There a Rationale for Adjuvant Therapy De-escalation Based on Tumour Biology?</strong>
-            <div class="prog-speaker">Panellists &amp; Case Presenter TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">15:20–16:00</div>
-          <div class="prog-type-badge"><span class="type-tag type-case">Case 3</span></div>
-          <div class="prog-content">
-            <strong>High-Risk Hepatocellular Carcinoma: Evidence for Anti-PD-L1/Anti-VEGF Therapy After Surgery or Ablation</strong>
-            <div class="prog-speaker">Panellists &amp; Case Presenter TBC</div>
-          </div>
-        </div>
-        <div class="break-row"><span class="break-icon">☕</span><span>Coffee Break · 16:00–16:30</span></div>
+        <div class="session-header" style="background:var(--s1);"><div class="session-num">S1</div><div class="session-title-wrap"><h4>Session 1 · Primary Local Treatment Followed by Adjuvant Therapy</h4><p>Interactive Case-Based Discussion · Limited Evidence Settings</p></div></div>
+        <div class="prog-item"><div class="prog-time">14:00–14:20</div><div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 1</span></div><div class="prog-content"><strong>Locally Advanced Cancers in LMICs: Epidemiology, Diagnostic Tools, and Therapeutic Strategy</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">14:20–14:40</div><div class="prog-type-badge"><span class="type-tag type-case">Case 1</span></div><div class="prog-content"><strong>Stage II Colon Cancer: Role of Tumour Biology in Guiding Adjuvant Chemotherapy vs. Surveillance</strong><div class="prog-speaker">Panellists &amp; Case Presenter TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">15:00–15:20</div><div class="prog-type-badge"><span class="type-tag type-case">Case 2</span></div><div class="prog-content"><strong>Stage III Colon Cancer: Is There a Rationale for Adjuvant Therapy De-escalation Based on Tumour Biology?</strong><div class="prog-speaker">Panellists &amp; Case Presenter TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">15:20–16:00</div><div class="prog-type-badge"><span class="type-tag type-case">Case 3</span></div><div class="prog-content"><strong>High-Risk Hepatocellular Carcinoma: Evidence for Anti-PD-L1/Anti-VEGF Therapy After Surgery or Ablation</strong><div class="prog-speaker">Panellists &amp; Case Presenter TBC</div></div></div>
+        <div class="break-row"><span>☕</span><span>Coffee Break · 16:00–16:30</span></div>
       </div>
-
-      <!-- Session 2 -->
       <div class="session-block">
-        <div class="session-header" style="background:var(--s2-color);">
-          <div class="session-num" style="background:rgba(255,255,255,0.2);">S2</div>
-          <div class="session-title-wrap">
-            <h4>Session 2 · Neoadjuvant Systemic Therapy Followed by Adjuvant Therapy</h4>
-            <p>Interactive Case-Based Discussion · Limited Evidence Settings</p>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">16:30–16:50</div>
-          <div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 2</span></div>
-          <div class="prog-content">
-            <strong>The Neoadjuvant-to-Adjuvant Continuum in Prostate Cancer: Current Status and Future Directions</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-            <div class="prog-sub">Sponsored Session</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">16:50–17:10</div>
-          <div class="prog-type-badge"><span class="type-tag type-case">Case 4</span></div>
-          <div class="prog-content">
-            <strong>Locally Advanced Oesophagogastric Cancer: Role of Immunotherapy After Perioperative Chemotherapy</strong>
-            <div class="prog-speaker">Panellists &amp; Case Presenter TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">17:10–17:30</div>
-          <div class="prog-type-badge"><span class="type-tag type-case">Case 5</span></div>
-          <div class="prog-content">
-            <strong>Rectal Adenocarcinoma (dMMR/MSI-H), Stage II–III: Anti-PD-1 Therapy (Dostarlimab) in the Neoadjuvant Setting</strong>
-            <div class="prog-speaker">Panellists &amp; Case Presenter TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">17:30–17:50</div>
-          <div class="prog-type-badge"><span class="type-tag type-case">Case 6</span></div>
-          <div class="prog-content">
-            <strong>Locally Advanced Soft Tissue Sarcoma: Multimodal Treatment Strategies and Emerging Approaches</strong>
-            <div class="prog-speaker">Panellists &amp; Case Presenter TBC</div>
-          </div>
-        </div>
+        <div class="session-header" style="background:var(--s2);"><div class="session-num">S2</div><div class="session-title-wrap"><h4>Session 2 · Neoadjuvant Systemic Therapy Followed by Adjuvant Therapy</h4><p>Interactive Case-Based Discussion · Limited Evidence Settings</p></div></div>
+        <div class="prog-item"><div class="prog-time">16:30–16:50</div><div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 2</span></div><div class="prog-content"><strong>The Neoadjuvant-to-Adjuvant Continuum in Prostate Cancer: Current Status and Future Directions</strong><div class="prog-speaker">Speaker TBC</div><div class="prog-sub">Sponsored Session</div></div></div>
+        <div class="prog-item"><div class="prog-time">16:50–17:10</div><div class="prog-type-badge"><span class="type-tag type-case">Case 4</span></div><div class="prog-content"><strong>Locally Advanced Oesophagogastric Cancer: Role of Immunotherapy After Perioperative Chemotherapy</strong><div class="prog-speaker">Panellists &amp; Case Presenter TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">17:10–17:30</div><div class="prog-type-badge"><span class="type-tag type-case">Case 5</span></div><div class="prog-content"><strong>Rectal Adenocarcinoma (dMMR/MSI-H), Stage II–III: Anti-PD-1 Therapy (Dostarlimab) in the Neoadjuvant Setting</strong><div class="prog-speaker">Panellists &amp; Case Presenter TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">17:30–17:50</div><div class="prog-type-badge"><span class="type-tag type-case">Case 6</span></div><div class="prog-content"><strong>Locally Advanced Soft Tissue Sarcoma: Multimodal Treatment Strategies and Emerging Approaches</strong><div class="prog-speaker">Panellists &amp; Case Presenter TBC</div></div></div>
       </div>
-
-      <!-- Session 3 -->
       <div class="session-block">
-        <div class="session-header" style="background:var(--s3-color);">
-          <div class="session-num" style="background:rgba(255,255,255,0.2);">S3</div>
-          <div class="session-title-wrap">
-            <h4>Session 3 · Artificial Intelligence in Oncology</h4>
-            <p>Special Keynote Session · Sponsored Session</p>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">17:50–18:50</div>
-          <div class="prog-type-badge"><span class="type-tag type-keynote-special">Keynote 3</span></div>
-          <div class="prog-content">
-            <strong>AI in Oncology — A Multidisciplinary Perspective</strong>
-            <div class="prog-speaker">• The Pathologist's Perspective · • The Radiologist's Perspective · • The Radiation &amp; Medical Oncologist's Perspective</div>
-            <div class="prog-speaker">Speakers TBC · 60 min</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">18:50–19:00</div>
-          <div class="prog-type-badge"><span class="type-tag type-closing">Closing</span></div>
-          <div class="prog-content">
-            <strong>Closing Remarks — Day 1</strong>
-          </div>
-        </div>
-        <div class="social-row"><span class="break-icon">🍽</span><span>Mediterranean Scientific Societies Exchange Dinner · 20:00</span></div>
+        <div class="session-header" style="background:var(--s3);"><div class="session-num">S3</div><div class="session-title-wrap"><h4>Session 3 · Artificial Intelligence in Oncology</h4><p>Special Keynote Session · Sponsored Session</p></div></div>
+        <div class="prog-item"><div class="prog-time">17:50–18:50</div><div class="prog-type-badge"><span class="type-tag type-keynote-special">Keynote 3</span></div><div class="prog-content"><strong>AI in Oncology — A Multidisciplinary Perspective</strong><div class="prog-speaker">• The Pathologist's Perspective · • The Radiologist's Perspective · • The Radiation &amp; Medical Oncologist's Perspective · Speakers TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">18:50–19:00</div><div class="prog-type-badge"><span class="type-tag type-closing">Closing</span></div><div class="prog-content"><strong>Closing Remarks — Day 1</strong></div></div>
+        <div class="social-row"><span>🍽</span><span>Mediterranean Scientific Societies Exchange Dinner · 20:00</span></div>
       </div>
     </div>
-
     <!-- DAY 2 -->
     <div class="prog-day" id="day2">
-      <div class="day-header">
-        <div class="day-header-left">
-          <h3>Thursday, 13 November 2026</h3>
-          <p>Full-Day Programme · Main Room</p>
-        </div>
-        <div class="day-header-badge">High-Level Evidence in Locally Advanced Cancers</div>
-      </div>
-
-      <!-- Session 4 -->
+      <div class="day-header"><div class="day-header-left"><h3>Thursday, 13 November 2026</h3><p>Full-Day Programme · Main Room</p></div><div class="day-header-badge">High-Level Evidence in Locally Advanced Cancers</div></div>
       <div class="session-block">
-        <div class="session-header" style="background:var(--s4-color);">
-          <div class="session-num" style="background:rgba(255,255,255,0.2);">S4</div>
-          <div class="session-title-wrap">
-            <h4>Session 4 · Locally Advanced Breast Cancer</h4>
-            <p>Neoadjuvant-to-Adjuvant Treatment Continuum: High-Level Evidence</p>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">08:30–08:50</div>
-          <div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 4</span></div>
-          <div class="prog-content">
-            <strong>Biomarker-Guided Treatment Strategy Across the Neoadjuvant-to-Adjuvant Continuum According to Breast Cancer Molecular Subtypes</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-            <div class="prog-sub">Sponsored Session</div>
-          </div>
-        </div>
-        <!-- HER2+ -->
-        <div style="background:#fff4f4;padding:8px 20px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c8390a;border-top:1px solid var(--border);">🎗 HER2-Positive Stage II–III Locally Advanced Breast Cancer</div>
-        <div class="prog-item">
-          <div class="prog-time">08:50–09:10</div>
-          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
-          <div class="prog-content">
-            <strong>Pathological Complete Response After Optimal Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">09:10–09:30</div>
-          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
-          <div class="prog-content">
-            <strong>Invasive Residual Disease After Optimal Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">09:30–10:00</div>
-          <div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div>
-          <div class="prog-content">
-            <strong>Expert Panel &amp; Audience Vote: Optimising the Neoadjuvant-to-Adjuvant Strategy in HER2+ LABC — Minimal Requirements vs. Optimal Care in LMICs</strong>
-            <div class="prog-speaker">Discussant: J. Gligorov (France) + Audience Interactive Vote</div>
-          </div>
-        </div>
-        <div class="break-row"><span class="break-icon">☕</span><span>Coffee Break · 10:00–10:30</span></div>
-        <!-- TNBC -->
-        <div style="background:#f4f0ff;padding:8px 20px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#5b21b6;border-top:1px solid var(--border);">🔵 Triple-Negative Stage II–III Locally Advanced Breast Cancer</div>
-        <div class="prog-item">
-          <div class="prog-time">10:30–10:50</div>
-          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
-          <div class="prog-content">
-            <strong>Pathological Complete Response After Optimal Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">10:50–11:10</div>
-          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
-          <div class="prog-content">
-            <strong>Invasive Residual Disease After Optimal Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">11:10–11:40</div>
-          <div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div>
-          <div class="prog-content">
-            <strong>Expert Panel &amp; Audience Vote: Optimising the Neoadjuvant-to-Adjuvant Strategy in TNBC — Minimal Requirements vs. Optimal Care in LMICs</strong>
-            <div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div>
-          </div>
-        </div>
-        <!-- HR+ -->
-        <div style="background:#f0fdf4;padding:8px 20px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#065f46;border-top:1px solid var(--border);">🌿 Hormone Receptor-Positive Stage II–III Locally Advanced Breast Cancer</div>
-        <div class="prog-item">
-          <div class="prog-time">11:40–12:00</div>
-          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
-          <div class="prog-content">
-            <strong>High-Risk HR+ Breast Cancer Without Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">12:00–12:20</div>
-          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
-          <div class="prog-content">
-            <strong>High-Risk HR+ Breast Cancer After Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">12:20–12:50</div>
-          <div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div>
-          <div class="prog-content">
-            <strong>Expert Panel &amp; Audience Vote: Optimising Type and Duration of Adjuvant Endocrine Therapy in HR+ LABC — Challenges in LMICs</strong>
-            <div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div>
-          </div>
-        </div>
-        <div class="break-row"><span class="break-icon">🍽</span><span>Lunch Break · 12:50–14:00</span></div>
+        <div class="session-header" style="background:var(--s4);"><div class="session-num">S4</div><div class="session-title-wrap"><h4>Session 4 · Locally Advanced Breast Cancer</h4><p>Neoadjuvant-to-Adjuvant Treatment Continuum: High-Level Evidence</p></div></div>
+        <div class="prog-item"><div class="prog-time">08:30–08:50</div><div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 4</span></div><div class="prog-content"><strong>Biomarker-Guided Treatment Strategy Across the Neoadjuvant-to-Adjuvant Continuum According to Breast Cancer Molecular Subtypes</strong><div class="prog-speaker">Speaker TBC · Sponsored Session</div></div></div>
+        <div style="background:#fff4f4;padding:7px 18px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c8390a;border-top:1px solid var(--border);">🎗 HER2-Positive Stage II–III</div>
+        <div class="prog-item"><div class="prog-time">08:50–09:10</div><div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div><div class="prog-content"><strong>Pathological Complete Response After Optimal Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">09:10–09:30</div><div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div><div class="prog-content"><strong>Invasive Residual Disease After Optimal Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">09:30–10:00</div><div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div><div class="prog-content"><strong>Expert Panel &amp; Audience Vote: Optimising Neoadjuvant-to-Adjuvant Strategy in HER2+ LABC — Minimal Requirements vs. Optimal Care in LMICs</strong><div class="prog-speaker">Discussant: J. Gligorov (France) + Audience Interactive Vote</div></div></div>
+        <div class="break-row"><span>☕</span><span>Coffee Break · 10:00–10:30</span></div>
+        <div style="background:#f4f0ff;padding:7px 18px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#5b21b6;border-top:1px solid var(--border);">🔵 Triple-Negative Stage II–III</div>
+        <div class="prog-item"><div class="prog-time">10:30–10:50</div><div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div><div class="prog-content"><strong>Pathological Complete Response After Optimal Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">10:50–11:10</div><div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div><div class="prog-content"><strong>Invasive Residual Disease After Optimal Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">11:10–11:40</div><div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div><div class="prog-content"><strong>Expert Panel &amp; Audience Vote: Optimising Neoadjuvant-to-Adjuvant Strategy in TNBC — Minimal Requirements vs. Optimal Care in LMICs</strong><div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div></div></div>
+        <div style="background:#f0fdf4;padding:7px 18px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#065f46;border-top:1px solid var(--border);">🌿 Hormone Receptor-Positive Stage II–III</div>
+        <div class="prog-item"><div class="prog-time">11:40–12:00</div><div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div><div class="prog-content"><strong>High-Risk HR+ Breast Cancer Without Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">12:00–12:20</div><div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div><div class="prog-content"><strong>High-Risk HR+ Breast Cancer After Neoadjuvant Therapy: Standard of Care in the Adjuvant Setting</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">12:20–12:50</div><div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div><div class="prog-content"><strong>Expert Panel &amp; Audience Vote: Optimising Type and Duration of Adjuvant Endocrine Therapy in HR+ LABC — Challenges in LMICs</strong><div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div></div></div>
+        <div class="break-row"><span>🍽</span><span>Lunch Break · 12:50–14:00</span></div>
       </div>
-
-      <!-- Session 5 -->
       <div class="session-block">
-        <div class="session-header" style="background:var(--s5-color);">
-          <div class="session-num" style="background:rgba(255,255,255,0.2);">S5</div>
-          <div class="session-title-wrap">
-            <h4>Session 5 · Non-Small Cell Lung Cancer (NSCLC)</h4>
-            <p>Neoadjuvant-to-Adjuvant Treatment Continuum: High-Level Evidence</p>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">14:00–14:30</div>
-          <div class="prog-type-badge"><span class="type-tag type-symposium">Symposium</span></div>
-          <div class="prog-content">
-            <strong>Industry Symposium</strong>
-            <div class="prog-sub">Sponsored Session</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">14:30–14:50</div>
-          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
-          <div class="prog-content">
-            <strong>NSCLC Stage IB–IIIA: Combined Chemo-Immunotherapy in the Neoadjuvant and Adjuvant Settings — Standard of Care</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">14:50–15:10</div>
-          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
-          <div class="prog-content">
-            <strong>NSCLC Stage IB–IIIA: Surgical Considerations Following Neoadjuvant Chemo-Immunotherapy</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">15:10–15:40</div>
-          <div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div>
-          <div class="prog-content">
-            <strong>Expert Panel &amp; Audience Vote: Optimising Immunotherapy Type and Duration in NSCLC — Challenges and Adaptations for LMICs</strong>
-            <div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">15:40–16:00</div>
-          <div class="prog-type-badge"><span class="type-tag type-symposium">Symposium</span></div>
-          <div class="prog-content">
-            <strong>Industry Symposium: Anti-PD-1/Anti-PD-L1 Therapy</strong>
-            <div class="prog-sub">Sponsored Session</div>
-          </div>
-        </div>
-        <div class="break-row"><span class="break-icon">☕</span><span>Coffee Break · 16:00–16:30</span></div>
+        <div class="session-header" style="background:var(--s5);"><div class="session-num">S5</div><div class="session-title-wrap"><h4>Session 5 · Non-Small Cell Lung Cancer (NSCLC)</h4><p>Neoadjuvant-to-Adjuvant Treatment Continuum: High-Level Evidence</p></div></div>
+        <div class="prog-item"><div class="prog-time">14:00–14:30</div><div class="prog-type-badge"><span class="type-tag type-symposium">Symposium</span></div><div class="prog-content"><strong>Industry Symposium</strong><div class="prog-sub">Sponsored Session</div></div></div>
+        <div class="prog-item"><div class="prog-time">14:30–14:50</div><div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div><div class="prog-content"><strong>NSCLC Stage IB–IIIA: Combined Chemo-Immunotherapy in the Neoadjuvant and Adjuvant Settings — Standard of Care</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">14:50–15:10</div><div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div><div class="prog-content"><strong>NSCLC Stage IB–IIIA: Surgical Considerations Following Neoadjuvant Chemo-Immunotherapy</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">15:10–15:40</div><div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div><div class="prog-content"><strong>Expert Panel &amp; Audience Vote: Optimising Immunotherapy Type and Duration in NSCLC — Challenges and Adaptations for LMICs</strong><div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div></div></div>
+        <div class="prog-item"><div class="prog-time">15:40–16:00</div><div class="prog-type-badge"><span class="type-tag type-symposium">Symposium</span></div><div class="prog-content"><strong>Industry Symposium: Anti-PD-1/Anti-PD-L1 Therapy</strong><div class="prog-sub">Sponsored Session</div></div></div>
+        <div class="break-row"><span>☕</span><span>Coffee Break · 16:00–16:30</span></div>
       </div>
-
-      <!-- Session 6 -->
       <div class="session-block">
-        <div class="session-header" style="background:var(--s6-color);">
-          <div class="session-num" style="background:rgba(255,255,255,0.2);">S6</div>
-          <div class="session-title-wrap">
-            <h4>Session 6 · Resectable Melanoma</h4>
-            <p>Neoadjuvant-to-Adjuvant Treatment Continuum: High-Level Evidence</p>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">16:30–16:50</div>
-          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
-          <div class="prog-content">
-            <strong>Stage III Resectable Melanoma: Immunotherapy in the Neoadjuvant-to-Adjuvant Continuum — Standard of Care</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">16:50–17:10</div>
-          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
-          <div class="prog-content">
-            <strong>Stage III Resectable Melanoma: Criteria for Immunotherapy Optimisation and Alternative Therapeutic Options</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">17:10–17:40</div>
-          <div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div>
-          <div class="prog-content">
-            <strong>Expert Panel &amp; Audience Vote: Optimising Immunotherapy Type and Duration in Resectable Melanoma — Challenges and Adaptations for LMICs</strong>
-            <div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">17:40–18:00</div>
-          <div class="prog-type-badge"><span class="type-tag type-symposium">Symposium</span></div>
-          <div class="prog-content">
-            <strong>Industry Symposium</strong>
-            <div class="prog-sub">Sponsored Session</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">18:00–18:30</div>
-          <div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 5</span></div>
-          <div class="prog-content">
-            <strong>Closing Keynote Lecture — Day 2</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="social-row"><span class="break-icon">🍽</span><span>Meet-the-Expert Dinner · 20:00</span></div>
+        <div class="session-header" style="background:var(--s6);"><div class="session-num">S6</div><div class="session-title-wrap"><h4>Session 6 · Resectable Melanoma</h4><p>Neoadjuvant-to-Adjuvant Treatment Continuum: High-Level Evidence</p></div></div>
+        <div class="prog-item"><div class="prog-time">16:30–16:50</div><div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div><div class="prog-content"><strong>Stage III Resectable Melanoma: Immunotherapy in the Neoadjuvant-to-Adjuvant Continuum — Standard of Care</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">16:50–17:10</div><div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div><div class="prog-content"><strong>Stage III Resectable Melanoma: Criteria for Immunotherapy Optimisation and Alternative Therapeutic Options</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">17:10–17:40</div><div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div><div class="prog-content"><strong>Expert Panel &amp; Audience Vote: Optimising Immunotherapy Type and Duration in Resectable Melanoma — Challenges and Adaptations for LMICs</strong><div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div></div></div>
+        <div class="prog-item"><div class="prog-time">17:40–18:00</div><div class="prog-type-badge"><span class="type-tag type-symposium">Symposium</span></div><div class="prog-content"><strong>Industry Symposium</strong><div class="prog-sub">Sponsored Session</div></div></div>
+        <div class="prog-item"><div class="prog-time">18:00–18:30</div><div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 5</span></div><div class="prog-content"><strong>Closing Keynote Lecture — Day 2</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="social-row"><span>🍽</span><span>Meet-the-Expert Dinner · 20:00</span></div>
       </div>
     </div>
-
     <!-- DAY 3 -->
     <div class="prog-day" id="day3">
-      <div class="day-header">
-        <div class="day-header-left">
-          <h3>Friday, 14 November 2026</h3>
-          <p>Morning Session · Main Room</p>
-        </div>
-        <div class="day-header-badge">Bladder Cancer &amp; AROME Oral Communications</div>
-      </div>
-
-      <!-- Session 7 -->
+      <div class="day-header"><div class="day-header-left"><h3>Friday, 14 November 2026</h3><p>Morning Session · Main Room</p></div><div class="day-header-badge">Bladder Cancer &amp; AROME Oral Communications</div></div>
       <div class="session-block">
-        <div class="session-header" style="background:var(--s7-color);">
-          <div class="session-num" style="background:rgba(255,255,255,0.2);">S7</div>
-          <div class="session-title-wrap">
-            <h4>Session 7 · Muscle-Invasive Bladder Cancer</h4>
-            <p>Neoadjuvant-to-Adjuvant Treatment Continuum: High-Level Evidence</p>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">08:30–08:50</div>
-          <div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 6</span></div>
-          <div class="prog-content">
-            <strong>Robotic Surgery in Urothelial Cancers: State of the Art</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-            <div class="prog-sub">Sponsored Session</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">08:50–09:10</div>
-          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
-          <div class="prog-content">
-            <strong>High-Risk Bladder Cancer: Standard of Care in the Neoadjuvant-to-Adjuvant Continuum</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">09:10–09:30</div>
-          <div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div>
-          <div class="prog-content">
-            <strong>Post-Cystectomy Management: Patient Selection and Optimisation of Adjuvant Therapy in the Immunotherapy Era</strong>
-            <div class="prog-speaker">Speaker TBC</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">09:30–10:00</div>
-          <div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div>
-          <div class="prog-content">
-            <strong>Expert Panel &amp; Audience Vote: Optimising the Neoadjuvant-to-Adjuvant Strategy in High-Risk Bladder Cancer — Challenges and Adaptations for LMICs</strong>
-            <div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">10:00–10:30</div>
-          <div class="prog-type-badge"><span class="type-tag type-symposium">Symposium</span></div>
-          <div class="prog-content">
-            <strong>Industry Symposium</strong>
-            <div class="prog-sub">Sponsored Session</div>
-          </div>
-        </div>
-        <div class="break-row"><span class="break-icon">☕</span><span>Coffee Break · 10:30–11:00</span></div>
+        <div class="session-header" style="background:var(--s7);"><div class="session-num">S7</div><div class="session-title-wrap"><h4>Session 7 · Muscle-Invasive Bladder Cancer</h4><p>Neoadjuvant-to-Adjuvant Treatment Continuum: High-Level Evidence</p></div></div>
+        <div class="prog-item"><div class="prog-time">08:30–08:50</div><div class="prog-type-badge"><span class="type-tag type-keynote">Keynote 6</span></div><div class="prog-content"><strong>Robotic Surgery in Urothelial Cancers: State of the Art</strong><div class="prog-speaker">Speaker TBC · Sponsored Session</div></div></div>
+        <div class="prog-item"><div class="prog-time">08:50–09:10</div><div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div><div class="prog-content"><strong>High-Risk Bladder Cancer: Standard of Care in the Neoadjuvant-to-Adjuvant Continuum</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">09:10–09:30</div><div class="prog-type-badge"><span class="type-tag type-lecture">Lecture</span></div><div class="prog-content"><strong>Post-Cystectomy Management: Patient Selection and Optimisation of Adjuvant Therapy in the Immunotherapy Era</strong><div class="prog-speaker">Speaker TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">09:30–10:00</div><div class="prog-type-badge"><span class="type-tag type-panel">Panel</span></div><div class="prog-content"><strong>Expert Panel &amp; Audience Vote: Optimising Neoadjuvant-to-Adjuvant Strategy in High-Risk Bladder Cancer — Challenges and Adaptations for LMICs</strong><div class="prog-speaker">Discussant TBC + Audience Interactive Vote</div></div></div>
+        <div class="prog-item"><div class="prog-time">10:00–10:30</div><div class="prog-type-badge"><span class="type-tag type-symposium">Symposium</span></div><div class="prog-content"><strong>Industry Symposium</strong><div class="prog-sub">Sponsored Session</div></div></div>
+        <div class="break-row"><span>☕</span><span>Coffee Break · 10:30–11:00</span></div>
       </div>
-
-      <!-- Session 8 -->
       <div class="session-block">
-        <div class="session-header" style="background:var(--s8-color);">
-          <div class="session-num" style="background:rgba(255,255,255,0.2);">S8</div>
-          <div class="session-title-wrap">
-            <h4>Session 8 · AROME Junior Proffered Oral Communications</h4>
-            <p>Plenary Session · 10 Communications · 11:00–12:40</p>
-          </div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">11:00–11:10</div>
-          <div class="prog-type-badge"><span class="type-tag type-oral">C01</span></div>
-          <div class="prog-content"><strong>Oral Communication 01</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">11:10–11:20</div>
-          <div class="prog-type-badge"><span class="type-tag type-oral">C02</span></div>
-          <div class="prog-content"><strong>Oral Communication 02</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">11:20–11:30</div>
-          <div class="prog-type-badge"><span class="type-tag type-oral">C03</span></div>
-          <div class="prog-content"><strong>Oral Communication 03</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">11:30–11:40</div>
-          <div class="prog-type-badge"><span class="type-tag type-oral">C04</span></div>
-          <div class="prog-content"><strong>Oral Communication 04</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">11:40–11:50</div>
-          <div class="prog-type-badge"><span class="type-tag type-oral">C05</span></div>
-          <div class="prog-content"><strong>Oral Communication 05</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">11:50–12:00</div>
-          <div class="prog-type-badge"><span class="type-tag type-oral">C06</span></div>
-          <div class="prog-content"><strong>Oral Communication 06</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">12:00–12:10</div>
-          <div class="prog-type-badge"><span class="type-tag type-oral">C07</span></div>
-          <div class="prog-content"><strong>Oral Communication 07</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">12:10–12:20</div>
-          <div class="prog-type-badge"><span class="type-tag type-oral">C08</span></div>
-          <div class="prog-content"><strong>Oral Communication 08</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">12:20–12:30</div>
-          <div class="prog-type-badge"><span class="type-tag type-oral">C09</span></div>
-          <div class="prog-content"><strong>Oral Communication 09</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
-        </div>
-        <div class="prog-item">
-          <div class="prog-time">12:30–12:40</div>
-          <div class="prog-type-badge"><span class="type-tag type-oral">C10</span></div>
-          <div class="prog-content"><strong>Oral Communication 10</strong><div class="prog-speaker">Presenter TBC · Title TBC</div></div>
-        </div>
+        <div class="session-header" style="background:var(--s8);"><div class="session-num">S8</div><div class="session-title-wrap"><h4>Session 8 · AROME Junior Proffered Oral Communications</h4><p>Plenary Session · 10 Communications · 11:00–12:40</p></div></div>
+        <div class="prog-item"><div class="prog-time">11:00–11:10</div><div class="prog-type-badge"><span class="type-tag type-oral">C01</span></div><div class="prog-content"><strong>Oral Communication 01</strong><div class="prog-speaker">Presenter TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">11:10–11:20</div><div class="prog-type-badge"><span class="type-tag type-oral">C02</span></div><div class="prog-content"><strong>Oral Communication 02</strong><div class="prog-speaker">Presenter TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">11:20–11:30</div><div class="prog-type-badge"><span class="type-tag type-oral">C03</span></div><div class="prog-content"><strong>Oral Communication 03</strong><div class="prog-speaker">Presenter TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">11:30–11:40</div><div class="prog-type-badge"><span class="type-tag type-oral">C04</span></div><div class="prog-content"><strong>Oral Communication 04</strong><div class="prog-speaker">Presenter TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">11:40–11:50</div><div class="prog-type-badge"><span class="type-tag type-oral">C05</span></div><div class="prog-content"><strong>Oral Communication 05</strong><div class="prog-speaker">Presenter TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">11:50–12:00</div><div class="prog-type-badge"><span class="type-tag type-oral">C06</span></div><div class="prog-content"><strong>Oral Communication 06</strong><div class="prog-speaker">Presenter TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">12:00–12:10</div><div class="prog-type-badge"><span class="type-tag type-oral">C07</span></div><div class="prog-content"><strong>Oral Communication 07</strong><div class="prog-speaker">Presenter TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">12:10–12:20</div><div class="prog-type-badge"><span class="type-tag type-oral">C08</span></div><div class="prog-content"><strong>Oral Communication 08</strong><div class="prog-speaker">Presenter TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">12:20–12:30</div><div class="prog-type-badge"><span class="type-tag type-oral">C09</span></div><div class="prog-content"><strong>Oral Communication 09</strong><div class="prog-speaker">Presenter TBC</div></div></div>
+        <div class="prog-item"><div class="prog-time">12:30–12:40</div><div class="prog-type-badge"><span class="type-tag type-oral">C10</span></div><div class="prog-content"><strong>Oral Communication 10</strong><div class="prog-speaker">Presenter TBC</div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABSTRACT -->
+<!-- ABSTRACT SUBMISSION -->
 <section class="abstract-section" id="abstracts">
   <div class="abstract-inner">
     <div class="section-header">
       <div class="section-tag" style="color:var(--gold-light);">Abstract Submission</div>
       <h2 style="color:#fff;">Submit Your Abstract</h2>
-      <p style="color:rgba(255,255,255,0.6);">AROME Junior investigators are invited to submit abstracts for oral communications at eXIOME 2026.</p>
+      <p style="color:rgba(255,255,255,.6);">AROME Junior investigators are invited to submit abstracts for oral or poster presentation at eXIOME 2026.</p>
     </div>
-    <div class="abstract-grid">
-      <div class="abstract-card">
-        <h4>Format &amp; Requirements</h4>
+
+    <div class="abstract-top">
+      <div class="ab-card">
+        <h4>📄 Formal Requirements</h4>
         <ul>
-          <li>Word document (.doc/.docx)</li>
-          <li>Maximum 350 words</li>
-          <li>Times New Roman, 12pt, 1.5 spacing</li>
-          <li>Title (max 70 characters)</li>
-          <li>Authors + affiliations</li>
-          <li>Structured: Background, Methods, Results, Conclusions</li>
-          <li>No images, tables or references</li>
+          <li>Maximum <strong style="color:#fff;">350 words</strong></li>
+          <li>Font: Times New Roman, 12pt, 1.5 spacing</li>
+          <li>Maximum <strong style="color:#fff;">1 page</strong> (including figures &amp; references)</li>
+          <li>File format: Microsoft Word (.doc / .docx)</li>
+          <li>Title: max 70 characters</li>
+        </ul>
+        <h4 style="margin-top:18px;">📐 Formatting Details</h4>
+        <ul>
+          <li>Margins: Top/Bottom 2.5 cm · Left/Right 1.5 cm · Gutter 1 cm</li>
+          <li>Title: 14pt, Bold, centered</li>
+          <li>Authors: 12pt, centered, underline presenting author</li>
+          <li>Affiliations &amp; Email: 11pt, centered</li>
+          <li>Main text: 12pt, justified</li>
+          <li>References: 11pt, square brackets [1]</li>
         </ul>
       </div>
-      <div class="abstract-card">
-        <h4>Scientific Themes</h4>
-        <ul>
-          <li>Locally advanced cancers in LMICs</li>
-          <li>Neoadjuvant-to-adjuvant treatment continuum</li>
-          <li>Artificial intelligence in oncology</li>
-          <li>Clinical cases with therapeutic innovation</li>
-        </ul>
-        <h4 style="margin-top:16px;">Selection Criteria</h4>
-        <ul>
-          <li>Scientific quality &amp; originality</li>
-          <li>Clinical relevance for LMICs</li>
-          <li>Clarity of presentation</li>
-        </ul>
+      <div class="ab-card">
+        <h4>🎤 Abstract Structure</h4>
+        <div class="struct-grid">
+          <div class="struct-item"><div class="struct-num">1</div><div class="struct-label">Title</div></div>
+          <div class="struct-item"><div class="struct-num">2</div><div class="struct-label">Introduction</div></div>
+          <div class="struct-item"><div class="struct-num">3</div><div class="struct-label">Objectives</div></div>
+          <div class="struct-item"><div class="struct-num">4</div><div class="struct-label">Material &amp; Methods</div></div>
+          <div class="struct-item"><div class="struct-num">5</div><div class="struct-label">Results</div></div>
+          <div class="struct-item"><div class="struct-num">6</div><div class="struct-label">Conclusion</div></div>
+        </div>
+        <div class="struct-pres">
+          <p style="margin-bottom:8px;"><strong>Type of presentation</strong> (to specify in your email):</p>
+          <p>🎙 Oral presentation only</p>
+          <p>🖼 Poster presentation only</p>
+          <p>🎙/🖼 Oral or Poster</p>
+        </div>
       </div>
     </div>
-    <div class="abstract-deadline">
-      <div class="date">26 October 2026</div>
+
+    <div class="ab-topics">
+      <h4>Accepted Topics — Please indicate in your abstract title</h4>
+      <div class="topics-grid">
+        <div class="topic-card">
+          <div class="topic-header"><span>🎗 Breast Cancers (BC)</span></div>
+          <ul class="topic-items">
+            <li>Luminal A BC</li>
+            <li>Luminal B BC</li>
+            <li>Triple Negative BC</li>
+            <li>HER2-Positive BC</li>
+            <li>Neoadjuvant locoregional therapy</li>
+            <li>Others translational study</li>
+          </ul>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header"><span>🫁 Lung Cancers</span></div>
+          <ul class="topic-items">
+            <li>Neoadjuvant therapeutic strategy</li>
+            <li>Locoregional therapy</li>
+            <li>Immunotherapy and new drugs</li>
+            <li>Others translational study</li>
+          </ul>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header"><span>🔬 Melanoma</span></div>
+          <ul class="topic-items">
+            <li>Immunotherapy and new drugs</li>
+            <li>Locoregional therapy</li>
+            <li>Others translational study</li>
+          </ul>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header"><span>🫀 Bladder Cancers</span></div>
+          <ul class="topic-items">
+            <li>Neoadjuvant therapy</li>
+            <li>Surgery / Radiotherapy</li>
+            <li>Immunotherapy and new drugs</li>
+            <li>Others translational study</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ab-deadline">
+      <div class="date">Monday, 26 October 2026</div>
       <div class="label">Abstract Submission Deadline</div>
     </div>
-    <div class="abstract-email">
-      <p style="color:rgba(255,255,255,0.6);font-size:13px;margin-bottom:8px;">Send your abstract by email to:</p>
+    <div class="ab-email" style="margin-top:20px;">
+      <p style="color:rgba(255,255,255,.55);font-size:12px;margin-bottom:10px;">Send your abstract (.doc / .docx) by email to:</p>
       <a href="mailto:yazid.belkacemi@aphp.fr">yazid.belkacemi@aphp.fr</a>
-      <span style="color:rgba(255,255,255,0.4);font-size:13px;"> (CC: </span>
+      <span> &nbsp;·&nbsp; CC: </span>
       <a href="mailto:fadila.chekiri@aphp.fr">fadila.chekiri@aphp.fr</a>
-      <span style="color:rgba(255,255,255,0.4);font-size:13px;">)</span>
     </div>
   </div>
 </section>
 
-<!-- PRACTICAL INFO -->
+<!-- PRACTICAL -->
 <section id="infos">
   <div class="section-inner">
-    <div class="section-header">
-      <div class="section-tag">Practical Information</div>
-      <h2>Venue &amp; Logistics</h2>
-    </div>
+    <div class="section-header"><div class="section-tag">Practical Information</div><h2>Venue &amp; Logistics</h2></div>
     <div class="practical-grid">
-      <div class="practical-card">
-        <div class="practical-icon">🏨</div>
-        <h4>Venue</h4>
-        <p><strong>Marmara Taksim Hotel</strong><br>Taksim Meydani, Istanbul, Turkey<br><br>12–14 November 2026</p>
-      </div>
-      <div class="practical-card">
-        <div class="practical-icon">✈️</div>
-        <h4>Getting There</h4>
-        <p>Istanbul is served by two international airports:<br><strong>Istanbul Airport (IST)</strong> — main hub<br><strong>Sabiha Gökçen (SAW)</strong> — Asian side<br><br>The hotel is centrally located near Taksim Square.</p>
-      </div>
-      <div class="practical-card">
-        <div class="practical-icon">📋</div>
-        <h4>Registration</h4>
-        <p>Registration details will be communicated shortly.<br><br>For enquiries:<br><a href="mailto:hande@uniconmice.com">hande@uniconmice.com</a></p>
-      </div>
-      <div class="practical-card">
-        <div class="practical-icon">📧</div>
-        <h4>Contact</h4>
-        <p>Scientific:<br><a href="mailto:yazid.belkacemi@aphp.fr">yazid.belkacemi@aphp.fr</a><br><br>Organisation:<br><a href="mailto:fadila.chekiri@aphp.fr">fadila.chekiri@aphp.fr</a></p>
-      </div>
+      <div class="practical-card"><div class="practical-icon">🏨</div><h4>Venue</h4><p><strong>Marmara Taksim Hotel</strong><br>Taksim Meydani, Istanbul, Turkey<br><br>12–14 November 2026</p></div>
+      <div class="practical-card"><div class="practical-icon">✈️</div><h4>Getting There</h4><p><strong>Istanbul Airport (IST)</strong> — main hub<br><strong>Sabiha Gökçen (SAW)</strong> — Asian side<br><br>Hotel is near Taksim Square, city centre.</p></div>
+      <div class="practical-card"><div class="practical-icon">📋</div><h4>Registration</h4><p>Registration details communicated shortly.<br><br>Enquiries:<br><a href="mailto:hande@uniconmice.com">hande@uniconmice.com</a></p></div>
+      <div class="practical-card"><div class="practical-icon">📧</div><h4>Contact</h4><p>Scientific:<br><a href="mailto:yazid.belkacemi@aphp.fr">yazid.belkacemi@aphp.fr</a><br><br>Organisation:<br><a href="mailto:fadila.chekiri@aphp.fr">fadila.chekiri@aphp.fr</a></p></div>
     </div>
   </div>
 </section>
@@ -851,144 +481,43 @@ footer{background:var(--navy);padding:40px 24px;}
 <!-- ORGANISATION -->
 <section class="orga-section" id="organisation">
   <div class="section-inner">
-    <div class="section-header">
-      <div class="section-tag">Organisation</div>
-      <h2>Scientific Committee &amp; Logistics</h2>
-    </div>
+    <div class="section-header"><div class="section-tag">Organisation</div><h2>Scientific Committee &amp; Logistics</h2></div>
     <div class="orga-grid">
-      <div class="orga-card">
-        <div class="orga-name">Yazid Belkacemi</div>
-        <div class="orga-country">France</div>
-        <div class="orga-role">Scientific Chair</div>
-      </div>
-      <div class="orga-card">
-        <div class="orga-name">Abdelkader Bounedjar</div>
-        <div class="orga-country">Algeria</div>
-        <div class="orga-role">Co-Chair</div>
-      </div>
-      <div class="orga-card">
-        <div class="orga-name">Joseph Gligorov</div>
-        <div class="orga-country">France</div>
-        <div class="orga-role">Co-Chair</div>
-      </div>
-      <div class="orga-card">
-        <div class="orga-name">Rachid Samlali</div>
-        <div class="orga-country">Morocco</div>
-        <div class="orga-role">Co-Chair</div>
-      </div>
-      <div class="orga-card">
-        <div class="orga-name">Berna Atalar</div>
-        <div class="orga-country">Turkey</div>
-        <div class="orga-role">Co-Chair</div>
-      </div>
-      <div class="orga-card">
-        <div class="orga-name">Enis Özyar</div>
-        <div class="orga-country">Turkey</div>
-        <div class="orga-role">Co-Chair</div>
-      </div>
-      <div class="orga-card">
-        <div class="orga-name">Serap Turkan</div>
-        <div class="orga-country">Turkey</div>
-        <div class="orga-role">Co-Chair</div>
-      </div>
+      <div class="orga-card"><div class="orga-name">Yazid Belkacemi</div><div class="orga-country">France</div><div class="orga-role">Scientific Chair</div></div>
+      <div class="orga-card"><div class="orga-name">Abdelkader Bounedjar</div><div class="orga-country">Algeria</div><div class="orga-role">Co-Chair</div></div>
+      <div class="orga-card"><div class="orga-name">Joseph Gligorov</div><div class="orga-country">France</div><div class="orga-role">Co-Chair</div></div>
+      <div class="orga-card"><div class="orga-name">Rachid Samlali</div><div class="orga-country">Morocco</div><div class="orga-role">Co-Chair</div></div>
+      <div class="orga-card"><div class="orga-name">Berna Atalar</div><div class="orga-country">Turkey</div><div class="orga-role">Co-Chair</div></div>
+      <div class="orga-card"><div class="orga-name">Enis Özyar</div><div class="orga-country">Turkey</div><div class="orga-role">Co-Chair</div></div>
+      <div class="orga-card"><div class="orga-name">Serap Turkan</div><div class="orga-country">Turkey</div><div class="orga-role">Co-Chair</div></div>
     </div>
     <div class="logistics-box">
-      <div class="unicon-badge"><span>UNICON</span></div>
-      <h4>Congress Logistics — UNICON MICE</h4>
-      <p>For all logistical enquiries regarding accommodation, transfers, and on-site organisation:<br>
-      <strong>Hande Boyacioglu</strong> · <a href="mailto:hande@uniconmice.com">hande@uniconmice.com</a></p>
+      <div class="logistics-logo"><img src="data:image/png;base64,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" alt="UNICON"></div>
+      <div class="logistics-text"><h4>Congress Logistics — UNICON MICE</h4><p>Hande Boyacioglu · <a href="mailto:hande@uniconmice.com">hande@uniconmice.com</a></p></div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-inner" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;max-width:1100px;margin:0 auto;">
-    <div class="footer-logo">
-      <div class="logo-badge">eXIOME</div>
+  <div class="footer-inner">
+    <div class="footer-logos">
+      <div class="footer-logo-pill"><img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAFqA/gDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AIyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//9k=" alt="eXIOME"></div>
+      <div class="footer-logo-pill unicon"><img src="data:image/png;base64,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" alt="UNICON"></div>
     </div>
-    <div class="footer-info">
-      eXpert International Oncology MEeting · Istanbul, Turkey · 12–14 November 2026<br>
-      <a href="mailto:yazid.belkacemi@aphp.fr">yazid.belkacemi@aphp.fr</a> · 
-      <a href="mailto:hande@uniconmice.com">hande@uniconmice.com</a>
-    </div>
-    <div style="font-size:11px;color:rgba(255,255,255,0.3);">© 2026 eXIOME</div>
+    <div class="footer-info">eXpert International Oncology MEeting · Istanbul, Turkey · 12–14 November 2026<br><a href="mailto:yazid.belkacemi@aphp.fr">yazid.belkacemi@aphp.fr</a> · <a href="mailto:hande@uniconmice.com">hande@uniconmice.com</a></div>
+    <div style="font-size:11px;color:rgba(255,255,255,.25);">© 2026 eXIOME</div>
   </div>
 </footer>
 
-<!-- ADMIN LOGIN MODAL -->
-<div class="admin-overlay" id="adminOverlay">
-  <div class="admin-modal">
-    <div class="admin-modal-header">
-      <h3>Administration</h3>
-      <p>Accès réservé aux organisateurs</p>
-    </div>
-    <div class="admin-modal-body">
-      <label>Mot de passe</label>
-      <input type="password" id="adminPass" placeholder="••••••••" onkeypress="if(event.key==='Enter')checkAdmin()">
-      <div class="admin-error" id="adminError">Mot de passe incorrect.</div>
-    </div>
-    <div class="admin-modal-footer">
-      <button class="btn-modal-primary" onclick="checkAdmin()">Accéder</button>
-      <button class="btn-modal-cancel" onclick="closeAdminModal()">Annuler</button>
-    </div>
-  </div>
-</div>
-
-<!-- ADMIN PANEL -->
-<div class="admin-panel-overlay" id="adminPanel">
-  <div class="admin-panel">
-    <h2>Panneau Administration</h2>
-    <p class="subtitle">Bienvenue. Utilisez ce panneau pour noter les modifications à apporter au site.</p>
-    <div class="admin-section">
-      <h4>📝 Notes de modification</h4>
-      <p>Notez ici les changements à transmettre pour mise à jour du site :</p>
-      <textarea placeholder="Ex: Ajouter le nom du conférencier pour Keynote 1 : Dr. Smith (Harvard)..."></textarea>
-      <button class="btn-save">Enregistrer les notes</button>
-      <button class="btn-close-admin" onclick="closeAdminPanel()">Fermer</button>
-    </div>
-    <div class="admin-section">
-      <h4>🔑 Mot de passe admin</h4>
-      <p>Mot de passe actuel : <strong>admin2026</strong><br>Pour le modifier, contactez le webmaster.</p>
-    </div>
-    <div class="admin-section">
-      <h4>📧 Contact webmaster</h4>
-      <p>Pour toute modification du site, envoyez vos demandes à :<br>
-      <strong>fadila.chekiri@aphp.fr</strong></p>
-    </div>
-  </div>
-</div>
-
+<div class="admin-overlay" id="adminOv"><div class="admin-modal"><div class="admin-hdr"><h3>Administration</h3><p>Accès réservé aux organisateurs</p></div><div class="admin-body"><label>Mot de passe</label><input type="password" id="adminPw" placeholder="••••••••" onkeypress="if(event.key==='Enter')checkAdmin()"><div class="admin-err" id="adminErr">Mot de passe incorrect.</div></div><div class="admin-foot"><button class="btn-go" onclick="checkAdmin()">Accéder</button><button class="btn-cancel" onclick="closeAdmin()">Annuler</button></div></div></div>
+<div class="admin-panel-ov" id="adminPanel"><div class="adm-panel"><h2>Panneau Administration</h2><p style="font-size:12px;color:var(--gray);">Bienvenue. Notez les modifications à apporter au site.</p><div class="adm-sec"><h4>📝 Notes</h4><p>Modifications à transmettre :</p><textarea placeholder="Ex: Keynote 1 — Dr. Smith (Harvard)..."></textarea><button class="btn-sv">Enregistrer</button><button class="btn-cls" onclick="closePanel()">Fermer</button></div><div class="adm-sec"><h4>🔑 Mot de passe</h4><p>Actuel : <strong>admin2026</strong></p></div><div class="adm-sec"><h4>📧 Webmaster</h4><p><strong>fadila.chekiri@aphp.fr</strong></p></div></div></div>
 <script>
-function showDay(n,btn){
-  document.querySelectorAll('.prog-day').forEach(d=>d.classList.remove('active'));
-  document.querySelectorAll('.prog-tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById('day'+n).classList.add('active');
-  btn.classList.add('active');
-}
-function openAdmin(){
-  document.getElementById('adminOverlay').classList.add('open');
-  setTimeout(()=>document.getElementById('adminPass').focus(),100);
-}
-function closeAdminModal(){
-  document.getElementById('adminOverlay').classList.remove('open');
-  document.getElementById('adminPass').value='';
-  document.getElementById('adminError').style.display='none';
-}
-function checkAdmin(){
-  if(document.getElementById('adminPass').value==='admin2026'){
-    closeAdminModal();
-    document.getElementById('adminPanel').classList.add('open');
-  } else {
-    document.getElementById('adminError').style.display='block';
-  }
-}
-function closeAdminPanel(){
-  document.getElementById('adminPanel').classList.remove('open');
-}
-document.getElementById('adminOverlay').addEventListener('click',function(e){
-  if(e.target===this)closeAdminModal();
-});
+function showDay(n,btn){document.querySelectorAll('.prog-day').forEach(d=>d.classList.remove('active'));document.querySelectorAll('.prog-tab').forEach(t=>t.classList.remove('active'));document.getElementById('day'+n).classList.add('active');btn.classList.add('active');}
+function openAdmin(){document.getElementById('adminOv').classList.add('open');setTimeout(()=>document.getElementById('adminPw').focus(),100);}
+function closeAdmin(){document.getElementById('adminOv').classList.remove('open');document.getElementById('adminPw').value='';document.getElementById('adminErr').style.display='none';}
+function checkAdmin(){if(document.getElementById('adminPw').value==='admin2026'){closeAdmin();document.getElementById('adminPanel').classList.add('open');}else{document.getElementById('adminErr').style.display='block';}}
+function closePanel(){document.getElementById('adminPanel').classList.remove('open');}
+document.getElementById('adminOv').addEventListener('click',function(e){if(e.target===this)closeAdmin();});
 </script>
 </body>
 </html>

@@ -21,9 +21,9 @@ body{font-family:'DM Sans',sans-serif;color:var(--navy);background:#fff;}
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,151,42,0.3);}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px;}
 .nav-left{display:flex;align-items:center;gap:14px;}
-.nav-logo-pill{background:rgba(255,255,255,.92);border-radius:7px;padding:5px 12px;display:flex;align-items:center;}
+.nav-logo-pill{display:flex;align-items:center;}
 .nav-logo-pill img{height:32px;display:block;}
-.nav-logo-pill.unicon img{height:24px;}
+.nav-logo-pill.unicon{background:rgba(255,255,255,.88);border-radius:7px;padding:5px 12px;} .nav-logo-pill.unicon img{height:24px;}
 .nav-sep{width:1px;height:28px;background:rgba(255,255,255,.18);}
 .nav-links{display:flex;gap:8px;align-items:center;}
 .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:13px;font-weight:500;padding:8px 14px;border-radius:6px;transition:all .2s;}
@@ -36,7 +36,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.
 .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c8972a' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");}
 .hero-inner{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:1;}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(200,151,42,0.15);border:1px solid rgba(200,151,42,0.3);color:var(--gold-light);font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:8px 20px;border-radius:50px;margin-bottom:28px;}
-.hero-logo-box{background:rgba(255,255,255,.92);border-radius:12px;padding:12px 28px;display:inline-block;margin-bottom:24px;}
+.hero-logo-box{display:inline-block;margin-bottom:24px;border-radius:12px;overflow:hidden;}
 .hero-logo-box img{height:56px;display:block;}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7vw,80px);font-weight:600;color:#fff;line-height:1.05;margin-bottom:12px;}
 .hero h1 span{color:var(--gold-light);}
@@ -170,9 +170,9 @@ section{padding:80px 24px;}
 footer{background:var(--navy);padding:36px 24px;}
 .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
 .footer-logos{display:flex;align-items:center;gap:12px;}
-.footer-logo-pill{background:rgba(255,255,255,.88);border-radius:7px;padding:5px 12px;display:flex;align-items:center;}
+.footer-logo-pill{display:flex;align-items:center;border-radius:7px;overflow:hidden;}
 .footer-logo-pill img{height:26px;}
-.footer-logo-pill.unicon img{height:20px;}
+.footer-logo-pill.unicon{background:rgba(255,255,255,.85);padding:5px 12px;} .footer-logo-pill.unicon img{height:20px;}
 .footer-info{font-size:11px;color:rgba(255,255,255,.35);text-align:center;line-height:1.9;}
 .footer-info a{color:rgba(255,255,255,.55);text-decoration:none;}
 

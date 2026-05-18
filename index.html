@@ -814,61 +814,139 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbo
 
 </script>
 
+
 <!-- FULL SITE EDITOR -->
-<div id="floatingEditorBar">
-  <button class="editor-toggle" onclick="toggleFullEdit()">Edition</button>
-  <button class="editor-image" onclick="addImageAnywhere()">Ajouter image</button>
-  <button class="editor-save" onclick="downloadEditedSite()">Télécharger site</button>
+<div id="floatingEditorBar" style="display:none;">
+  <button class="editor-toggle" onclick="toggleFullEdit()">Editer</button>
+  <button class="editor-image" onclick="addImageAnywhere()">Image</button>
+  <button class="editor-image" onclick="addNewSection()">Section</button>
+  <button class="editor-save" onclick="downloadEditedSite()">Exporter</button>
 </div>
+
+
+
+
 
 
 <script>
 
-let fullEditEnabled = false;
+/* ===== EXIOME FULL SUPER ADMIN ===== */
 
-function enableAdvancedAdmin(){
-    document.getElementById('floatingEditorBar').style.display='flex';
+let EXIOME_EDIT_MODE = false;
+
+/* Auto activation after normal admin login */
+(function(){
+
+    const originalDoAdminLogin = window.doAdminLogin;
+
+    window.doAdminLogin = function(){
+
+        if(originalDoAdminLogin){
+            originalDoAdminLogin();
+        }
+
+        setTimeout(()=>{
+
+            enableFullAdminAccess();
+
+        },300);
+
+    };
+
+})();
+
+function enableFullAdminAccess(){
+
+    const bar = document.getElementById('floatingEditorBar');
+
+    if(bar){
+        bar.style.display = 'flex';
+    }
+
+    activateGlobalEditing();
+
+}
+
+function activateGlobalEditing(){
+
+    EXIOME_EDIT_MODE = true;
+
+    document.body.classList.add('edit-mode');
+
+    document.querySelectorAll('*').forEach(el=>{
+
+        const forbidden = [
+            'SCRIPT',
+            'STYLE',
+            'META',
+            'HEAD',
+            'LINK',
+            'BODY',
+            'HTML'
+        ];
+
+        if(
+            !forbidden.includes(el.tagName) &&
+            !el.closest('#floatingEditorBar') &&
+            !el.closest('#adminPanel') &&
+            !el.closest('#adminLoginOverlay')
+        ){
+
+            el.contentEditable = true;
+
+            el.style.outline = '1px dashed rgba(200,169,110,.35)';
+
+            el.addEventListener('dblclick', function(e){
+
+                if(confirm('Supprimer cet élément ?')){
+                    e.target.remove();
+                }
+
+            });
+
+        }
+
+    });
+
+    alert('SUPER ADMIN ACTIVÉ');
+
+}
+
+function disableGlobalEditing(){
+
+    EXIOME_EDIT_MODE = false;
+
+    document.body.classList.remove('edit-mode');
+
+    document.querySelectorAll('*').forEach(el=>{
+
+        el.contentEditable = false;
+
+        el.style.outline = '';
+
+    });
+
 }
 
 function toggleFullEdit(){
 
-    fullEditEnabled = !fullEditEnabled;
-
-    document.body.classList.toggle('edit-mode');
-
-    const editableSelectors = [
-        'h1','h2','h3','h4','h5','h6',
-        'p','span','a','li',
-        '.prog-content',
-        '.speaker-name',
-        '.speaker-title',
-        '.org-name',
-        '.org-role',
-        '.info-text',
-        '.topic-items li',
-        '.day-theme',
-        '.gallery-caption'
-    ];
-
-    editableSelectors.forEach(selector=>{
-        document.querySelectorAll(selector).forEach(el=>{
-            el.contentEditable = fullEditEnabled;
-        });
-    });
-
-    alert(fullEditEnabled ?
-    'Mode édition activé' :
-    'Mode édition désactivé');
+    if(EXIOME_EDIT_MODE){
+        disableGlobalEditing();
+    } else {
+        activateGlobalEditing();
+    }
 
 }
 
 function addImageAnywhere(){
 
     const input = document.createElement('input');
-    input.type='file';
-    input.accept='image/*';
 
-    input.onchange = e => {
+    input.type = 'file';
+
+    input.accept = 'image/*';
+
+    input.onchange = function(e){
 
         const file = e.target.files[0];
 
@@ -878,70 +956,91 @@ function addImageAnywhere(){
 
         reader.onload = function(evt){
 
+            const wrapper = document.createElement('div');
+
+            wrapper.style.position='relative';
+            wrapper.style.margin='20px auto';
+            wrapper.style.maxWidth='900px';
+
             const img = document.createElement('img');
 
             img.src = evt.target.result;
 
-            img.style.maxWidth='100%';
+            img.style.width='100%';
+            img.style.borderRadius='14px';
             img.style.display='block';
-            img.style.margin='20px auto';
-            img.style.borderRadius='12px';
 
-            img.contentEditable = false;
+            const del = document.createElement('button');
 
-            const target = document.activeElement;
+            del.innerHTML='✕';
 
-            if(target && target.isContentEditable){
-                target.appendChild(img);
-            } else {
-                document.body.appendChild(img);
-            }
+            del.style.position='absolute';
+            del.style.top='10px';
+            del.style.right='10px';
+            del.style.background='#c0392b';
+            del.style.color='white';
+            del.style.border='none';
+            del.style.width='32px';
+            del.style.height='32px';
+            del.style.borderRadius='50%';
+            del.style.cursor='pointer';
+
+            del.onclick = ()=>wrapper.remove();
+
+            wrapper.appendChild(img);
+            wrapper.appendChild(del);
+
+            document.body.appendChild(wrapper);
 
         };
 
         reader.readAsDataURL(file);
+
     };
 
     input.click();
+
+}
+
+function addNewSection(){
+
+    const title = prompt('Titre de la section');
+
+    if(!title) return;
+
+    const section = document.createElement('section');
+
+    section.innerHTML = `
+        <div class="container">
+            <div class="section-label">NEW SECTION</div>
+            <h2 class="section-title">${title}</h2>
+            <p contenteditable="true">
+                Nouveau contenu...
+            </p>
+        </div>
+    `;
+
+    document.body.appendChild(section);
+
 }
 
 function downloadEditedSite(){
 
-    const content = document.documentElement.outerHTML;
+    disableGlobalEditing();
 
-    const blob = new Blob([content], {type:'text/html'});
+    const htmlContent = document.documentElement.outerHTML;
+
+    const blob = new Blob([htmlContent], {type:'text/html'});
 
     const a = document.createElement('a');
 
     a.href = URL.createObjectURL(blob);
 
-    a.download = 'EXIOME_FULL_EDIT.html';
+    a.download = 'EXIOME_SUPER_ADMIN.html';
 
     a.click();
 
 }
-
-document.addEventListener('keydown', function(e){
-
-    if(e.ctrlKey && e.shiftKey && e.key === 'E'){
-
-        const pwd = prompt('Mot de passe admin');
-
-        if(pwd === 'admin2026'){
-
-            enableAdvancedAdmin();
-
-            alert('Mode Super Edition activé');
-
-        } else {
-
-            alert('Mot de passe incorrect');
-
-        }
-
-    }
-
-});
 
 </script>
 

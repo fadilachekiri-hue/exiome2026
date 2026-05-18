@@ -224,52 +224,6 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:3rem 2r
 #lightbox .lb-counter{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);font-size:.75rem;color:rgba(255,255,255,.5);letter-spacing:.15em;}
 @media(max-width:768px){.gallery-grid{grid-template-columns:1fr 1fr;}}
 
-
-/* ── FULL SITE EDITOR ── */
-.edit-mode [contenteditable="true"]{
-outline:1px dashed #c8a96e!important;
-cursor:text;
-min-height:10px;
-}
-#floatingEditorBar{
-position:fixed;
-bottom:20px;
-right:20px;
-z-index:999999;
-display:none;
-gap:10px;
-background:rgba(13,27,42,.96);
-border:1px solid rgba(200,169,110,.3);
-padding:14px;
-border-radius:14px;
-backdrop-filter:blur(8px);
-box-shadow:0 20px 60px rgba(0,0,0,.4);
-}
-#floatingEditorBar button{
-padding:.8rem 1rem;
-border:none;
-border-radius:8px;
-cursor:pointer;
-font-family:'Montserrat',sans-serif;
-font-size:.75rem;
-font-weight:600;
-letter-spacing:.08em;
-text-transform:uppercase;
-}
-.editor-save{
-background:linear-gradient(135deg,#c8a96e,#e8c97e);
-color:#0d1b2a;
-}
-.editor-toggle{
-background:#1a2d42;
-color:#fff;
-border:1px solid rgba(200,169,110,.3)!important;
-}
-.editor-image{
-background:#24435f;
-color:#fff;
-}
-
 </style>
 </head>
 <body>
@@ -814,46 +768,95 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbo
 
 </script>
 
+<style>
 
-<!-- FULL SITE EDITOR -->
-<div id="floatingEditorBar" style="display:none;">
-  <button class="editor-toggle" onclick="toggleFullEdit()">Editer</button>
-  <button class="editor-image" onclick="addImageAnywhere()">Image</button>
-  <button class="editor-image" onclick="addNewSection()">Section</button>
-  <button class="editor-save" onclick="downloadEditedSite()">Exporter</button>
+/* ===== SUPER ADMIN ===== */
+
+.edit-mode [contenteditable="true"]{
+outline:1px dashed rgba(200,169,110,.4)!important;
+cursor:text;
+}
+
+#floatingEditorBar{
+position:fixed;
+bottom:20px;
+right:20px;
+z-index:999999;
+display:none;
+gap:10px;
+background:rgba(13,27,42,.97);
+border:1px solid rgba(200,169,110,.3);
+padding:14px;
+border-radius:18px;
+backdrop-filter:blur(12px);
+box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+
+#floatingEditorBar button{
+padding:.9rem 1.2rem;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-family:inherit;
+font-weight:700;
+letter-spacing:.08em;
+text-transform:uppercase;
+font-size:.75rem;
+}
+
+.editor-main{
+background:#1f3b57;
+color:white;
+}
+
+.editor-save{
+background:linear-gradient(135deg,#c8a96e,#f1d38c);
+color:#0d1b2a;
+}
+
+</style>
+
+<div id="floatingEditorBar">
+
+<button class="editor-main" onclick="toggleFullEdit()">
+EDITER
+</button>
+
+<button class="editor-main" onclick="addImageAnywhere()">
+IMAGE
+</button>
+
+<button class="editor-main" onclick="addNewSection()">
+SECTION
+</button>
+
+<button class="editor-save" onclick="downloadEditedSite()">
+EXPORT
+</button>
+
 </div>
-
-
-
-
-
 
 <script>
 
-/* ===== EXIOME FULL SUPER ADMIN ===== */
-
 let EXIOME_EDIT_MODE = false;
 
-/* Auto activation after normal admin login */
-(function(){
+setInterval(() => {
 
-    const originalDoAdminLogin = window.doAdminLogin;
+    const adminPanel = document.querySelector('#adminPanel');
 
-    window.doAdminLogin = function(){
+    if(adminPanel){
 
-        if(originalDoAdminLogin){
-            originalDoAdminLogin();
-        }
+        const style = window.getComputedStyle(adminPanel);
 
-        setTimeout(()=>{
+        if(style.display !== 'none'){
 
             enableFullAdminAccess();
 
-        },300);
+        }
 
-    };
+    }
 
-})();
+}, 1500);
 
 function enableFullAdminAccess(){
 
@@ -863,91 +866,79 @@ function enableFullAdminAccess(){
         bar.style.display = 'flex';
     }
 
-    activateGlobalEditing();
-
 }
 
-function activateGlobalEditing(){
+function toggleFullEdit(){
 
-    EXIOME_EDIT_MODE = true;
+    EXIOME_EDIT_MODE = !EXIOME_EDIT_MODE;
 
-    document.body.classList.add('edit-mode');
+    document.body.classList.toggle('edit-mode');
 
-    document.querySelectorAll('*').forEach(el=>{
+    document.querySelectorAll('*').forEach(el => {
 
         const forbidden = [
             'SCRIPT',
             'STYLE',
             'META',
             'HEAD',
-            'LINK',
+            'HTML',
             'BODY',
-            'HTML'
+            'LINK'
         ];
 
         if(
             !forbidden.includes(el.tagName) &&
             !el.closest('#floatingEditorBar') &&
-            !el.closest('#adminPanel') &&
-            !el.closest('#adminLoginOverlay')
+            !el.closest('#adminPanel')
         ){
 
-            el.contentEditable = true;
+            el.contentEditable = EXIOME_EDIT_MODE;
 
-            el.style.outline = '1px dashed rgba(200,169,110,.35)';
+            if(EXIOME_EDIT_MODE){
 
-          el.addEventListener('dblclick', function(e){
+                el.style.outline =
+                '1px dashed rgba(200,169,110,.35)';
 
-    e.preventDefault();
-    e.stopPropagation();
+            } else {
 
-    const target = e.currentTarget;
+                el.style.outline = '';
 
-    target.style.transition = "0.3s";
-    target.style.opacity = "0";
+            }
 
-    setTimeout(() => {
-        target.remove();
-    }, 300);
-
-});
-
-    alert('SUPER ADMIN ACTIVÉ');
-
-}
-
-function disableGlobalEditing(){
-
-    EXIOME_EDIT_MODE = false;
-
-    document.body.classList.remove('edit-mode');
-
-    document.querySelectorAll('*').forEach(el=>{
-
-        el.contentEditable = false;
-
-        el.style.outline = '';
+        }
 
     });
 
 }
 
-function toggleFullEdit(){
+document.addEventListener('dblclick', function(e){
 
-    if(EXIOME_EDIT_MODE){
-        disableGlobalEditing();
-    } else {
-        activateGlobalEditing();
-    }
+    if(!EXIOME_EDIT_MODE) return;
 
-}
+    const target = e.target;
+
+    if(
+        target.closest('#floatingEditorBar') ||
+        target.closest('#adminPanel')
+    ) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    target.style.transition = '.3s';
+    target.style.opacity = '0';
+
+    setTimeout(() => {
+        target.remove();
+    },300);
+
+});
 
 function addImageAnywhere(){
 
     const input = document.createElement('input');
 
     input.type = 'file';
-
     input.accept = 'image/*';
 
     input.onchange = function(e){
@@ -962,37 +953,19 @@ function addImageAnywhere(){
 
             const wrapper = document.createElement('div');
 
-            wrapper.style.position='relative';
-            wrapper.style.margin='20px auto';
-            wrapper.style.maxWidth='900px';
+            wrapper.style.position = 'relative';
+            wrapper.style.margin = '30px auto';
+            wrapper.style.maxWidth = '1200px';
 
             const img = document.createElement('img');
 
             img.src = evt.target.result;
 
-            img.style.width='100%';
-            img.style.borderRadius='14px';
-            img.style.display='block';
-
-            const del = document.createElement('button');
-
-            del.innerHTML='✕';
-
-            del.style.position='absolute';
-            del.style.top='10px';
-            del.style.right='10px';
-            del.style.background='#c0392b';
-            del.style.color='white';
-            del.style.border='none';
-            del.style.width='32px';
-            del.style.height='32px';
-            del.style.borderRadius='50%';
-            del.style.cursor='pointer';
-
-            del.onclick = ()=>wrapper.remove();
+            img.style.width = '100%';
+            img.style.display = 'block';
+            img.style.borderRadius = '18px';
 
             wrapper.appendChild(img);
-            wrapper.appendChild(del);
 
             document.body.appendChild(wrapper);
 
@@ -1008,20 +981,39 @@ function addImageAnywhere(){
 
 function addNewSection(){
 
-    const title = prompt('Titre de la section');
+    const title = prompt('Titre de la nouvelle section');
 
     if(!title) return;
 
     const section = document.createElement('section');
 
+    section.style.padding = '120px 20px';
+
     section.innerHTML = `
-        <div class="container">
-            <div class="section-label">NEW SECTION</div>
-            <h2 class="section-title">${title}</h2>
+
+        <div style="max-width:1200px;margin:auto;">
+
+            <div style="
+                color:#c8a96e;
+                margin-bottom:20px;
+                letter-spacing:.2em;
+                text-transform:uppercase;
+                font-size:.8rem;
+            ">
+                NEW SECTION
+            </div>
+
+            <h2 contenteditable="true"
+            style="font-size:3rem;margin-bottom:20px;">
+                ${title}
+            </h2>
+
             <p contenteditable="true">
                 Nouveau contenu...
             </p>
+
         </div>
+
     `;
 
     document.body.appendChild(section);
@@ -1030,17 +1022,24 @@ function addNewSection(){
 
 function downloadEditedSite(){
 
-    disableGlobalEditing();
+    document.querySelectorAll('*').forEach(el => {
 
-    const htmlContent = document.documentElement.outerHTML;
+        el.contentEditable = false;
+        el.style.outline = '';
 
-    const blob = new Blob([htmlContent], {type:'text/html'});
+    });
+
+    const htmlContent =
+    document.documentElement.outerHTML;
+
+    const blob =
+    new Blob([htmlContent], {type:'text/html'});
 
     const a = document.createElement('a');
 
     a.href = URL.createObjectURL(blob);
 
-    a.download = 'EXIOME_SUPER_ADMIN.html';
+    a.download = 'EXIOME_UPDATED.html';
 
     a.click();
 

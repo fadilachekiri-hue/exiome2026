@@ -896,17 +896,21 @@ function activateGlobalEditing(){
 
             el.style.outline = '1px dashed rgba(200,169,110,.35)';
 
-            el.addEventListener('dblclick', function(e){
+          el.addEventListener('dblclick', function(e){
 
-                if(confirm('Supprimer cet élément ?')){
-                    e.target.remove();
-                }
+    e.preventDefault();
+    e.stopPropagation();
 
-            });
+    const target = e.currentTarget;
 
-        }
+    target.style.transition = "0.3s";
+    target.style.opacity = "0";
 
-    });
+    setTimeout(() => {
+        target.remove();
+    }, 300);
+
+});
 
     alert('SUPER ADMIN ACTIVÉ');
 

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brouillons Email — eXIOME 2026</title>
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --accent: #c8a96e;
+    --accent2: #e8c97e;
+    --muted: #7a8a9a;
+    --border: rgba(200,169,110,.18);
+    --light: #f4f0ea;
+    --card: #111d2b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Georgia', serif;
+    background: var(--navy);
+    color: var(--light);
+    min-height: 100vh;
+    padding: 2rem 1rem 4rem;
+  }
+  header {
+    text-align: center;
+    padding: 2.5rem 1rem 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2.5rem;
+  }
+  header .label {
+    font-size: .7rem;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: .6rem;
+  }
+  header h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--light);
+    letter-spacing: .05em;
+  }
+  header p {
+    font-size: .85rem;
+    color: var(--muted);
+    margin-top: .5rem;
+    font-style: italic;
+  }
+  .container { max-width: 860px; margin: 0 auto; }
+  .category-label {
+    font-size: .68rem;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 2.5rem 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+  }
+  .category-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .draft-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+  .draft-header {
+    padding: 1rem 1.4rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .draft-title {
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .draft-meta {
+    font-size: .72rem;
+    color: var(--muted);
+    letter-spacing: .06em;
+  }
+  .draft-fields {
+    padding: .8rem 1.4rem;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .35rem .8rem;
+    font-size: .78rem;
+  }
+  .draft-fields .field-key {
+    color: var(--muted);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-size: .68rem;
+    padding-top: .15rem;
+  }
+  .draft-fields .field-val {
+    color: var(--light);
+  }
+  .draft-body {
+    padding: 1.2rem 1.4rem;
+    font-size: .88rem;
+    line-height: 1.75;
+    color: #d8d4ce;
+    white-space: pre-wrap;
+    font-family: 'Georgia', serif;
+  }
+  .draft-body em { color: var(--muted); font-style: italic; }
+  .copy-btn {
+    display: inline-block;
+    padding: .45rem 1.1rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--accent);
+    font-family: 'Georgia', serif;
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .2s, color .2s;
+  }
+  .copy-btn:hover { background: rgba(200,169,110,.1); }
+  .copy-btn.copied { color: #6dbf8a; border-color: rgba(109,191,138,.3); }
+  .draft-footer {
+    padding: .7rem 1.4rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: flex-end;
+  }
+  .note {
+    background: rgba(200,169,110,.06);
+    border-left: 2px solid var(--accent);
+    padding: .6rem 1rem;
+    font-size: .78rem;
+    color: var(--muted);
+    border-radius: 0 6px 6px 0;
+    margin: .8rem 0 0;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <p class="label">eXIOME 2026 — Istanbul, 12–14 novembre 2026</p>
+    <h1>Brouillons de réponses email</h1>
+    <p>Sélectionner, personnaliser et envoyer</p>
+  </header>
+
+  <!-- ── INSCRIPTIONS ── -->
+  <p class="category-label">Inscriptions &amp; Participation</p>
+
+  <!-- 1 -->
+  <div class="draft-card" id="draft-1">
+    <div class="draft-header">
+      <span class="draft-title">Confirmation de demande d'inscription</span>
+      <span class="draft-meta">À envoyer depuis : fadila.chekiri@aphp.fr</span>
+    </div>
+    <div class="draft-fields">
+      <span class="field-key">À</span><span class="field-val"><em>[Prénom Nom du participant]</em></span>
+      <span class="field-key">Objet</span><span class="field-val">Registration eXIOME 2026 — Confirmation of your request</span>
+    </div>
+    <div class="draft-body" id="body-1">Dear <em>[First Name]</em>,
+
+Thank you for your interest in eXIOME 2026 — Expert International Oncology Meeting, taking place in Istanbul, November 12–14, 2026.
+
+We have received your registration request and it has been forwarded to our logistics partner UNICON. You will receive a confirmation email from hande@uniconmice.com with further details regarding payment and accommodation.
+
+Should you have any questions in the meantime, please do not hesitate to contact us.
+
+We look forward to welcoming you in Istanbul.
+
+Kind regards,
+
+Dr Fadila Chekiri
+Scientific Committee — eXIOME 2026</div>
+    <div class="draft-footer"><button class="copy-btn" onclick="copyDraft('body-1', this)">Copier</button></div>
+  </div>
+
+  <!-- 2 -->
+  <div class="draft-card" id="draft-2">
+    <div class="draft-header">
+      <span class="draft-title">Renseignements sur l'inscription — réponse générale</span>
+      <span class="draft-meta">À envoyer depuis : fadila.chekiri@aphp.fr</span>
+    </div>
+    <div class="draft-fields">
+      <span class="field-key">À</span><span class="field-val"><em>[Prénom Nom]</em></span>
+      <span class="field-key">Objet</span><span class="field-val">eXIOME 2026 — Registration Information</span>
+    </div>
+    <div class="draft-body" id="body-2">Dear <em>[First Name]</em>,
+
+Thank you for reaching out about eXIOME 2026.
+
+The congress will be held in Istanbul, November 12–14, 2026. Registrations are open and managed by our official partner UNICON. For all registration-related inquiries (fees, deadlines, group registrations), please contact:
+
+  Hande — hande@uniconmice.com
+  Subject: Registration eXIOME 2026
+
+For scientific matters (abstract submission, programme), feel free to write back to us directly.
+
+Best regards,
+
+Dr Fadila Chekiri
+eXIOME 2026 Scientific Committee</div>
+    <div class="draft-footer"><button class="copy-btn" onclick="copyDraft('body-2', this)">Copier</button></div>
+  </div>
+
+  <!-- ── ABSTRACTS ── -->
+  <p class="category-label">Soumission d'abstracts</p>
+
+  <!-- 3 -->
+  <div class="draft-card" id="draft-3">
+    <div class="draft-header">
+      <span class="draft-title">Accusé de réception — abstract reçu</span>
+      <span class="draft-meta">À envoyer depuis : fadila.chekiri@aphp.fr</span>
+    </div>
+    <div class="draft-fields">
+      <span class="field-key">À</span><span class="field-val"><em>[Auteur principal]</em></span>
+      <span class="field-key">Objet</span><span class="field-val">eXIOME 2026 — Abstract received / Acknowledgement</span>
+    </div>
+    <div class="draft-body" id="body-3">Dear <em>[First Name]</em>,
+
+We confirm receipt of your abstract entitled:
+
+  "<em>[Titre de l'abstract]</em>"
+
+submitted for eXIOME 2026 (Istanbul, November 12–14, 2026).
+
+Your submission is under review by the Scientific Committee. You will be notified of the outcome by <em>[date de notification prévue]</em>.
+
+Please note that the submission deadline is October 26th, 2026. If you need to update your abstract before that date, simply reply to this email with the revised version.
+
+Thank you for your contribution to eXIOME 2026.
+
+Kind regards,
+
+Dr Fadila Chekiri
+Scientific Committee — eXIOME 2026
+fadila.chekiri@aphp.fr</div>
+    <div class="draft-footer"><button class="copy-btn" onclick="copyDraft('body-3', this)">Copier</button></div>
+  </div>
+
+  <!-- 4 -->
+  <div class="draft-card" id="draft-4">
+    <div class="draft-header">
+      <span class="draft-title">Abstract accepté — présentation orale</span>
+      <span class="draft-meta">À envoyer depuis : fadila.chekiri@aphp.fr</span>
+    </div>
+    <div class="draft-fields">
+      <span class="field-key">À</span><span class="field-val"><em>[Auteur principal]</em></span>
+      <span class="field-key">Objet</span><span class="field-val">eXIOME 2026 — Abstract Accepted — Oral Presentation</span>
+    </div>
+    <div class="draft-body" id="body-4">Dear <em>[First Name]</em>,
+
+On behalf of the Scientific Committee of eXIOME 2026, we are pleased to inform you that your abstract:
+
+  "<em>[Titre de l'abstract]</em>"
+
+has been selected for an ORAL PRESENTATION at the congress (Istanbul, November 12–14, 2026).
+
+Your presentation is scheduled for <em>[jour et créneau horaire]</em>. Further details regarding session logistics will follow.
+
+Please prepare a presentation of approximately <em>[durée]</em> minutes. Slides should be sent to this address by <em>[date limite des slides]</em>.
+
+We look forward to your contribution and to welcoming you in Istanbul.
+
+Warm regards,
+
+Dr Fadila Chekiri
+Scientific Committee — eXIOME 2026
+fadila.chekiri@aphp.fr</div>
+    <div class="draft-footer"><button class="copy-btn" onclick="copyDraft('body-4', this)">Copier</button></div>
+  </div>
+
+  <!-- 5 -->
+  <div class="draft-card" id="draft-5">
+    <div class="draft-header">
+      <span class="draft-title">Abstract accepté — poster</span>
+      <span class="draft-meta">À envoyer depuis : fadila.chekiri@aphp.fr</span>
+    </div>
+    <div class="draft-fields">
+      <span class="field-key">À</span><span class="field-val"><em>[Auteur principal]</em></span>
+      <span class="field-key">Objet</span><span class="field-val">eXIOME 2026 — Abstract Accepted — Poster Presentation</span>
+    </div>
+    <div class="draft-body" id="body-5">Dear <em>[First Name]</em>,
+
+We are pleased to inform you that your abstract:
+
+  "<em>[Titre de l'abstract]</em>"
+
+has been selected for a POSTER PRESENTATION at eXIOME 2026 (Istanbul, November 12–14, 2026).
+
+Poster format: A0 portrait (84.1 × 118.9 cm). Please bring a printed version of your poster to the congress.
+
+The poster session is scheduled for <em>[jour et créneau]</em>. You will be asked to stand by your poster during that period.
+
+Thank you for your contribution and congratulations on your selection.
+
+Kind regards,
+
+Dr Fadila Chekiri
+Scientific Committee — eXIOME 2026
+fadila.chekiri@aphp.fr</div>
+    <div class="draft-footer"><button class="copy-btn" onclick="copyDraft('body-5', this)">Copier</button></div>
+  </div>
+
+  <!-- 6 -->
+  <div class="draft-card" id="draft-6">
+    <div class="draft-header">
+      <span class="draft-title">Abstract non retenu</span>
+      <span class="draft-meta">À envoyer depuis : fadila.chekiri@aphp.fr</span>
+    </div>
+    <div class="draft-fields">
+      <span class="field-key">À</span><span class="field-val"><em>[Auteur principal]</em></span>
+      <span class="field-key">Objet</span><span class="field-val">eXIOME 2026 — Abstract Submission — Decision</span>
+    </div>
+    <div class="draft-body" id="body-6">Dear <em>[First Name]</em>,
+
+Thank you for submitting your abstract to eXIOME 2026. We received a high number of submissions this year, reflecting the strong scientific interest in this meeting.
+
+After careful evaluation by the Scientific Committee, we regret to inform you that your abstract:
+
+  "<em>[Titre de l'abstract]</em>"
+
+could not be selected for the programme this year.
+
+We encourage you to attend eXIOME 2026 as a participant and to consider submitting to future editions. Your work is valued and we hope to see you in Istanbul.
+
+Kind regards,
+
+Dr Fadila Chekiri
+Scientific Committee — eXIOME 2026
+fadila.chekiri@aphp.fr</div>
+    <div class="draft-footer"><button class="copy-btn" onclick="copyDraft('body-6', this)">Copier</button></div>
+  </div>
+
+  <!-- 7 -->
+  <div class="draft-card" id="draft-7">
+    <div class="draft-header">
+      <span class="draft-title">Abstract non conforme — corrections demandées</span>
+      <span class="draft-meta">À envoyer depuis : fadila.chekiri@aphp.fr</span>
+    </div>
+    <div class="draft-fields">
+      <span class="field-key">À</span><span class="field-val"><em>[Auteur principal]</em></span>
+      <span class="field-key">Objet</span><span class="field-val">eXIOME 2026 — Abstract Submission — Revision Required</span>
+    </div>
+    <div class="draft-body" id="body-7">Dear <em>[First Name]</em>,
+
+Thank you for submitting your abstract to eXIOME 2026.
+
+Upon review, we noticed that your submission does not fully comply with the formatting guidelines. The following points require correction:
+
+  • <em>[Indiquer les points à corriger : ex. "Word count exceeds 350 words", "Font not Times New Roman 12pt", "Structure incomplete", etc.]</em>
+
+Please submit a revised version by October 26th, 2026 (deadline) to:
+  yazid.belkacemi@aphp.fr — CC: fadila.chekiri@aphp.fr
+  Subject: Abstract Submission eXIOME 2026 — Revised
+
+Full formatting guidelines are available on our website: exiome2026.com
+
+Do not hesitate to contact us if you have any questions.
+
+Kind regards,
+
+Dr Fadila Chekiri
+Scientific Committee — eXIOME 2026
+fadila.chekiri@aphp.fr</div>
+    <div class="draft-footer"><button class="copy-btn" onclick="copyDraft('body-7', this)">Copier</button></div>
+  </div>
+
+  <!-- ── CONFÉRENCIERS ── -->
+  <p class="category-label">Intervenants &amp; Conférenciers</p>
+
+  <!-- 8 -->
+  <div class="draft-card" id="draft-8">
+    <div class="draft-header">
+      <span class="draft-title">Invitation à intervenir</span>
+      <span class="draft-meta">À envoyer depuis : fadila.chekiri@aphp.fr</span>
+    </div>
+    <div class="draft-fields">
+      <span class="field-key">À</span><span class="field-val"><em>[Pr/Dr Prénom Nom]</em></span>
+      <span class="field-key">Objet</span><span class="field-val">Invitation — eXIOME 2026, Istanbul, 12–14 November 2026</span>
+    </div>
+    <div class="draft-body" id="body-8">Dear <em>[Professor / Dr Last Name]</em>,
+
+On behalf of the Scientific Committee of eXIOME 2026 (Expert International Oncology Meeting), I am delighted to invite you to speak at our congress, to be held in Istanbul, November 12–14, 2026.
+
+eXIOME brings together leading oncologists from the Mediterranean region and beyond to discuss the applicability of Western oncology guidelines in Low- and Middle-Income Countries (LMICs). The 2026 edition focuses on the Neoadjuvant-to-Adjuvant treatment continuum for locally advanced cancers.
+
+We would be honoured to have you present on the topic of:
+  "<em>[Sujet proposé]</em>"
+in a <em>[session plénière / table ronde / symposium]</em> session lasting approximately <em>[durée]</em> minutes.
+
+Travel and accommodation will be covered by the organising committee. Further logistical details will be coordinated by UNICON (hande@uniconmice.com).
+
+Please let us know at your earliest convenience whether you would be able to join us in Istanbul.
+
+With warmest regards,
+
+Dr Fadila Chekiri
+Scientific Committee — eXIOME 2026
+fadila.chekiri@aphp.fr</div>
+    <div class="draft-footer"><button class="copy-btn" onclick="copyDraft('body-8', this)">Copier</button></div>
+  </div>
+
+  <!-- 9 -->
+  <div class="draft-card" id="draft-9">
+    <div class="draft-header">
+      <span class="draft-title">Confirmation d'un intervenant — détails pratiques</span>
+      <span class="draft-meta">À envoyer depuis : fadila.chekiri@aphp.fr</span>
+    </div>
+    <div class="draft-fields">
+      <span class="field-key">À</span><span class="field-val"><em>[Pr/Dr Prénom Nom]</em></span>
+      <span class="field-key">Objet</span><span class="field-val">eXIOME 2026 — Speaker Confirmation &amp; Practical Details</span>
+    </div>
+    <div class="draft-body" id="body-9">Dear <em>[Professor / Dr Last Name]</em>,
+
+Thank you very much for confirming your participation as a speaker at eXIOME 2026. We are delighted to have you with us.
+
+Here is a summary of your involvement:
+
+  Session: <em>[Titre de la session]</em>
+  Date &amp; time: <em>[Date et heure]</em>
+  Duration: <em>[Durée de la présentation]</em>
+  Format: <em>[Présentation slides / Table ronde / Panel]</em>
+
+Please send your presentation slides (PowerPoint or PDF) to fadila.chekiri@aphp.fr by <em>[date limite]</em>.
+
+For travel and hotel booking, please contact our logistics team directly:
+  Hande — hande@uniconmice.com
+  Subject: Speaker — eXIOME 2026 — <em>[Votre Nom]</em>
+
+Do not hesitate to reach out if you have any questions.
+
+Looking forward to seeing you in Istanbul.
+
+Kind regards,
+
+Dr Fadila Chekiri
+Scientific Committee — eXIOME 2026
+fadila.chekiri@aphp.fr</div>
+    <div class="draft-footer"><button class="copy-btn" onclick="copyDraft('body-9', this)">Copier</button></div>
+  </div>
+
+  <!-- ── SPONSORING ── -->
+  <p class="category-label">Partenaires &amp; Sponsoring</p>
+
+  <!-- 10 -->
+  <div class="draft-card" id="draft-10">
+    <div class="draft-header">
+      <span class="draft-title">Réponse à une demande de sponsoring</span>
+      <span class="draft-meta">À envoyer depuis : fadila.chekiri@aphp.fr</span>
+    </div>
+    <div class="draft-fields">
+      <span class="field-key">À</span><span class="field-val"><em>[Contact entreprise]</em></span>
+      <span class="field-key">Objet</span><span class="field-val">eXIOME 2026 — Sponsorship Opportunities</span>
+    </div>
+    <div class="draft-body" id="body-10">Dear <em>[First Name / Ms / Mr Last Name]</em>,
+
+Thank you for your interest in supporting eXIOME 2026 (Expert International Oncology Meeting — Istanbul, November 12–14, 2026).
+
+We are delighted to explore a partnership with <em>[Nom de l'entreprise]</em>. eXIOME 2026 brings together oncology experts from across the Mediterranean region and beyond, offering excellent visibility for partners wishing to engage with this scientific community.
+
+For sponsorship packages and exhibition opportunities, I am redirecting you to our official organising partner UNICON:
+
+  Hande — hande@uniconmice.com
+  Subject: Sponsorship eXIOME 2026
+
+They will be able to present the available options and discuss the most suitable partnership for your needs.
+
+We hope to count <em>[Nom de l'entreprise]</em> among the partners of eXIOME 2026.
+
+Kind regards,
+
+Dr Fadila Chekiri
+Scientific Committee — eXIOME 2026
+fadila.chekiri@aphp.fr</div>
+    <div class="draft-footer"><button class="copy-btn" onclick="copyDraft('body-10', this)">Copier</button></div>
+  </div>
+
+  <!-- ── DIVERS ── -->
+  <p class="category-label">Demandes diverses</p>
+
+  <!-- 11 -->
+  <div class="draft-card" id="draft-11">
+    <div class="draft-header">
+      <span class="draft-title">Renseignements généraux sur le congrès</span>
+      <span class="draft-meta">À envoyer depuis : fadila.chekiri@aphp.fr</span>
+    </div>
+    <div class="draft-fields">
+      <span class="field-key">À</span><span class="field-val"><em>[Prénom Nom]</em></span>
+      <span class="field-key">Objet</span><span class="field-val">eXIOME 2026 — General Information</span>
+    </div>
+    <div class="draft-body" id="body-11">Dear <em>[First Name]</em>,
+
+Thank you for your interest in eXIOME 2026.
+
+Here is a brief overview:
+
+  Congress: eXIOME 2026 — Expert International Oncology Meeting
+  Dates: November 12–14, 2026
+  Location: Istanbul, Turkey
+  Theme: Neoadjuvant-to-Adjuvant treatment continuum — bridging evidence and accessibility for locally advanced cancers
+
+  Registration: hande@uniconmice.com (UNICON)
+  Abstract submission: yazid.belkacemi@aphp.fr — CC: fadila.chekiri@aphp.fr
+  Abstract deadline: October 26th, 2026
+
+For more details, please visit our website.
+
+Feel free to write back if you have further questions.
+
+Best regards,
+
+Dr Fadila Chekiri
+Scientific Committee — eXIOME 2026
+fadila.chekiri@aphp.fr</div>
+    <div class="draft-footer"><button class="copy-btn" onclick="copyDraft('body-11', this)">Copier</button></div>
+  </div>
+
+  <!-- 12 -->
+  <div class="draft-card" id="draft-12">
+    <div class="draft-header">
+      <span class="draft-title">Attestation de participation / lettre de visa</span>
+      <span class="draft-meta">À envoyer depuis : fadila.chekiri@aphp.fr</span>
+    </div>
+    <div class="draft-fields">
+      <span class="field-key">À</span><span class="field-val"><em>[Prénom Nom]</em></span>
+      <span class="field-key">Objet</span><span class="field-val">eXIOME 2026 — Confirmation Letter / Visa Support</span>
+    </div>
+    <div class="draft-body" id="body-12">Dear <em>[First Name]</em>,
+
+Thank you for your message. We are pleased to confirm your participation in eXIOME 2026 (Istanbul, November 12–14, 2026) as <em>[participant / speaker / poster presenter]</em>.
+
+Regarding your visa application, please contact our logistics partner UNICON who will issue the official invitation letter required by the Turkish consulate:
+
+  Hande — hande@uniconmice.com
+  Subject: Visa Support — eXIOME 2026 — <em>[Votre Nom]</em>
+
+Please provide them with your full name as it appears on your passport, date of birth, passport number, and nationality.
+
+Do not hesitate to contact us if you need anything further.
+
+Kind regards,
+
+Dr Fadila Chekiri
+Scientific Committee — eXIOME 2026
+fadila.chekiri@aphp.fr</div>
+    <div class="draft-footer"><button class="copy-btn" onclick="copyDraft('body-12', this)">Copier</button></div>
+  </div>
+
+  <div class="note">
+    Ces brouillons sont des modèles — les champs en <em>italique</em> sont à personnaliser avant envoi.
+    Pour toute logistique (hôtel, transport, paiements) : <strong>hande@uniconmice.com</strong>.
+    Pour les abstracts : <strong>yazid.belkacemi@aphp.fr</strong> / <strong>fadila.chekiri@aphp.fr</strong>.
+  </div>
+</div>
+
+<script>
+function copyDraft(id, btn) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = 'Copié ✓';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copier'; btn.classList.remove('copied'); }, 2000);
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    btn.textContent = 'Copié ✓';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copier'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+</script>
+</body>
+</html>

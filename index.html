@@ -63,6 +63,8 @@ section{padding:6rem 2rem;}
 .container{max-width:1100px;margin:0 auto;}
 .section-label{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem;}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--light);margin-bottom:3rem;line-height:1.2;}
+.sub-heading{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--accent);margin:0 0 1.3rem;padding-top:.5rem;}
+.sub-heading:first-of-type{padding-top:0;}
 
 /* ── ABOUT ── */
 #about{background:var(--deep);}
@@ -75,7 +77,6 @@ section{padding:6rem 2rem;}
 .stat-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);}
 
 /* ── ORGANIZERS ── */
-#organizers{background:var(--navy);}
 .org-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;}
 .org-card{border:1px solid var(--border);border-radius:10px;padding:1.5rem;text-align:center;background:var(--glass);}
 .org-name{font-weight:600;color:var(--accent);margin-bottom:.3rem;font-size:.9rem;}
@@ -1025,22 +1026,6 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
   </div>
 </section>
 
-<!-- ── ORGANIZERS ── -->
-<section id="organizers">
-  <div class="container">
-    <p class="section-label">Organisation</p>
-    <h2 class="section-title">Organising Committee</h2>
-    <div class="org-grid">
-      <div class="org-card"><div class="org-name">Pr Y. Belkacemi</div><div class="org-role">Co-Chair</div><div class="org-country">France</div></div>
-      <div class="org-card"><div class="org-name">Pr B. Atalar</div><div class="org-role">Co-Chair</div><div class="org-country">Turkey</div></div>
-      <div class="org-card"><div class="org-name">Pr A. Bounedjar</div><div class="org-role">Co-Chair</div><div class="org-country">Algeria</div></div>
-      <div class="org-card"><div class="org-name">Pr J. Gligorov</div><div class="org-role">Co-Chair</div><div class="org-country">France</div></div>
-      <div class="org-card"><div class="org-name">Pr E. Özyar</div><div class="org-role">Co-Chair</div><div class="org-country">Turkey</div></div>
-      <div class="org-card"><div class="org-name">Pr R. Samlali</div><div class="org-role">Co-Chair</div><div class="org-country">Morocco</div></div>
-      <div class="org-card"><div class="org-name">Pr S. Turkan</div><div class="org-role">Co-Chair</div><div class="org-country">Turkey</div></div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ── GALERIE PHOTOS ── -->
@@ -1131,8 +1116,21 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
 <!-- ── SPEAKERS ── -->
 <section id="speakers">
   <div class="container">
-    <p class="section-label">Faculty</p>
-    <h2 class="section-title">International Faculty</h2>
+    <p class="section-label">Committee &amp; Faculty</p>
+    <h2 class="section-title">Organising Committee &amp; International Faculty</h2>
+
+    <h3 class="sub-heading">Organising Committee</h3>
+    <div class="org-grid">
+      <div class="org-card"><div class="org-name">Pr Y. Belkacemi</div><div class="org-role">Co-Chair</div><div class="org-country">France</div></div>
+      <div class="org-card"><div class="org-name">Pr B. Atalar</div><div class="org-role">Co-Chair</div><div class="org-country">Turkey</div></div>
+      <div class="org-card"><div class="org-name">Pr A. Bounedjar</div><div class="org-role">Co-Chair</div><div class="org-country">Algeria</div></div>
+      <div class="org-card"><div class="org-name">Pr J. Gligorov</div><div class="org-role">Co-Chair</div><div class="org-country">France</div></div>
+      <div class="org-card"><div class="org-name">Pr E. Özyar</div><div class="org-role">Co-Chair</div><div class="org-country">Turkey</div></div>
+      <div class="org-card"><div class="org-name">Pr R. Samlali</div><div class="org-role">Co-Chair</div><div class="org-country">Morocco</div></div>
+      <div class="org-card"><div class="org-name">Pr S. Turkan</div><div class="org-role">Co-Chair</div><div class="org-country">Turkey</div></div>
+    </div>
+
+    <h3 class="sub-heading" style="margin-top:3rem;">International Faculty</h3>
     <div class="speakers-grid" id="speakersGrid">
       <div class="speaker-card"><div class="speaker-name">B. Atalar</div><div class="speaker-title">Turkey</div></div>
       <div class="speaker-card"><div class="speaker-name">A. Awada</div><div class="speaker-title">Belgium</div></div>
@@ -1613,8 +1611,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
   <select class="pm-section-select" id="pmSectionTarget">
     <option value="hero">Hero (bannière principale)</option>
     <option value="about">Section À propos</option>
-    <option value="organizers">Section Organisateurs</option>
-    <option value="speakers">Section Speakers</option>
+    <option value="speakers">Section Comité &amp; Speakers</option>
     <option value="gallery">Galerie Photos</option>
     <option value="programme">Section Programme</option>
     <option value="body">Page entière (bas de page)</option>
@@ -2076,7 +2073,7 @@ function insertSelectedPhoto(){
     wrapper.appendChild(del);
 
     const sectionMap = {
-        hero: '#hero', about: '#about', organizers: '#organizers',
+        hero: '#hero', about: '#about',
         speakers: '#speakers', gallery: '#gallery', programme: '#programme', body: 'body'
     };
     const sel = sectionMap[target] || 'body';

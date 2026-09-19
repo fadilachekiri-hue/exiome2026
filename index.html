@@ -99,6 +99,9 @@ section{padding:6rem 2rem;}
 .speaker-card{border:1px solid var(--border);border-radius:10px;padding:1.5rem;text-align:center;background:var(--glass);}
 .speaker-name{font-weight:600;color:var(--light);margin-bottom:.3rem;font-size:.88rem;}
 .speaker-title{font-size:.72rem;color:var(--muted);}
+.faculty-country{grid-column:1/-1;display:flex;align-items:center;gap:.7rem;margin:1.6rem 0 -.4rem;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--accent);}
+.faculty-country:first-child{margin-top:0;}
+.faculty-country::after{content:'';flex:1;height:1px;background:var(--border);}
 .no-content{color:var(--muted);font-style:italic;text-align:center;padding:3rem;}
 
 /* ── PROGRAMME ── */
@@ -1132,58 +1135,71 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
 
     <h3 class="sub-heading" style="margin-top:3rem;">International Faculty</h3>
     <div class="speakers-grid" id="speakersGrid">
-      <div class="speaker-card"><div class="speaker-name">B. Atalar</div><div class="speaker-title">Turkey</div></div>
-      <div class="speaker-card"><div class="speaker-name">A. Awada</div><div class="speaker-title">Belgium</div></div>
-      <div class="speaker-card"><div class="speaker-name">D. Belabdi</div><div class="speaker-title">Algeria</div></div>
-      <div class="speaker-card"><div class="speaker-name">F-Z. Bellefkih</div><div class="speaker-title">Morocco</div></div>
-      <div class="speaker-card"><div class="speaker-name">Y. Belkacemi</div><div class="speaker-title">France</div></div>
-      <div class="speaker-card"><div class="speaker-name">Y. Bensouda</div><div class="speaker-title">Morocco</div></div>
-      <div class="speaker-card"><div class="speaker-name">N. Berrada</div><div class="speaker-title">Morocco</div></div>
-      <div class="speaker-card"><div class="speaker-name">N. Bese</div><div class="speaker-title">Turkey</div></div>
+      <div class="faculty-country">Algeria</div>
       <div class="speaker-card"><div class="speaker-name">A. Bounedjar</div><div class="speaker-title">Algeria</div></div>
-      <div class="speaker-card"><div class="speaker-name">H. Boussen</div><div class="speaker-title">Tunisia</div></div>
-      <div class="speaker-card"><div class="speaker-name">M. Celayir</div><div class="speaker-title">Turkey</div></div>
-      <div class="speaker-card"><div class="speaker-name">AM. Czarnecka</div><div class="speaker-title">Poland</div></div>
       <div class="speaker-card"><div class="speaker-name">A. Dib</div><div class="speaker-title">Algeria</div></div>
-      <div class="speaker-card"><div class="speaker-name">L.K. El Hassani</div><div class="speaker-title">Morocco</div></div>
-      <div class="speaker-card"><div class="speaker-name">Özlem Er</div><div class="speaker-title">Turkey</div></div>
-      <div class="speaker-card"><div class="speaker-name">G. Ergene</div><div class="speaker-title">Turkey</div></div>
-      <div class="speaker-card"><div class="speaker-name">Y. Erlap</div><div class="speaker-title">Turkey</div></div>
-      <div class="speaker-card"><div class="speaker-name">H. Errihani</div><div class="speaker-title">Morocco</div></div>
-      <div class="speaker-card"><div class="speaker-name">E. Esin</div><div class="speaker-title">Turkey</div></div>
-      <div class="speaker-card"><div class="speaker-name">S. Frikha</div><div class="speaker-title">France</div></div>
-      <div class="speaker-card"><div class="speaker-name">F. Geara</div><div class="speaker-title">UAE</div></div>
-      <div class="speaker-card"><div class="speaker-name">J. Gligorov</div><div class="speaker-title">France</div></div>
-      <div class="speaker-card"><div class="speaker-name">P. Hurmuz</div><div class="speaker-title">Turkey</div></div>
-      <div class="speaker-card"><div class="speaker-name">S. Kanoun</div><div class="speaker-title">Tunisia</div></div>
-      <div class="speaker-card"><div class="speaker-name">E. Kerboua</div><div class="speaker-title">Algeria</div></div>
-      <div class="speaker-card"><div class="speaker-name">B. Köylü</div><div class="speaker-title">Turkey</div></div>
-      <div class="speaker-card"><div class="speaker-name">B. Kukic</div><div class="speaker-title">Serbia</div></div>
       <div class="speaker-card"><div class="speaker-name">B. Labraoui</div><div class="speaker-title">Algeria</div></div>
+      <div class="speaker-card"><div class="speaker-name">D. Belabdi</div><div class="speaker-title">Algeria</div></div>
+      <div class="speaker-card"><div class="speaker-name">E. Kerboua</div><div class="speaker-title">Algeria</div></div>
+      <div class="speaker-card"><div class="speaker-name">M. Oukkal</div><div class="speaker-title">Algeria</div></div>
+      <div class="faculty-country">Belgium</div>
+      <div class="speaker-card"><div class="speaker-name">A. Awada</div><div class="speaker-title">Belgium</div></div>
+      <div class="faculty-country">China</div>
       <div class="speaker-card"><div class="speaker-name">J. Lang</div><div class="speaker-title">China</div></div>
       <div class="speaker-card"><div class="speaker-name">S. Lu</div><div class="speaker-title">China</div></div>
-      <div class="speaker-card"><div class="speaker-name">Y. Mahi</div><div class="speaker-title">France</div></div>
-      <div class="speaker-card"><div class="speaker-name">N. Maletin</div><div class="speaker-title">Serbia</div></div>
-      <div class="speaker-card"><div class="speaker-name">M. Maskrout</div><div class="speaker-title">Morocco</div></div>
-      <div class="speaker-card"><div class="speaker-name">S. Najem</div><div class="speaker-title">Morocco</div></div>
-      <div class="speaker-card"><div class="speaker-name">O. Nouri</div><div class="speaker-title">Tunisia</div></div>
-      <div class="speaker-card"><div class="speaker-name">K. Oualla</div><div class="speaker-title">Morocco</div></div>
-      <div class="speaker-card"><div class="speaker-name">M. Oukkal</div><div class="speaker-title">Algeria</div></div>
-      <div class="speaker-card"><div class="speaker-name">M. Ozsahin</div><div class="speaker-title">Switzerland</div></div>
-      <div class="speaker-card"><div class="speaker-name">E. Özyar</div><div class="speaker-title">Turkey</div></div>
-      <div class="speaker-card"><div class="speaker-name">Nikos Paragios</div><div class="speaker-title">TheraPanacea, France</div></div>
+      <div class="faculty-country">France</div>
+      <div class="speaker-card"><div class="speaker-name">C. Gaudy</div><div class="speaker-title">France</div></div>
       <div class="speaker-card"><div class="speaker-name">F. Penault-Llorca</div><div class="speaker-title">France</div></div>
       <div class="speaker-card"><div class="speaker-name">J-Y. Pierga</div><div class="speaker-title">France</div></div>
-      <div class="speaker-card"><div class="speaker-name">L. Popovic</div><div class="speaker-title">Serbia</div></div>
-      <div class="speaker-card"><div class="speaker-name">P. Rutkowski</div><div class="speaker-title">Poland</div></div>
-      <div class="speaker-card"><div class="speaker-name">H. Samlali</div><div class="speaker-title">Morocco</div></div>
-      <div class="speaker-card"><div class="speaker-name">R. Samlali</div><div class="speaker-title">Morocco</div></div>
-      <div class="speaker-card"><div class="speaker-name">U. Selek</div><div class="speaker-title">Turkey</div></div>
-      <div class="speaker-card"><div class="speaker-name">Ö. Sönmez</div><div class="speaker-title">Turkey</div></div>
-      <div class="speaker-card"><div class="speaker-name">D. Tesanovic</div><div class="speaker-title">Serbia</div></div>
+      <div class="speaker-card"><div class="speaker-name">J. Gligorov</div><div class="speaker-title">France</div></div>
       <div class="speaker-card"><div class="speaker-name">N-H. To</div><div class="speaker-title">France</div></div>
+      <div class="speaker-card"><div class="speaker-name">Nikos Paragios</div><div class="speaker-title">TheraPanacea, France</div></div>
+      <div class="speaker-card"><div class="speaker-name">S. Frikha</div><div class="speaker-title">France</div></div>
+      <div class="speaker-card"><div class="speaker-name">Y. Belkacemi</div><div class="speaker-title">France</div></div>
+      <div class="speaker-card"><div class="speaker-name">Y. Mahi</div><div class="speaker-title">France</div></div>
+      <div class="faculty-country">Morocco</div>
+      <div class="speaker-card"><div class="speaker-name">F-Z. Bellefkih</div><div class="speaker-title">Morocco</div></div>
+      <div class="speaker-card"><div class="speaker-name">H. Errihani</div><div class="speaker-title">Morocco</div></div>
+      <div class="speaker-card"><div class="speaker-name">H. Samlali</div><div class="speaker-title">Morocco</div></div>
+      <div class="speaker-card"><div class="speaker-name">K. Oualla</div><div class="speaker-title">Morocco</div></div>
+      <div class="speaker-card"><div class="speaker-name">L.K. El Hassani</div><div class="speaker-title">Morocco</div></div>
+      <div class="speaker-card"><div class="speaker-name">M. Maskrout</div><div class="speaker-title">Morocco</div></div>
+      <div class="speaker-card"><div class="speaker-name">N. Berrada</div><div class="speaker-title">Morocco</div></div>
+      <div class="speaker-card"><div class="speaker-name">R. Samlali</div><div class="speaker-title">Morocco</div></div>
+      <div class="speaker-card"><div class="speaker-name">S. Najem</div><div class="speaker-title">Morocco</div></div>
+      <div class="speaker-card"><div class="speaker-name">Y. Bensouda</div><div class="speaker-title">Morocco</div></div>
+      <div class="faculty-country">Poland</div>
+      <div class="speaker-card"><div class="speaker-name">AM. Czarnecka</div><div class="speaker-title">Poland</div></div>
+      <div class="speaker-card"><div class="speaker-name">P. Rutkowski</div><div class="speaker-title">Poland</div></div>
+      <div class="faculty-country">Serbia</div>
+      <div class="speaker-card"><div class="speaker-name">B. Kukic</div><div class="speaker-title">Serbia</div></div>
+      <div class="speaker-card"><div class="speaker-name">D. Tesanovic</div><div class="speaker-title">Serbia</div></div>
+      <div class="speaker-card"><div class="speaker-name">L. Popovic</div><div class="speaker-title">Serbia</div></div>
+      <div class="speaker-card"><div class="speaker-name">N. Maletin</div><div class="speaker-title">Serbia</div></div>
+      <div class="faculty-country">Switzerland</div>
+      <div class="speaker-card"><div class="speaker-name">M. Ozsahin</div><div class="speaker-title">Switzerland</div></div>
       <div class="speaker-card"><div class="speaker-name">P. Tsoutsou</div><div class="speaker-title">Switzerland</div></div>
+      <div class="faculty-country">Tunisia</div>
+      <div class="speaker-card"><div class="speaker-name">H. Boussen</div><div class="speaker-title">Tunisia</div></div>
+      <div class="speaker-card"><div class="speaker-name">O. Nouri</div><div class="speaker-title">Tunisia</div></div>
+      <div class="speaker-card"><div class="speaker-name">S. Kanoun</div><div class="speaker-title">Tunisia</div></div>
+      <div class="faculty-country">Turkey</div>
+      <div class="speaker-card"><div class="speaker-name">B. Atalar</div><div class="speaker-title">Turkey</div></div>
+      <div class="speaker-card"><div class="speaker-name">B. Köylü</div><div class="speaker-title">Turkey</div></div>
+      <div class="speaker-card"><div class="speaker-name">E. Esin</div><div class="speaker-title">Turkey</div></div>
+      <div class="speaker-card"><div class="speaker-name">E. Özyar</div><div class="speaker-title">Turkey</div></div>
+      <div class="speaker-card"><div class="speaker-name">G. Ergene</div><div class="speaker-title">Turkey</div></div>
+      <div class="speaker-card"><div class="speaker-name">M. Celayir</div><div class="speaker-title">Turkey</div></div>
+      <div class="speaker-card"><div class="speaker-name">N. Bese</div><div class="speaker-title">Turkey</div></div>
+      <div class="speaker-card"><div class="speaker-name">Ö. Sönmez</div><div class="speaker-title">Turkey</div></div>
+      <div class="speaker-card"><div class="speaker-name">Özlem Er</div><div class="speaker-title">Turkey</div></div>
+      <div class="speaker-card"><div class="speaker-name">P. Hurmuz</div><div class="speaker-title">Turkey</div></div>
       <div class="speaker-card"><div class="speaker-name">S. Turkan</div><div class="speaker-title">Turkey</div></div>
+      <div class="speaker-card"><div class="speaker-name">U. Selek</div><div class="speaker-title">Turkey</div></div>
+      <div class="speaker-card"><div class="speaker-name">V. Kykan</div><div class="speaker-title">Turkey</div></div>
+      <div class="speaker-card"><div class="speaker-name">Y. Erlap</div><div class="speaker-title">Turkey</div></div>
+      <div class="faculty-country">UAE</div>
+      <div class="speaker-card"><div class="speaker-name">F. Geara</div><div class="speaker-title">UAE</div></div>
     </div>
   </div>
 </section>
@@ -1291,8 +1307,8 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
         <div class="session-items">
           <div class="prog-row"><span class="prog-sub">👥 Chairpersons: N-H. To (France), A. Dib (Algeria), TBC</span></div>
           <div class="prog-row"><span class="prog-time">16:30–16:50</span><span class="prog-type t-lecture">Lecture</span><div class="prog-content">Stage III Resectable Melanoma: Immunotherapy in the Neoadjuvant-to-Adjuvant Continuum — Standard of Care in the Immunotherapy Era<span class="prog-speaker">P. Rutkowski (Poland)</span><span class="prog-duration">20 min</span></div></div>
-          <div class="prog-row"><span class="prog-time">16:50–17:10</span><span class="prog-type t-lecture">Lecture</span><div class="prog-content">Stage III Resectable Melanoma: Criteria for Immunotherapy Personalization According to the Pathologic Response<span class="prog-speaker">Speaker TBC</span><span class="prog-duration">20 min</span></div></div>
-          <div class="prog-row"><span class="prog-time">17:10–17:40</span><span class="prog-type t-panel">Panel</span><div class="prog-content">Expert Panel &amp; Audience Vote: Optimizing Immunotherapy Type and Duration in Resectable Melanoma — Challenges and Adaptations for LMICs<span class="prog-speaker">Discussant: AM. Czarnecka (Poland), N-H. To (France) + Audience Interactive Vote</span><span class="prog-duration">30 min</span></div></div>
+          <div class="prog-row"><span class="prog-time">16:50–17:10</span><span class="prog-type t-lecture">Lecture</span><div class="prog-content">Stage III Resectable Melanoma: Criteria for Immunotherapy Personalization According to the Pathologic Response<span class="prog-speaker">V. Kykan (Turkey)</span><span class="prog-duration">20 min</span></div></div>
+          <div class="prog-row"><span class="prog-time">17:10–17:40</span><span class="prog-type t-panel">Panel</span><div class="prog-content">Expert Panel &amp; Audience Vote: Optimizing Immunotherapy Type and Duration in Resectable Melanoma — Challenges and Adaptations for LMICs<span class="prog-speaker">Discussant: AM. Czarnecka (Poland), N-H. To (France), C. Gaudy (France) + Audience Interactive Vote</span><span class="prog-duration">30 min</span></div></div>
           <div class="prog-row"><span class="prog-time">17:40–18:00</span><span class="prog-type t-symposium">Symposium</span><div class="prog-content">Liquid Biopsy: State of the Art and Perspectives in Solid Tumors <em>[Symposium Sponsored by Guardanthealth]</em><span class="prog-speaker">Y. Mahi (France)</span></div></div>
           <div class="prog-row"><span class="prog-time">18:00–18:30</span><span class="prog-type t-keynote">Keynote 5</span><div class="prog-content">Closing Keynote Lecture — Day 2<span class="prog-speaker">Speaker TBC</span><span class="prog-duration">30 min</span></div></div>
           <div class="prog-row"><span class="prog-time">20:00</span><span class="prog-type t-social">🍽 Social</span><div class="prog-content">"Meet-the-Expert" Dinner</div></div>

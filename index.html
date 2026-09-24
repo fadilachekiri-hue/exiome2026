@@ -109,6 +109,9 @@ section{padding:6rem 2rem;}
 .day-tabs{display:flex;gap:.5rem;margin-bottom:2.5rem;flex-wrap:wrap;}
 .day-tab{padding:.6rem 1.5rem;border:1px solid var(--border);border-radius:8px;background:none;color:var(--muted);cursor:pointer;font-family:'Montserrat',sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;transition:all .2s;}
 .day-tab.active,.day-tab:hover{background:var(--accent);color:var(--navy);border-color:var(--accent);font-weight:600;}
+.day-nav{text-align:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);}
+.day-nav-btn{padding:.9rem 2.2rem;background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--navy);border:none;border-radius:8px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:opacity .2s;}
+.day-nav-btn:hover{opacity:.88;}
 .day-content{display:none;}
 .day-content.active{display:block;}
 .day-header{margin-bottom:2rem;padding:1.4rem 0 1.1rem;background:none;border-bottom:1px solid var(--border);border-radius:0;}
@@ -1269,6 +1272,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
           <div class="prog-row"><span class="prog-time">20:00</span><span class="prog-type t-social">🍽 Social</span><div class="prog-content">Mediterranean Scientific Societies Dinner</div></div>
         </div>
       </div>
+      <div class="day-nav"><button class="day-nav-btn" onclick="goToDay('day2')">Day 2 — Nov. 13 →</button></div>
     </div>
 
     <!-- DAY 2 -->
@@ -1324,6 +1328,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
           <div class="prog-row"><span class="prog-time">20:00</span><span class="prog-type t-social">🍽 Social</span><div class="prog-content">"Meet-the-Expert" Dinner</div></div>
         </div>
       </div>
+      <div class="day-nav"><button class="day-nav-btn" onclick="goToDay('day3')">Day 3 — Nov. 14 →</button></div>
     </div>
 
     <!-- DAY 3 -->
@@ -1701,6 +1706,12 @@ function showDay(id,btn){
   document.querySelectorAll('.day-tab').forEach(function(b){b.classList.remove('active');});
   document.getElementById(id).classList.add('active');
   btn.classList.add('active');
+}
+function goToDay(id){
+  var btn = document.querySelector('.day-tab[onclick*="'+id+'\'"]');
+  if(btn){ showDay(id, btn); }
+  var sec = document.getElementById('programme');
+  if(sec){ sec.scrollIntoView({behavior:'smooth', block:'start'}); }
 }
 function saveBanner(){
   var t=document.getElementById('adminBanner').value.trim();

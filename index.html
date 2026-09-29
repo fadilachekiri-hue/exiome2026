@@ -2303,7 +2303,7 @@ document.addEventListener('click', function(e){
   /* Scroll-reveal — applied via JS so content is never hidden without JS */
   if(!reduce && 'IntersectionObserver' in window){
     var solo = ['.section-label','.section-title','.about-text','.abstract-box','.gallery-intro','.sponsor-contact'];
-    var grids = ['.why-grid','.about-stats','.org-grid','.info-cards','.speakers-grid','.gallery-grid','.day-tabs','.topics-grid','.sponsor-row'];
+    var grids = ['.why-grid','.about-stats','.org-grid','.info-cards','.gallery-grid','.day-tabs','.topics-grid','.sponsor-row'];
     document.querySelectorAll(solo.join(',')).forEach(function(el){ el.classList.add('reveal'); });
     document.querySelectorAll(grids.join(',')).forEach(function(el){ el.classList.add('reveal-stagger'); });
 
@@ -2313,6 +2313,17 @@ document.addEventListener('click', function(e){
       });
     }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
     document.querySelectorAll('.reveal,.reveal-stagger').forEach(function(el){ io.observe(el); });
+
+    /* Safety net: some mobile browsers (notably iOS Safari with dynamic
+       toolbar) can fail to fire IntersectionObserver reliably, leaving
+       content stuck invisible. Force-reveal anything still hidden after
+       a short delay so content is never permanently lost. */
+    setTimeout(function(){
+      document.querySelectorAll('.reveal:not(.in),.reveal-stagger:not(.in)').forEach(function(el){
+        el.classList.add('in');
+        io.unobserve(el);
+      });
+    }, 2500);
   }
 })();
 </script>

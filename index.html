@@ -355,7 +355,7 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:3rem 2r
 .gallery-item .gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:.8rem 1rem;font-size:.72rem;color:var(--light);letter-spacing:.05em;opacity:0;transition:opacity .25s;transform:translateY(4px);}
 .gallery-item:hover .gallery-caption{opacity:1;transform:translateY(0);}
 /* Lightbox */
-#lightbox{display:none;position:fixed;inset:0;z-index:9500;background:rgba(0,0,0,.92);align-items:center;justify-content:center;padding:2rem;}
+#lightbox{display:none;position:fixed;inset:0;z-index:9500;background:rgba(13,27,42,.96);align-items:center;justify-content:center;padding:2rem;}
 #lightbox.open{display:flex;animation:fadeIn .2s ease;}
 #lightbox img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.8);}
 #lightbox .lb-close{position:fixed;top:1.5rem;right:1.5rem;width:44px;height:44px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:50%;color:#fff;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;}
@@ -695,20 +695,8 @@ nav.scrolled{background:rgba(13,27,42,.88);box-shadow:0 10px 40px -20px rgba(0,0
 #countdown{gap:.8rem;}
 
 /* ════════════ FOOTER ════════════ */
-footer{background:linear-gradient(180deg,var(--navy),#091421);}
+footer{background:linear-gradient(180deg,var(--navy),var(--deep));}
 
-/* ════════════ SCROLL REVEAL ════════════ */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease);will-change:opacity,transform;}
-.reveal.in{opacity:1;transform:none;}
-.reveal-stagger > *{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
-.reveal-stagger.in > *{opacity:1;transform:none;}
-.reveal-stagger.in > *:nth-child(1){transition-delay:.04s}
-.reveal-stagger.in > *:nth-child(2){transition-delay:.1s}
-.reveal-stagger.in > *:nth-child(3){transition-delay:.16s}
-.reveal-stagger.in > *:nth-child(4){transition-delay:.22s}
-.reveal-stagger.in > *:nth-child(5){transition-delay:.28s}
-.reveal-stagger.in > *:nth-child(6){transition-delay:.34s}
-.reveal-stagger.in > *:nth-child(7){transition-delay:.4s}
 
 /* ════════════ REDUCED MOTION ════════════ */
 @media(prefers-reduced-motion:reduce){
@@ -929,9 +917,10 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
   <ul class="nav-links">
     <li><a href="#why">Why Attend</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#gallery">Pictures</a></li>
+    <li><a href="#gallery">Gallery</a></li>
     <li><a href="#info">Venue</a></li>
     <li><a href="#speakers">Faculty</a></li>
+    <li><a href="#symposium">Symposium Speakers</a></li>
     <li><a href="#programme">Program</a></li>
     <li><a href="#abstract">Abstracts</a></li>
     <li><a href="#sponsors">Partners</a></li>
@@ -944,9 +933,10 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
 <nav class="nav-mobile-menu" id="navMobileMenu">
   <a href="#why" onclick="closeMobileMenu()">Why Attend</a>
   <a href="#about" onclick="closeMobileMenu()">About</a>
-  <a href="#gallery" onclick="closeMobileMenu()">Pictures</a>
+  <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
   <a href="#info" onclick="closeMobileMenu()">Venue</a>
   <a href="#speakers" onclick="closeMobileMenu()">Faculty</a>
+  <a href="#symposium" onclick="closeMobileMenu()">Symposium Speakers</a>
   <a href="#programme" onclick="closeMobileMenu()">Program</a>
   <a href="#abstract" onclick="closeMobileMenu()">Abstracts</a>
   <a href="#sponsors" onclick="closeMobileMenu()">Partners</a>
@@ -956,7 +946,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
 <section id="hero" tabindex="-1">
   <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="hero-inner">
-    <p class="hero-edition"><span style="color:var(--accent);font-weight:700;font-size:.95rem;">e</span><span style="color:var(--accent);font-weight:700;font-size:.95rem;">X</span>pert &nbsp;<span style="color:var(--accent);font-weight:700;font-size:.95rem;">I</span>nternational &nbsp;<span style="color:var(--accent);font-weight:700;font-size:.95rem;">O</span>ncology &nbsp;<span style="color:var(--accent);font-weight:700;font-size:.95rem;">ME</span>eting &nbsp;&mdash;&nbsp; 3rd Edition</p>
+    <p class="hero-edition"><span style="color:#e51f2b;font-weight:700;font-size:.95rem;">e</span><span style="color:#e51f2b;font-weight:700;font-size:.95rem;">X</span>pert &nbsp;<span style="color:#e51f2b;font-weight:700;font-size:.95rem;">I</span>nternational &nbsp;<span style="color:#e51f2b;font-weight:700;font-size:.95rem;">O</span>ncology &nbsp;<span style="color:#e51f2b;font-weight:700;font-size:.95rem;">ME</span>eting &nbsp;&mdash;&nbsp; 3rd Edition</p>
     <img src="assets/img-53481088d2cb.png" alt="eXIOME 2026" class="hero-logo-img">
     <p class="hero-tagline">Applicability of Western Oncology Guidelines and Innovations in LMICs</p>
     <div class="hero-dates">
@@ -1043,7 +1033,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
 <section id="gallery">
   <div class="container">
     <p class="section-label">Previous Edition</p>
-    <h2 class="section-title">eXIOME 2025 — In Pictures</h2>
+    <h2 class="section-title">eXIOME 2025 — Gallery</h2>
     <p class="gallery-intro">A look back at the 2nd edition of eXIOME, held in November 2025 in Istanbul. International experts, scientific exchanges and memorable moments among participants from around the world.</p>
     <div class="gallery-grid">
       <div class="gallery-item" onclick="openLightbox(0)">
@@ -1162,10 +1152,9 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
       <div class="faculty-country">France</div>
       <div class="speaker-card"><div class="speaker-name">C. Gaudy</div><div class="speaker-title">France</div></div>
       <div class="speaker-card"><div class="speaker-name">F. Penault-Llorca</div><div class="speaker-title">France</div></div>
-      <div class="speaker-card"><div class="speaker-name">J-Y. Pierga</div><div class="speaker-title">France</div></div>
       <div class="speaker-card"><div class="speaker-name">J. Gligorov</div><div class="speaker-title">France</div></div>
+      <div class="speaker-card"><div class="speaker-name">J-Y. Pierga</div><div class="speaker-title">France</div></div>
       <div class="speaker-card"><div class="speaker-name">N-H. To</div><div class="speaker-title">France</div></div>
-      <div class="speaker-card"><div class="speaker-name">Nikos Paragios</div><div class="speaker-title">TheraPanacea, France</div></div>
       <div class="speaker-card"><div class="speaker-name">S. Frikha</div><div class="speaker-title">France</div></div>
       <div class="speaker-card"><div class="speaker-name">Y. Belkacemi</div><div class="speaker-title">France</div></div>
       <div class="speaker-card"><div class="speaker-name">Y. Mahi</div><div class="speaker-title">France</div></div>
@@ -1213,6 +1202,17 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
       <div class="speaker-card"><div class="speaker-name">Y.C. Öyken</div><div class="speaker-title">Turkey</div></div>
       <div class="faculty-country">UAE</div>
       <div class="speaker-card"><div class="speaker-name">F. Geara</div><div class="speaker-title">UAE</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SYMPOSIUM SPEAKERS ── -->
+<section id="symposium">
+  <div class="container">
+    <p class="section-label">Industry Symposia</p>
+    <h2 class="section-title">Symposium Speakers</h2>
+    <div class="speakers-grid" id="symposiumGrid">
+      <div class="speaker-card"><div class="speaker-name">Nikos Paragios</div><div class="speaker-title">TheraPanacea</div></div>
     </div>
   </div>
 </section>
@@ -1469,7 +1469,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
 <!-- ── SPONSORS ── -->
 <section id="sponsors">
   <div class="container">
-    <p class="section-label">Partners & Sponsors</p>
+    <p class="section-label">Partner Sponsorship</p>
     <h2 class="section-title">Supporting eXIOME 2026</h2>
     <div class="sponsors-tiers">
       <div class="sponsor-tier sponsor-gold">
@@ -1493,10 +1493,10 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
       <div class="sponsor-tier sponsor-institutional">
         <span class="tier-label">Institutional Partners</span>
         <div class="sponsor-row">
+          <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-fb9a866c9a1a.png" alt="AROME"></div><span>AROME</span></div>
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-25adb43e4c37.png" alt="SAFRO"></div><span>SAFRO</span></div>
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-9000b9785a9b.png" alt="OMA Agadir"></div><span>OMA Agadir</span></div>
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-fcb08eb1d19c.png" alt="AMFROM"></div><span>AMFROM</span></div>
-          <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-fb9a866c9a1a.png" alt="AROME"></div><span>AROME</span></div>
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-d0c283cf2d09.png" alt="Saudi Oncology Society"></div><span>Saudi Oncology Society</span></div>
           
           <div class="sponsor-slot"><span>Your Logo Here</span></div>
@@ -1524,9 +1524,10 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
       <div class="footer-links">
         <a href="#why">Why Attend</a>
         <a href="#about">About</a>
-        <a href="#gallery">Pictures</a>
+        <a href="#gallery">Gallery</a>
         <a href="#info">Venue</a>
         <a href="#speakers">Faculty</a>
+        <a href="#symposium">Symposium Speakers</a>
         <a href="#programme">Program</a>
         <a href="#abstract">Abstracts</a>
         <a href="#sponsors">Partners</a>
@@ -2300,31 +2301,10 @@ document.addEventListener('click', function(e){
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
 
-  /* Scroll-reveal — applied via JS so content is never hidden without JS */
-  if(!reduce && 'IntersectionObserver' in window){
-    var solo = ['.section-label','.section-title','.about-text','.abstract-box','.gallery-intro','.sponsor-contact'];
-    var grids = ['.why-grid','.about-stats','.org-grid','.info-cards','.gallery-grid','.day-tabs','.topics-grid','.sponsor-row'];
-    document.querySelectorAll(solo.join(',')).forEach(function(el){ el.classList.add('reveal'); });
-    document.querySelectorAll(grids.join(',')).forEach(function(el){ el.classList.add('reveal-stagger'); });
-
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
-    document.querySelectorAll('.reveal,.reveal-stagger').forEach(function(el){ io.observe(el); });
-
-    /* Safety net: some mobile browsers (notably iOS Safari with dynamic
-       toolbar) can fail to fire IntersectionObserver reliably, leaving
-       content stuck invisible. Force-reveal anything still hidden after
-       a short delay so content is never permanently lost. */
-    setTimeout(function(){
-      document.querySelectorAll('.reveal:not(.in),.reveal-stagger:not(.in)').forEach(function(el){
-        el.classList.add('in');
-        io.unobserve(el);
-      });
-    }, 2500);
-  }
+  /* Scroll-reveal animation removed: it relied on IntersectionObserver
+     firing reliably across all browsers, which proved not to be the case
+     (content stuck invisible on iOS Safari, then on Mac browsers for the
+     sponsor logos). Content now stays visible by default everywhere. */
 })();
 </script>
 </body>

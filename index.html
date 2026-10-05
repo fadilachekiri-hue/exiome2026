@@ -79,7 +79,7 @@ section{padding:6rem 2rem;}
 /* ── ORGANIZERS ── */
 .org-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;}
 .org-card{border:1px solid var(--border);border-radius:10px;padding:1.5rem;text-align:center;background:var(--glass);}
-.org-name{font-weight:600;color:var(--accent);margin-bottom:.3rem;font-size:.9rem;}
+.org-name{font-weight:700;color:var(--accent);margin-bottom:.3rem;font-size:1rem;}
 .org-role{font-size:.72rem;color:var(--muted);}
 .org-country{font-size:.7rem;color:var(--muted);margin-top:.2rem;}
 
@@ -97,7 +97,7 @@ section{padding:6rem 2rem;}
 #speakers{background:var(--navy);}
 .speakers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;}
 .speaker-card{border:1px solid var(--border);border-radius:10px;padding:1.5rem;text-align:center;background:var(--glass);}
-.speaker-name{font-weight:600;color:var(--light);margin-bottom:.3rem;font-size:.88rem;}
+.speaker-name{font-weight:700;color:var(--light);margin-bottom:.3rem;font-size:.95rem;}
 .speaker-title{font-size:.72rem;color:var(--muted);}
 .faculty-country{grid-column:1/-1;display:flex;align-items:center;gap:.7rem;margin:1.6rem 0 -.4rem;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--accent);}
 .faculty-country:first-child{margin-top:0;}
@@ -127,7 +127,7 @@ section{padding:6rem 2rem;}
 .sbg-cyan{background:rgba(26,188,156,.4);border-left-color:#1abc9c;}
 .sbg-gold{background:rgba(243,156,18,.38);border-left-color:#f39c12;}
 .sbg-teal{background:rgba(26,188,156,.38);border-left-color:#1abc9c;}
-.session-title-text{font-size:.85rem;font-weight:600;letter-spacing:.05em;color:var(--light);}
+.session-title-text{font-size:.95rem;font-weight:700;letter-spacing:.05em;color:var(--light);}
 .session-items{background:rgba(6,13,23,.32);}
 .prog-row{display:grid;grid-template-columns:90px 100px 1fr;gap:1rem;padding:.9rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.06);align-items:start;}
 .prog-row:last-child{border-bottom:none;}
@@ -144,9 +144,9 @@ section{padding:6rem 2rem;}
 .t-social{background:rgba(26,188,156,.32);color:#94e8d6;}
 .t-symposium{background:rgba(231,76,60,.34);color:#ffb3a7;}
 .t-oral{background:rgba(155,89,182,.32);color:#d9b8ea;}
-.prog-content{font-size:.82rem;color:var(--light);line-height:1.5;}
-.prog-speaker{display:block;font-size:.72rem;color:var(--muted);margin-top:.3rem;}
-.prog-duration{display:inline-block;font-size:.68rem;color:var(--accent);background:rgba(200,169,110,.1);padding:.1rem .4rem;border-radius:3px;margin-top:.3rem;}
+.prog-content{font-size:.82rem;font-weight:600;color:var(--light);line-height:1.5;}
+.prog-speaker{display:block;font-size:.72rem;font-weight:400;color:var(--muted);margin-top:.3rem;}
+.prog-duration{display:inline-block;font-size:.68rem;font-weight:400;color:var(--accent);background:rgba(200,169,110,.1);padding:.1rem .4rem;border-radius:3px;margin-top:.3rem;}
 .prog-sub{font-size:.72rem;color:var(--accent);font-style:italic;grid-column:1/-1;padding:.4rem 0;}
 
 /* ── ABSTRACT ── */
@@ -1132,20 +1132,20 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
 
     <h3 class="sub-heading">Organising Committee</h3>
     <div class="org-grid">
-      <div class="org-card"><div class="org-name">Pr Y. Belkacemi</div><div class="org-role">Co-Chair</div><div class="org-country">France</div></div>
-      <div class="org-card"><div class="org-name">Pr A. Bounedjar</div><div class="org-role">Co-Chair</div><div class="org-country">Algeria</div></div>
-      <div class="org-card"><div class="org-name">Pr J. Gligorov</div><div class="org-role">Co-Chair</div><div class="org-country">France</div></div>
-      <div class="org-card"><div class="org-name">Pr R. Samlali</div><div class="org-role">Co-Chair</div><div class="org-country">Morocco</div></div>
+      <div class="org-card"><div class="org-name">Pr Y. Belkacemi</div><div class="org-role">Co-Chair</div><div class="org-country">🇫🇷 France</div></div>
+      <div class="org-card"><div class="org-name">Pr A. Bounedjar</div><div class="org-role">Co-Chair</div><div class="org-country">🇩🇿 Algeria</div></div>
+      <div class="org-card"><div class="org-name">Pr J. Gligorov</div><div class="org-role">Co-Chair</div><div class="org-country">🇫🇷 France</div></div>
+      <div class="org-card"><div class="org-name">Pr R. Samlali</div><div class="org-role">Co-Chair</div><div class="org-country">🇲🇦 Morocco</div></div>
     </div>
 
     <h3 class="sub-heading" style="margin-top:3rem;">Local Committee — Turkey</h3>
     <div class="org-grid">
-      <div class="org-card"><div class="org-name">Pr B. Atalar</div><div class="org-role">Local Committee</div><div class="org-country">Turkey</div></div>
-      <div class="org-card"><div class="org-name">Pr N. Bese</div><div class="org-role">Local Committee</div><div class="org-country">Turkey</div></div>
-      <div class="org-card"><div class="org-name">Pr Özlem Er</div><div class="org-role">Local Committee</div><div class="org-country">Turkey</div></div>
-      <div class="org-card"><div class="org-name">Pr E. Özyar</div><div class="org-role">Local Committee</div><div class="org-country">Turkey</div></div>
-      <div class="org-card"><div class="org-name">Pr U. Selek</div><div class="org-role">Local Committee</div><div class="org-country">Turkey</div></div>
-      <div class="org-card"><div class="org-name">Pr S. Turkan</div><div class="org-role">Local Committee</div><div class="org-country">Turkey</div></div>
+      <div class="org-card"><div class="org-name">Pr B. Atalar</div><div class="org-role">Local Committee</div><div class="org-country">🇹🇷 Turkey</div></div>
+      <div class="org-card"><div class="org-name">Pr N. Bese</div><div class="org-role">Local Committee</div><div class="org-country">🇹🇷 Turkey</div></div>
+      <div class="org-card"><div class="org-name">Pr Özlem Er</div><div class="org-role">Local Committee</div><div class="org-country">🇹🇷 Turkey</div></div>
+      <div class="org-card"><div class="org-name">Pr E. Özyar</div><div class="org-role">Local Committee</div><div class="org-country">🇹🇷 Turkey</div></div>
+      <div class="org-card"><div class="org-name">Pr U. Selek</div><div class="org-role">Local Committee</div><div class="org-country">🇹🇷 Turkey</div></div>
+      <div class="org-card"><div class="org-name">Pr S. Turkan</div><div class="org-role">Local Committee</div><div class="org-country">🇹🇷 Turkey</div></div>
     </div>
 
     <h3 class="sub-heading" style="margin-top:3rem;">International Faculty</h3>

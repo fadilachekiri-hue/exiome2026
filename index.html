@@ -181,14 +181,16 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:3rem 2r
 .footer-inner{max-width:1100px;margin:0 auto;}
 .footer-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);}
 .footer-logo{display:flex;align-items:center;gap:1rem;}
-.footer-logo img{height:50px;width:auto;object-fit:contain;}
-.footer-logo-text{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--accent);}
+.footer-logo img{height:50px;width:auto;object-fit:contain;border-radius:8px;}
+.footer-logo-text{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--light);letter-spacing:.02em;}
+.footer-logo-e{color:#e2483e;font-size:1.15em;}
+.footer-logo-year{color:var(--accent);font-weight:400;}
 .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
-.footer-links a{color:var(--muted);text-decoration:none;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;transition:color .2s;}
 .footer-links a:hover{color:var(--accent);}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
 .footer-copy{font-size:.72rem;color:var(--muted);}
-.footer-org{font-size:.72rem;color:var(--muted);text-align:right;}
+.footer-org{font-size:.72rem;color:var(--muted);text-align:right;line-height:1.8;}
 
 /* ── ADMIN PANEL ── */
 #adminPanel{position:fixed;inset:0;z-index:8000;background:rgba(0,0,0,.85);display:none;align-items:flex-start;justify-content:center;padding:2rem;overflow-y:auto;}
@@ -1561,7 +1563,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
       <div class="footer-logo">
         <img src="assets/img-53481088d2cb.png" alt="eXIOME 2026" loading="lazy">
         <div>
-          <div class="footer-logo-text">eXIOME 2026</div>
+          <div class="footer-logo-text"><span class="footer-logo-e">e</span>XIOME <span class="footer-logo-year">2026</span></div>
           <div style="font-size:.65rem;color:var(--muted);letter-spacing:.1em;">Istanbul · November 12–14, 2026</div>
         </div>
       </div>
@@ -1581,6 +1583,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
       <div class="footer-copy">© 2026 eXIOME — eXpert International Oncology MEeting</div>
       <div class="footer-org">
         <div>Scientific organisation: Y. Belkacemi · A. Bounedjar · J. Gligorov · R. Samlali</div>
+        <div>Local committee — Türkiye: B. Atalar · N. Bese · Özlem Er · E. Özyar · U. Selek · S. Turkan</div>
         <div>Logistics: UNICON — <a href="mailto:hande@uniconmice.com" style="color:var(--accent);text-decoration:none;">hande@uniconmice.com</a></div>
       </div>
     </div>

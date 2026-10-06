@@ -467,17 +467,30 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:3rem 2r
 /* ── SPONSORS ── */
 #sponsors{background:var(--deep);}
 .sponsors-tiers{display:flex;flex-direction:column;gap:3rem;}
-.sponsor-tier{}
-.tier-label{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;display:block;text-align:center;}
+.sponsor-tier{text-align:center;}
+.tier-label{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem;display:inline-block;padding:.45rem 1.3rem;border-radius:20px;background:rgba(200,169,110,.1);border:1px solid var(--border);}
 .sponsor-row{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;align-items:center;}
 .sponsor-slot{border:1px solid var(--border);border-radius:10px;padding:1.4rem 2rem;background:var(--glass);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;min-width:190px;min-height:100px;transition:border-color .2s;}
 .sponsor-slot:hover{border-color:var(--accent);}
 .sponsor-slot span{font-size:.78rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;}
-.sponsor-gold .sponsor-slot{min-width:240px;min-height:120px;border-color:rgba(200,169,110,.4);}
-.sponsor-gold .sponsor-slot span{color:var(--accent);}
+
+.sponsor-gold .tier-label{font-size:.85rem;color:#2a2110;background:linear-gradient(135deg,#f3d99a,#c8a96e);border-color:#e8c97e;box-shadow:0 2px 12px rgba(200,169,110,.35);}
+.sponsor-gold .sponsor-slot{min-width:240px;min-height:120px;padding:1.8rem 2.4rem;border-width:2px;border-color:rgba(200,169,110,.55);background:rgba(200,169,110,.07);}
+.sponsor-gold .sponsor-slot span{color:var(--accent);font-weight:700;}
+.sponsor-gold .sponsor-logo{max-height:70px;max-width:220px;}
+
+.sponsor-silver .tier-label{color:#1e2a33;background:linear-gradient(135deg,#eef2f5,#b9c4cd);border-color:#c9d2db;}
+.sponsor-silver .sponsor-slot{min-width:210px;min-height:108px;border-color:rgba(192,201,209,.45);}
+.sponsor-silver .sponsor-slot span{color:#c9d2db;}
+.sponsor-silver .sponsor-logo{max-height:60px;max-width:195px;}
+
+.sponsor-bronze .tier-label{color:#2b1608;background:linear-gradient(135deg,#e3a97e,#b5733f);border-color:#c17a4a;}
+.sponsor-bronze .sponsor-slot{min-width:185px;min-height:96px;border-color:rgba(193,122,74,.4);}
+.sponsor-bronze .sponsor-slot span{color:#d79b6e;}
+.sponsor-bronze .sponsor-logo{max-height:50px;max-width:170px;}
+
 .sponsor-logo-wrap{background:#fff;border-radius:8px;padding:.6rem 1.1rem;display:flex;align-items:center;justify-content:center;}
 .sponsor-logo{display:block;max-height:56px;max-width:180px;object-fit:contain;}
-.sponsor-gold .sponsor-logo{max-height:70px;max-width:220px;}
 .sponsor-logo-lg{max-height:95px!important;max-width:280px!important;}
 .sponsor-institutional .sponsor-slot{min-width:220px;min-height:110px;}
 .sponsor-institutional .sponsor-logo{max-height:80px;max-width:240px;}
@@ -1501,7 +1514,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
     <h2 class="section-title">Supporting eXIOME 2026</h2>
     <div class="sponsors-tiers">
       <div class="sponsor-tier sponsor-gold">
-        <span class="tier-label">Gold Sponsors</span>
+        <span class="tier-label">🥇 Gold Sponsors</span>
         <div class="sponsor-row">
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo sponsor-logo-lg" loading="lazy" src="assets/img-b9d6579ec2ed.png" alt="Lilly — A Medicine Company"></div><span>Lilly</span></div>
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-ef3d7a09e670.png" alt="Elekta"></div><span>Elekta</span></div>
@@ -1509,15 +1522,15 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-8bc106b9dda1.png" alt="United Imaging"></div><span>United Imaging</span></div>
         </div>
       </div>
-      <div class="sponsor-tier">
-        <span class="tier-label">Silver Sponsors</span>
+      <div class="sponsor-tier sponsor-silver">
+        <span class="tier-label">🥈 Silver Sponsors</span>
         <div class="sponsor-row">
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-1f1dac5f2a13.png" alt="VisionRT"></div><span>VisionRT</span></div>
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-345031902045.png" alt="TheraPanacea"></div><span>TheraPanacea</span></div>
         </div>
       </div>
-      <div class="sponsor-tier">
-        <span class="tier-label">Bronze Sponsors</span>
+      <div class="sponsor-tier sponsor-bronze">
+        <span class="tier-label">🥉 Bronze Sponsors</span>
         <div class="sponsor-row">
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-6db9337bc7f6.png" alt="Guardant"></div><span>Guardant</span></div>
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-0540d89dcd40.png" alt="Acibadem"></div><span>Acibadem</span></div>

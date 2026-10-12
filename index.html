@@ -249,6 +249,7 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:3rem 2r
   .sponsor-row{gap:1rem;}
   .why-grid{grid-template-columns:repeat(2,1fr);}
   .sponsors-tiers{gap:2rem;}
+  .sponsors-tiers-3col{grid-template-columns:1fr;gap:2rem;}
   #floatingEditorBar{max-width:320px;}
 }
 
@@ -473,6 +474,8 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:3rem 2r
 /* ── SPONSORS ── */
 #sponsors{background:var(--deep);}
 .sponsors-tiers{display:flex;flex-direction:column;gap:3rem;}
+.sponsors-tiers-3col{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;align-items:start;margin-bottom:3rem;}
+.sponsors-tiers-3col .sponsor-row{flex-direction:column;}
 .sponsor-tier{text-align:center;}
 .tier-label{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem;display:inline-block;padding:.45rem 1.3rem;border-radius:20px;background:rgba(200,169,110,.1);border:1px solid var(--border);}
 .sponsor-row{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;align-items:center;}
@@ -1521,12 +1524,13 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-9000b9785a9b.png" alt="OMA Agadir"></div><span>OMA Agadir</span></div>
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-fcb08eb1d19c.png" alt="AMFROM"></div><span>AMFROM</span></div>
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-d2a31a85e80d.png" alt="OMM — Association Marocaine d'Oncologie Médicale du Secteur Libéral"></div><span>OMM</span></div>
+          <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-1a874f4da0c1.png" alt="Oncorad Group"></div><span>Oncorad Group</span></div>
         </div>
       </div>
     </div>
     <p class="section-label sponsorship-label">Partner Sponsorship</p>
     <h2 class="section-title">Supporting eXIOME 2026</h2>
-    <div class="sponsors-tiers">
+    <div class="sponsors-tiers sponsors-tiers-3col">
       <div class="sponsor-tier sponsor-gold">
         <span class="tier-label">🥇 Gold Sponsors</span>
         <div class="sponsor-row">
@@ -1550,6 +1554,8 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
           <div class="sponsor-slot"><div class="sponsor-logo-wrap"><img class="sponsor-logo" loading="lazy" src="assets/img-0540d89dcd40.png" alt="Acibadem"></div><span>Acibadem</span></div>
         </div>
       </div>
+    </div>
+    <div class="sponsors-tiers">
       <div class="sponsor-tier sponsor-support">
         <span class="tier-label">Acknowledgments — Local Guest Support</span>
         <div class="sponsor-row">

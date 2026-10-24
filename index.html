@@ -158,6 +158,7 @@ section{padding:6rem 2rem;}
 /* ── POSTERS ── */
 #posters{background:var(--deep);}
 .poster-theme{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--accent);margin:2.4rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);}
+.prog-theme{display:block;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:normal;color:var(--accent);grid-column:1/-1;margin:.8rem 0 .2rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);}
 .poster-theme:first-of-type{margin-top:0;}
 .poster-list{display:flex;flex-direction:column;}
 .poster-item{display:grid;grid-template-columns:52px 1fr;gap:1rem;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.06);align-items:start;}
@@ -354,6 +355,7 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:3rem 2r
   .gallery-grid{grid-template-columns:1fr;}
   .poster-item{grid-template-columns:40px 1fr;gap:.6rem;}
   .poster-theme{font-size:1.1rem;}
+  .prog-theme{font-size:1.1rem;}
   .poster-session-wrap{padding:1rem;}
   .about-stats{grid-template-columns:1fr 1fr;}
   .stat-num{font-size:2rem;}
@@ -1409,7 +1411,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
         <div class="session-items">
           <div class="prog-row"><span class="prog-sub">👥 Chairpersons: E.&nbsp;Kerboua (Algeria), P.&nbsp;Tsoutsou (Switzerland), S.&nbsp;Turkan (Turkey), TBC</span></div>
           <div class="prog-row"><span class="prog-time">11:00–11:10</span><span class="prog-type t-oral">C1</span><div class="prog-content oral-content"><strong><u>M.A. Melzi</u></strong>, A.Bounedjar — Biological Heterogeneity and Advanced-Stage<span class="prog-speaker oral-aff">Algerie</span><span class="prog-duration">10 min</span></div></div>
-          <div class="prog-row"><span class="prog-sub">Breast Cancer</span></div>
+          <div class="prog-row"><span class="prog-theme">Breast Cancer</span></div>
           <div class="prog-row"><span class="prog-time">11:10–11:20</span><span class="prog-type t-oral">C2</span><div class="prog-content oral-content"><strong><u>M.B. Ba</u></strong>, M. Toure, F. Nging, L. Gueye, M.M. Dieng, S. Ka, P.M. Gaye — Hypofractionated 3D-Conformal Post-Mastectomy Radiotherapy with Regional Nodal Irradiation for Breast Cancer in a Resource-Limited Setting: Dosimetric Results from a Senegalese Cohort<span class="prog-speaker oral-aff">Radiotherapy Department, Dalal Jamm Hospital / Faculty of Medicine, Pharmacy and Odontology, Cheikh Anta Diop University of Dakar, Senegal</span><span class="prog-duration">10 min</span></div></div>
           <div class="prog-row"><span class="prog-time">11:20–11:30</span><span class="prog-type t-oral">C3</span><div class="prog-content oral-content"><strong><u>L. Feredj</u></strong>, N. Bouaraba, H. Ammour, Yd. Ouchfoun, S. Toudjine, S. Haddad, L. Ait Ahmed, D. Merrad, C. Sedkaoui — Localized Triple-Negative BC: From Innovation to Local Care Realities<span class="prog-speaker oral-aff">Medical Oncology Department, Cancer Treatment Center / University of Tizi Ouzou, Algérie</span><span class="prog-duration">10 min</span></div></div>
           <div class="prog-row"><span class="prog-time">11:30–11:40</span><span class="prog-type t-oral">C4</span><div class="prog-content oral-content"><strong><u>A. Djelil</u></strong>, M. Oukkal — Real-World Experience with Neoadjuvant Chemotherapy Combined with a Pembrolizumab Biosimilar in Early Triple-Negative Breast Cancer: Pathological Response Outcomes<span class="prog-speaker oral-aff">Medical Oncology Department, Beni Messous University Hospital, Algiers, Algeria</span><span class="prog-duration">10 min</span></div></div>
@@ -1417,9 +1419,9 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
           <div class="prog-row"><span class="prog-time">11:50–12:00</span><span class="prog-type t-oral">C6</span><div class="prog-content oral-content"><strong><u>F. Zahlou</u></strong>, S. Dridou, K. Saadi, I. Touffahi, H. Ibroun, W. Merssetti, S. Morchid, N. Sellal — Les rechutes ganglionnaires dans le cancer du sein après radiothérapie adjuvante<span class="prog-speaker oral-aff">Service de Radiothérapie, Centre Hospitalier Universitaire de Tanger, Maroc</span><span class="prog-duration">10 min</span></div></div>
           <div class="prog-row"><span class="prog-time">12:00–12:10</span><span class="prog-type t-oral">C7</span><div class="prog-content oral-content"><strong><u>M. Kerkeb</u></strong>, S. Difi, N. Ghiroufella, D. Mesli, S. Madani, A. Ladjeroud, S. Sami, E. Kerboua — Dual HER2 blockade with pertuzumab and trastuzumab for neoadjuvant treatment of HER2-positive early breast cancer: pCR evaluation<span class="prog-speaker oral-aff">Medical Oncology Department, Pierre et Marie Curie Center, Algiers, Algeria</span><span class="prog-duration">10 min</span></div></div>
           <div class="prog-row"><span class="prog-time">12:10–12:20</span><span class="prog-type t-oral">C8</span><div class="prog-content oral-content"><strong><u>A. Laaouad</u></strong>, N. Aklouche, N.E. Kaim, F. Seghier — From Guidelines to Clinical Practice: HER2-Positive Breast Cancer Management Across the Neoadjuvant-to-Adjuvant Continuum in a LMIC<span class="prog-speaker oral-aff">Medical Oncology Department, Sidi Ghiles Hospital, Blida 1 University, Blida, Algeria</span><span class="prog-duration">10 min</span></div></div>
-          <div class="prog-row"><span class="prog-sub">Bladder Cancer</span></div>
+          <div class="prog-row"><span class="prog-theme">Bladder Cancer</span></div>
           <div class="prog-row"><span class="prog-time">12:20–12:30</span><span class="prog-type t-oral">C9</span><div class="prog-content oral-content"><strong><u>Rihem Fayala</u></strong>, Amal Chamsi, Bouchra Naija, Sarra Sghaier, Dalia Yazid, Rym Zanzouri, Haifa Hadj Abdallah, Nadia Bouzid, Samia Kanoun, Sabrine Tbessi, Sameh Tebra — Bladder Cancer Radiotherapy: A 30-Year Experience from a Tunisian Cancer Center<span class="prog-speaker oral-aff">University of Sousse, Faculty of Medicine of Sousse, Radiation Oncology Department, Farhat Hached Hospital, Sousse, Tunisie</span><span class="prog-duration">10 min</span></div></div>
-          <div class="prog-row"><span class="prog-sub">Lung Cancer</span></div>
+          <div class="prog-row"><span class="prog-theme">Lung Cancer</span></div>
           <div class="prog-row"><span class="prog-time">12:30–12:40</span><span class="prog-type t-oral">C10</span><div class="prog-content oral-content"><strong><u>T. Rossy</u></strong>, E. Mamou, D. Lassoued, B. Abbar, F. Ksantini, J.-P. Spano — Long-term survival in lung cancer patients with brain metastases treated with upfront local therapy and immunotherapy: the PHOENIX retrospective cohort<span class="prog-speaker oral-aff">Service d'Oncologie Médicale, APHP – Hôpital de la Pitié-Salpêtrière, Sorbonne Médecine, Paris, France</span><span class="prog-duration">10 min</span></div></div>
           <div class="prog-row"><span class="prog-time">12:40–12:50</span><span class="prog-type t-oral">C11</span><div class="prog-content oral-content"><strong><u>S. Bekouaci</u></strong> — Landscape of Lung Cancer in Algeria<span class="prog-speaker oral-aff">Algeria</span><span class="prog-duration">10 min</span></div></div>
         </div>

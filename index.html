@@ -164,6 +164,7 @@ section{padding:6rem 2rem;}
 .poster-no{font-size:.72rem;font-weight:700;color:var(--navy);background:var(--accent);border-radius:4px;padding:.25rem .5rem;text-align:center;white-space:nowrap;height:fit-content;}
 .poster-text{font-size:.82rem;color:var(--light);line-height:1.5;}
 .poster-aff{display:block;font-size:.72rem;color:var(--muted);margin-top:.3rem;font-style:italic;}
+.poster-session-wrap{padding:1.3rem 1.5rem;}
 .abstract-box{border:1px solid var(--border);border-radius:16px;padding:3rem;background:var(--glass);}
 .abstract-deadline{background:linear-gradient(135deg,rgba(200,169,110,.15),rgba(232,201,126,.08));border:1px solid var(--accent);border-radius:10px;padding:1.2rem 2rem;margin-bottom:2rem;text-align:center;}
 .abstract-deadline strong{color:var(--accent);font-size:1rem;}
@@ -351,6 +352,7 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:3rem 2r
   .gallery-grid{grid-template-columns:1fr;}
   .poster-item{grid-template-columns:40px 1fr;gap:.6rem;}
   .poster-theme{font-size:1.1rem;}
+  .poster-session-wrap{padding:1rem;}
   .about-stats{grid-template-columns:1fr 1fr;}
   .stat-num{font-size:2rem;}
   .hero-dates{padding:1rem 1.5rem;}
@@ -972,7 +974,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
     <li><a href="#symposium">Symposium Speakers</a></li>
     <li><a href="#programme">Program</a></li>
     <li><a href="#abstract">Abstracts</a></li>
-    <li><a href="#posters">Posters</a></li>
+    <li><a href="#posters" onclick="goToPosters();return false;">Posters</a></li>
     <li><a href="#sponsors">Partners</a></li>
   </ul>
   <button class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()" aria-label="Menu">
@@ -989,7 +991,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
   <a href="#symposium" onclick="closeMobileMenu()">Symposium Speakers</a>
   <a href="#programme" onclick="closeMobileMenu()">Program</a>
   <a href="#abstract" onclick="closeMobileMenu()">Abstracts</a>
-  <a href="#posters" onclick="closeMobileMenu()">Posters</a>
+  <a href="#posters" onclick="goToPosters();closeMobileMenu();return false;">Posters</a>
   <a href="#sponsors" onclick="closeMobileMenu()">Partners</a>
 </nav>
 
@@ -1420,6 +1422,51 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
           <div class="prog-row"><span class="prog-time">12:40–12:50</span><span class="prog-type t-oral">C11</span><div class="prog-content"><strong><u>S. Bekouaci</u></strong> — Landscape of Lung Cancer in Algeria<span class="prog-speaker">Algeria</span><span class="prog-duration">10 min</span></div></div>
         </div>
       </div>
+      <div class="session-block" id="posters">
+        <div class="session-header sbg-purple" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;"><span class="session-title-text">🖼️ Poster Presentations <em>(Session Sponsored by AROME)</em></span><span class="prog-sponsor-logo" style="margin:0;"><img src="assets/img-fb9a866c9a1a.png" alt="AROME" loading="lazy"></span></div>
+        <div class="session-items">
+          <div class="poster-session-wrap">
+            <h3 class="poster-theme">🎗 Breast Cancer</h3>
+            <div class="poster-list">
+              <div class="poster-item"><span class="poster-no">P1</span><div class="poster-text">N. Bouaraba, L. Feredj, H. Ammour, D. Merrad, Yd. Ouchfoun, C. Sedkaoui — HER2-Positive Breast Cancer: Response to Neoadjuvant Chemotherapy – A Retrospective Study<span class="poster-aff">Department of Medical Oncology, CLCC Draa Ben Khedda, Tizi Ouzou, Algérie</span></div></div>
+              <div class="poster-item"><span class="poster-no">P2</span><div class="poster-text"><strong><u>S. Zeroual</u></strong>, A. Zemmour, Blaha Larbaoui — Oncologic Outcomes of Neoadjuvant Treatment with Anthracycline-Free Regimens in HER2-Positive Breast Cancer<span class="poster-aff">Medical Oncology Department, Oran Cancer Center / Ahmed Ben Bella University-1, Faculty of Medicine, Algérie</span></div></div>
+              <div class="poster-item"><span class="poster-no">P3</span><div class="poster-text"><strong><u>N. Aklouche</u></strong>, A. Laaouad, N. Kaim, F. Seghier — Evaluation of Pathological Response after Neoadjuvant Chemo-Immunotherapy in Triple-Negative Breast Cancer: Experience of the Medical Oncology Department, Sidi Ghiles Hospital, 2025<span class="poster-aff">Medical Oncology Department, University Hospital of Sidi Ghiles / Saad Dahleb University of Blida, Faculty of Medicine, Algérie</span></div></div>
+              <div class="poster-item"><span class="poster-no">P4</span><div class="poster-text"><strong><u>C. Yahiaoui</u></strong>, B. Larbaoui — Phenotypic Switch After NAC in Locally Advanced Breast Cancer<span class="poster-aff">Medical Oncology Department, CLCC, Oran, Algeria</span></div></div>
+              <div class="poster-item"><span class="poster-no">P5</span><div class="poster-text"><strong><u>S. Challal</u></strong>, S. Ait Seddik, M. Oukkal, A. Kouchkar — HER2-Positive Breast Cancer: Pathological Complete Response following neoadjuvant treatment and associated factors<span class="poster-aff">Department of Medical Oncology, Beni Messous University Hospital, Algiers; Department of Epidemiology and Preventive Medicine, Beni Messous University Hospital, Algiers; Department of Anatomic and Cytopathology and Molecular Pathology, Bejaia University Hospital (CHU), Algeria</span></div></div>
+              <div class="poster-item"><span class="poster-no">P6</span><div class="poster-text"><strong><u>M.B. Ba</u></strong>, M. Toure, A.C. Diallo, O. Sarr, M.M. Dieng, S. Ka, P.M. Gaye — Breast Cancer in Senegalese Women: A Distinct Epidemiological and Tumor Profile Challenging the Western Paradigm<span class="poster-aff">Radiotherapy Department, Dalal Jamm Hospital / Faculty of Medicine, Pharmacy and Odontology, Cheikh Anta Diop University of Dakar, Senegal</span></div></div>
+            </div>
+            <h3 class="poster-theme">🫁 Lung Cancer</h3>
+            <div class="poster-list">
+              <div class="poster-item"><span class="poster-no">P7</span><div class="poster-text"><strong><u>L. Elarnaut</u></strong>, F. Sert — Locoregional Therapy in Lung Cancer: Re-irradiation in Pseudomesotheliomatous NSCLC<span class="poster-aff">Department of Radiation Oncology, Ege University Hospital, İzmir, Turquie</span></div></div>
+              <div class="poster-item"><span class="poster-no">P8</span><div class="poster-text"><strong><u>H. Ibroun</u></strong>, F. Ouhida, K. Saadi, I. Touffahi, W. Merssetti, S. Morchid, N. Sellal — Locorégional Therapy in Lung Cancer: Determinants of Tumor Progression in Locally Advanced Non-Small Cell Lung Cancer Treated with Concurrent Chemoradiotherapy<span class="poster-aff">Department of Radiotherapy, Mohammed VI University Hospital, Tangier, Morocco</span></div></div>
+              <div class="poster-item"><span class="poster-no">P9</span><div class="poster-text"><strong><u>M. Bugarčić</u></strong>, O. Ivanov — Atezolizumab as Second-Line Treatment in Patients with NSCLC Progressing After Sequential Chemoradiotherapy<span class="poster-aff">Radiation Oncology Department, Institute for Pulmonary Diseases of Vojvodina; Clinic for Radiation Oncology, Institute for Oncology of Vojvodina; University of Novi Sad, Medical Faculty, Serbia</span></div></div>
+            </div>
+            <h3 class="poster-theme">♀️ Gynecologic Cancers</h3>
+            <div class="poster-list">
+              <div class="poster-item"><span class="poster-no">P10</span><div class="poster-text"><strong><u>A.C. Diallo</u></strong>, J.I.A.T. Thiam, M.B. Ba, A. Fall, G. Sarr, A.B. Seye, S. Balde, S. Ka — HPV Genotype Distribution and the Vaccine-Coverage Gap in Cervical CIN2+ Lesions in Sub-Saharan Africa: A Systematic Review and Meta-Analysis<span class="poster-aff">Surgical Oncology Department, CHN Dalal Jamm, Dakar, Senegal</span></div></div>
+              <div class="poster-item"><span class="poster-no">P11</span><div class="poster-text"><strong><u>S. Lamarti</u></strong>, K. Saadi, H. Gzenayi, A. Outmani, A. Gourinda, W. Marsetti, S. Morchid, N. Sellal — Endometrial Cancer in Premenopausal Women: Towards a Distinct Clinicopathological Profile?<span class="poster-aff">Department of Radiotherapy, Mohammed VI University Hospital, Tangier; Department of Epidemiology, Mohammed VI University Hospital, Tangier, Morocco</span></div></div>
+            </div>
+            <h3 class="poster-theme">🔬 Melanoma</h3>
+            <div class="poster-list">
+              <div class="poster-item"><span class="poster-no">P12</span><div class="poster-text"><strong><u>R. Sai</u></strong>, E. Kerboua — Complete Metabolic Response to Pembrolizumab in a Stage IV Anorectal Melanoma: A Case Report<span class="poster-aff">Department of Oncology, CPMC, Algiers, Algeria</span></div></div>
+              <div class="poster-item"><span class="poster-no">P13</span><div class="poster-text"><strong><u>R. Sai</u></strong>, E. Kerboua — Immune-related systemic ophthalmic toxicity secondary to adjuvant pembrolizumab: a young patient with stage III cutaneous melanoma<span class="poster-aff">Department of Medical Oncology, CPMC, Algiers, Algeria</span></div></div>
+              <div class="poster-item"><span class="poster-no">P14</span><div class="poster-text"><strong><u>F. Aouamri</u></strong>, M.A. Melzi, Z. Mansour, W. Ouahioune, R. Dahmani, H. Bouazza, A. Bounedjar — Malignant transformation of a pigmented epithelioid melanocytoma (PEM) into multi-metastatic melanoma<span class="poster-aff">Department of Medical Oncology, EHC Blida; Faculty of Medicine, University of Blida 1; Department of Pathology, University Hospital of Blida, Algeria</span></div></div>
+              <div class="poster-item"><span class="poster-no">P15</span><div class="poster-text"><strong><u>F. Aouamri</u></strong>, R. Dahmani, M.A. Melzi, K. Mouaici, A. Bounedjar — Remarkable response to immunotherapy in cutaneous melanoma with liver metastasis: a case report<span class="poster-aff">Department of Medical Oncology, EHC Blida; Faculty of Medicine, University of Blida 1, Algeria</span></div></div>
+              <div class="poster-item"><span class="poster-no">P16</span><div class="poster-text"><strong><u>H. Zidane</u></strong>, A.I. Bahi, N. Zahi, M.K. Hadjar, H. Ghelam — Melanoma management at Mostaganem University Hospital, Algeria<span class="poster-aff">Medical Oncology Department, University Hospital of Mostaganem, Algeria</span></div></div>
+            </div>
+            <h3 class="poster-theme">🎗 Breast Cancer</h3>
+            <div class="poster-list">
+              <div class="poster-item"><span class="poster-no">P17</span><div class="poster-text"><strong><u>O. Abbas</u></strong>, I. Keraghel, A. Keffi, H.A. Dib — HER2 positive BC: neoadjuvant dual HER2 blockade, Sétif experience<span class="poster-aff">Department of Medical Oncology, Centre de Lutte Contre le Cancer (CLCC) of Sétif, Algeria</span></div></div>
+              <div class="poster-item"><span class="poster-no">P18</span><div class="poster-text"><strong><u>O. Abbas</u></strong>, I. Keraghel, A. Keffi, H.A. Dib — Dual HER2 Blockade (Trastuzumab-Pertuzumab) in the Neoadjuvant Setting for HER2-Positive Breast Cancer — CLCC Sétif Experience<span class="poster-aff">Department of Medical Oncology, Centre de Lutte Contre le Cancer (CLCC) of Sétif, Algeria</span></div></div>
+              <div class="poster-item"><span class="poster-no">P19</span><div class="poster-text"><strong><u>M. Keskin</u></strong>, E.N.E. Kisadere, S. Kahraman Cetintas — Neoadjuvant locoregional therapy: Is ypN0 reliable enough to omit RNI?<span class="poster-aff">Department of Radiation Oncology, Bursa Uludag University Faculty of Medicine, Bursa, Turkiye</span></div></div>
+              <div class="poster-item"><span class="poster-no">P20</span><div class="poster-text"><strong><u>N. Abed-Benmelha</u></strong>, M. Oukkal — The role of ovarian suppression in the treatment of premenopausal women with hormone receptor-positive early-stage breast cancer<span class="poster-aff">Medical Oncology Department, Beni Messous University Hospital, Algiers, Algeria</span></div></div>
+              <div class="poster-item"><span class="poster-no">P21</span><div class="poster-text"><strong><u>S. Ait Ouamer</u></strong>, A. Boudoukha, N. Haoui — Definitive Chemoradiotherapy for Triple-Negative BC: A Surgery-Free Case<span class="poster-aff">Radiation Therapy Center, Blida, Algeria</span></div></div>
+              <div class="poster-item"><span class="poster-no">P22</span><div class="poster-text"><strong><u>S. Laatitioui</u></strong>, C. Diaré, M. Khouchani — HER2 positive BC: T-DM1 Access After Residual Disease in Morocco<span class="poster-aff">Department of Oncology-Radiotherapy, CHU Mohammed VI of Marrakech; Faculty of Medicine and Pharmacy, Cadi Ayyad University, Maroc</span></div></div>
+              <div class="poster-item"><span class="poster-no">P23</span><div class="poster-text"><strong><u>A. Gheribi</u></strong>, M.A. Melzi, R. Benkali, H. Idir, A. Bounedjar — Efficacy and Longitudinal Tumor Response to First-Line Trastuzumab–Pertuzumab plus Chemotherapy in HER2-Positive Metastatic Breast Cancer: A Real-World Study<span class="poster-aff">Department of Medical Oncology, EHS Ligue Contre le Cancer (LCC) Blida, Algeria; Faculty of Medicine, University Saad Dahleb Blida 1, Algeria</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1526,53 +1573,6 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
       </div>
 
     </div>
-  </div>
-</section>
-
-<!-- ── POSTERS ── -->
-<section id="posters">
-  <div class="container">
-    <p class="section-label">Accepted Abstracts</p>
-    <h2 class="section-title">Poster Presentations</h2>
-    <div style="display:flex;align-items:center;gap:.8rem;margin:-.5rem 0 2rem;"><span style="font-size:.78rem;color:var(--muted);font-style:italic;">Session Sponsored by AROME</span><span class="prog-sponsor-logo" style="margin:0;"><img src="assets/img-fb9a866c9a1a.png" alt="AROME" loading="lazy"></span></div>
-      <h3 class="poster-theme">🎗 Breast Cancer</h3>
-      <div class="poster-list">
-        <div class="poster-item"><span class="poster-no">P1</span><div class="poster-text">N. Bouaraba, L. Feredj, H. Ammour, D. Merrad, Yd. Ouchfoun, C. Sedkaoui — HER2-Positive Breast Cancer: Response to Neoadjuvant Chemotherapy – A Retrospective Study<span class="poster-aff">Department of Medical Oncology, CLCC Draa Ben Khedda, Tizi Ouzou, Algérie</span></div></div>
-        <div class="poster-item"><span class="poster-no">P2</span><div class="poster-text"><strong><u>S. Zeroual</u></strong>, A. Zemmour, Blaha Larbaoui — Oncologic Outcomes of Neoadjuvant Treatment with Anthracycline-Free Regimens in HER2-Positive Breast Cancer<span class="poster-aff">Medical Oncology Department, Oran Cancer Center / Ahmed Ben Bella University-1, Faculty of Medicine, Algérie</span></div></div>
-        <div class="poster-item"><span class="poster-no">P3</span><div class="poster-text"><strong><u>N. Aklouche</u></strong>, A. Laaouad, N. Kaim, F. Seghier — Evaluation of Pathological Response after Neoadjuvant Chemo-Immunotherapy in Triple-Negative Breast Cancer: Experience of the Medical Oncology Department, Sidi Ghiles Hospital, 2025<span class="poster-aff">Medical Oncology Department, University Hospital of Sidi Ghiles / Saad Dahleb University of Blida, Faculty of Medicine, Algérie</span></div></div>
-        <div class="poster-item"><span class="poster-no">P4</span><div class="poster-text"><strong><u>C. Yahiaoui</u></strong>, B. Larbaoui — Phenotypic Switch After NAC in Locally Advanced Breast Cancer<span class="poster-aff">Medical Oncology Department, CLCC, Oran, Algeria</span></div></div>
-        <div class="poster-item"><span class="poster-no">P5</span><div class="poster-text"><strong><u>S. Challal</u></strong>, S. Ait Seddik, M. Oukkal, A. Kouchkar — HER2-Positive Breast Cancer: Pathological Complete Response following neoadjuvant treatment and associated factors<span class="poster-aff">Department of Medical Oncology, Beni Messous University Hospital, Algiers; Department of Epidemiology and Preventive Medicine, Beni Messous University Hospital, Algiers; Department of Anatomic and Cytopathology and Molecular Pathology, Bejaia University Hospital (CHU), Algeria</span></div></div>
-        <div class="poster-item"><span class="poster-no">P6</span><div class="poster-text"><strong><u>M.B. Ba</u></strong>, M. Toure, A.C. Diallo, O. Sarr, M.M. Dieng, S. Ka, P.M. Gaye — Breast Cancer in Senegalese Women: A Distinct Epidemiological and Tumor Profile Challenging the Western Paradigm<span class="poster-aff">Radiotherapy Department, Dalal Jamm Hospital / Faculty of Medicine, Pharmacy and Odontology, Cheikh Anta Diop University of Dakar, Senegal</span></div></div>
-      </div>
-      <h3 class="poster-theme">🫁 Lung Cancer</h3>
-      <div class="poster-list">
-        <div class="poster-item"><span class="poster-no">P7</span><div class="poster-text"><strong><u>L. Elarnaut</u></strong>, F. Sert — Locoregional Therapy in Lung Cancer: Re-irradiation in Pseudomesotheliomatous NSCLC<span class="poster-aff">Department of Radiation Oncology, Ege University Hospital, İzmir, Turquie</span></div></div>
-        <div class="poster-item"><span class="poster-no">P8</span><div class="poster-text"><strong><u>H. Ibroun</u></strong>, F. Ouhida, K. Saadi, I. Touffahi, W. Merssetti, S. Morchid, N. Sellal — Locorégional Therapy in Lung Cancer: Determinants of Tumor Progression in Locally Advanced Non-Small Cell Lung Cancer Treated with Concurrent Chemoradiotherapy<span class="poster-aff">Department of Radiotherapy, Mohammed VI University Hospital, Tangier, Morocco</span></div></div>
-        <div class="poster-item"><span class="poster-no">P9</span><div class="poster-text"><strong><u>M. Bugarčić</u></strong>, O. Ivanov — Atezolizumab as Second-Line Treatment in Patients with NSCLC Progressing After Sequential Chemoradiotherapy<span class="poster-aff">Radiation Oncology Department, Institute for Pulmonary Diseases of Vojvodina; Clinic for Radiation Oncology, Institute for Oncology of Vojvodina; University of Novi Sad, Medical Faculty, Serbia</span></div></div>
-      </div>
-      <h3 class="poster-theme">♀️ Gynecologic Cancers</h3>
-      <div class="poster-list">
-        <div class="poster-item"><span class="poster-no">P10</span><div class="poster-text"><strong><u>A.C. Diallo</u></strong>, J.I.A.T. Thiam, M.B. Ba, A. Fall, G. Sarr, A.B. Seye, S. Balde, S. Ka — HPV Genotype Distribution and the Vaccine-Coverage Gap in Cervical CIN2+ Lesions in Sub-Saharan Africa: A Systematic Review and Meta-Analysis<span class="poster-aff">Surgical Oncology Department, CHN Dalal Jamm, Dakar, Senegal</span></div></div>
-        <div class="poster-item"><span class="poster-no">P11</span><div class="poster-text"><strong><u>S. Lamarti</u></strong>, K. Saadi, H. Gzenayi, A. Outmani, A. Gourinda, W. Marsetti, S. Morchid, N. Sellal — Endometrial Cancer in Premenopausal Women: Towards a Distinct Clinicopathological Profile?<span class="poster-aff">Department of Radiotherapy, Mohammed VI University Hospital, Tangier; Department of Epidemiology, Mohammed VI University Hospital, Tangier, Morocco</span></div></div>
-      </div>
-      <h3 class="poster-theme">🔬 Melanoma</h3>
-      <div class="poster-list">
-        <div class="poster-item"><span class="poster-no">P12</span><div class="poster-text"><strong><u>R. Sai</u></strong>, E. Kerboua — Complete Metabolic Response to Pembrolizumab in a Stage IV Anorectal Melanoma: A Case Report<span class="poster-aff">Department of Oncology, CPMC, Algiers, Algeria</span></div></div>
-        <div class="poster-item"><span class="poster-no">P13</span><div class="poster-text"><strong><u>R. Sai</u></strong>, E. Kerboua — Immune-related systemic ophthalmic toxicity secondary to adjuvant pembrolizumab: a young patient with stage III cutaneous melanoma<span class="poster-aff">Department of Medical Oncology, CPMC, Algiers, Algeria</span></div></div>
-        <div class="poster-item"><span class="poster-no">P14</span><div class="poster-text"><strong><u>F. Aouamri</u></strong>, M.A. Melzi, Z. Mansour, W. Ouahioune, R. Dahmani, H. Bouazza, A. Bounedjar — Malignant transformation of a pigmented epithelioid melanocytoma (PEM) into multi-metastatic melanoma<span class="poster-aff">Department of Medical Oncology, EHC Blida; Faculty of Medicine, University of Blida 1; Department of Pathology, University Hospital of Blida, Algeria</span></div></div>
-        <div class="poster-item"><span class="poster-no">P15</span><div class="poster-text"><strong><u>F. Aouamri</u></strong>, R. Dahmani, M.A. Melzi, K. Mouaici, A. Bounedjar — Remarkable response to immunotherapy in cutaneous melanoma with liver metastasis: a case report<span class="poster-aff">Department of Medical Oncology, EHC Blida; Faculty of Medicine, University of Blida 1, Algeria</span></div></div>
-        <div class="poster-item"><span class="poster-no">P16</span><div class="poster-text"><strong><u>H. Zidane</u></strong>, A.I. Bahi, N. Zahi, M.K. Hadjar, H. Ghelam — Melanoma management at Mostaganem University Hospital, Algeria<span class="poster-aff">Medical Oncology Department, University Hospital of Mostaganem, Algeria</span></div></div>
-      </div>
-      <h3 class="poster-theme">🎗 Breast Cancer</h3>
-      <div class="poster-list">
-        <div class="poster-item"><span class="poster-no">P17</span><div class="poster-text"><strong><u>O. Abbas</u></strong>, I. Keraghel, A. Keffi, H.A. Dib — HER2 positive BC: neoadjuvant dual HER2 blockade, Sétif experience<span class="poster-aff">Department of Medical Oncology, Centre de Lutte Contre le Cancer (CLCC) of Sétif, Algeria</span></div></div>
-        <div class="poster-item"><span class="poster-no">P18</span><div class="poster-text"><strong><u>O. Abbas</u></strong>, I. Keraghel, A. Keffi, H.A. Dib — Dual HER2 Blockade (Trastuzumab-Pertuzumab) in the Neoadjuvant Setting for HER2-Positive Breast Cancer — CLCC Sétif Experience<span class="poster-aff">Department of Medical Oncology, Centre de Lutte Contre le Cancer (CLCC) of Sétif, Algeria</span></div></div>
-        <div class="poster-item"><span class="poster-no">P19</span><div class="poster-text"><strong><u>M. Keskin</u></strong>, E.N.E. Kisadere, S. Kahraman Cetintas — Neoadjuvant locoregional therapy: Is ypN0 reliable enough to omit RNI?<span class="poster-aff">Department of Radiation Oncology, Bursa Uludag University Faculty of Medicine, Bursa, Turkiye</span></div></div>
-        <div class="poster-item"><span class="poster-no">P20</span><div class="poster-text"><strong><u>N. Abed-Benmelha</u></strong>, M. Oukkal — The role of ovarian suppression in the treatment of premenopausal women with hormone receptor-positive early-stage breast cancer<span class="poster-aff">Medical Oncology Department, Beni Messous University Hospital, Algiers, Algeria</span></div></div>
-        <div class="poster-item"><span class="poster-no">P21</span><div class="poster-text"><strong><u>S. Ait Ouamer</u></strong>, A. Boudoukha, N. Haoui — Definitive Chemoradiotherapy for Triple-Negative BC: A Surgery-Free Case<span class="poster-aff">Radiation Therapy Center, Blida, Algeria</span></div></div>
-        <div class="poster-item"><span class="poster-no">P22</span><div class="poster-text"><strong><u>S. Laatitioui</u></strong>, C. Diaré, M. Khouchani — HER2 positive BC: T-DM1 Access After Residual Disease in Morocco<span class="poster-aff">Department of Oncology-Radiotherapy, CHU Mohammed VI of Marrakech; Faculty of Medicine and Pharmacy, Cadi Ayyad University, Maroc</span></div></div>
-        <div class="poster-item"><span class="poster-no">P23</span><div class="poster-text"><strong><u>A. Gheribi</u></strong>, M.A. Melzi, R. Benkali, H. Idir, A. Bounedjar — Efficacy and Longitudinal Tumor Response to First-Line Trastuzumab–Pertuzumab plus Chemotherapy in HER2-Positive Metastatic Breast Cancer: A Real-World Study<span class="poster-aff">Department of Medical Oncology, EHS Ligue Contre le Cancer (LCC) Blida, Algeria; Faculty of Medicine, University Saad Dahleb Blida 1, Algeria</span></div></div>
-      </div>
   </div>
 </section>
 
@@ -1848,6 +1848,12 @@ function goToDay(id){
   var btn = document.querySelector('.day-tab[onclick*="'+id+'\'"]');
   if(btn){ showDay(id, btn); }
   var sec = document.getElementById('programme');
+  if(sec){ sec.scrollIntoView({behavior:'smooth', block:'start'}); }
+}
+function goToPosters(){
+  var btn = document.querySelector('.day-tab[onclick*="day3\'"]');
+  if(btn){ showDay('day3', btn); }
+  var sec = document.getElementById('posters');
   if(sec){ sec.scrollIntoView({behavior:'smooth', block:'start'}); }
 }
 function saveBanner(){

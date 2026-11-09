@@ -973,7 +973,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
     <li><a href="#symposium">Symposium Speakers</a></li>
     <li><a href="#programme">Program</a></li>
     <li><a href="#abstract">Abstracts</a></li>
-    <li><a href="#posters" onclick="goToPosters();return false;">Posters</a></li>
+    <li><a href="#oral-comms" onclick="goToOralComms();return false;">Oral Communications / Posters</a></li>
     <li><a href="#sponsors">Partners</a></li>
   </ul>
   <button class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()" aria-label="Menu">
@@ -990,7 +990,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
   <a href="#symposium" onclick="closeMobileMenu()">Symposium Speakers</a>
   <a href="#programme" onclick="closeMobileMenu()">Program</a>
   <a href="#abstract" onclick="closeMobileMenu()">Abstracts</a>
-  <a href="#posters" onclick="goToPosters();closeMobileMenu();return false;">Posters</a>
+  <a href="#oral-comms" onclick="goToOralComms();closeMobileMenu();return false;">Oral Communications / Posters</a>
   <a href="#sponsors" onclick="closeMobileMenu()">Partners</a>
 </nav>
 
@@ -1406,7 +1406,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
           <div class="prog-row prog-break-row"><span class="prog-time">10:30–11:00</span><span class="prog-type t-break">☕ Break</span><div class="prog-content">Coffee Break</div></div>
         </div>
       </div>
-      <div class="session-block">
+      <div class="session-block" id="oral-comms">
         <div class="session-header sbg-purple" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;"><span class="session-title-text">🎤 Session 8 — Plenary Session: AROME Junior Proffered Oral Communications <em>(Session Sponsored by AROME)</em></span><span class="prog-sponsor-logo" style="margin:0;"><img src="assets/img-fb9a866c9a1a.png" alt="AROME" loading="lazy"></span></div>
         <div class="session-items">
           <div class="prog-row"><span class="prog-sub">👥 Chairpersons: S.&nbsp;Sami (Algeria), P.&nbsp;Tsoutsou (Switzerland), S.&nbsp;Turkan (Turkey), K.&nbsp;Debbi (France)</span></div>
@@ -1876,6 +1876,12 @@ function goToPosters(){
   var btn = document.querySelector('.day-tab[onclick*="day3\'"]');
   if(btn){ showDay('day3', btn); }
   var sec = document.getElementById('posters');
+  if(sec){ sec.scrollIntoView({behavior:'smooth', block:'start'}); }
+}
+function goToOralComms(){
+  var btn = document.querySelector('.day-tab[onclick*="day3\'"]');
+  if(btn){ showDay('day3', btn); }
+  var sec = document.getElementById('oral-comms');
   if(sec){ sec.scrollIntoView({behavior:'smooth', block:'start'}); }
 }
 function saveBanner(){

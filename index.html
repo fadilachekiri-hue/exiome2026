@@ -380,6 +380,7 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:3rem 2r
 #gallery{background:var(--navy);}
 .gallery-intro{color:var(--muted);font-size:.9rem;line-height:1.7;margin-bottom:2.5rem;max-width:700px;}
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+@media(min-width:769px){#live-gallery .gallery-grid{grid-template-columns:repeat(2,1fr);}}
 .gallery-item{border-radius:12px;overflow:hidden;border:1px solid var(--border);cursor:pointer;position:relative;aspect-ratio:4/3;transition:transform .25s,border-color .25s;}
 .gallery-item:hover{transform:translateY(-4px);border-color:var(--accent);}
 .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
@@ -1088,11 +1089,6 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
     <h2 class="section-title">eXIOME 2026 — Moments from Istanbul</h2>
     <p class="gallery-intro">Moments from the 3rd edition of eXIOME, taking place November 12–14, 2026 in Istanbul.</p>
     <div class="gallery-grid">
-      <div class="gallery-item" onclick="openLightbox(6)">
-        <img src="assets/img-cb93fac5a4af.jpg" alt="eXIOME 2026 - Participants" loading="lazy">
-        <div class="gallery-overlay"></div>
-        <div class="gallery-caption">Participants · eXIOME 2026</div>
-      </div>
       <div class="gallery-item" onclick="openLightbox(7)">
         <img src="assets/img-c0a6229ff6f7.jpg" alt="eXIOME 2026 - A. Awada" loading="lazy">
         <div class="gallery-overlay"></div>
@@ -1107,6 +1103,11 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
         <img src="assets/img-3cd6781f329b.jpg" alt="eXIOME 2026 - Group photo" loading="lazy">
         <div class="gallery-overlay"></div>
         <div class="gallery-caption">Group Photo · eXIOME 2026</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(6)">
+        <img src="assets/img-cb93fac5a4af.jpg" alt="eXIOME 2026 - Participants" loading="lazy">
+        <div class="gallery-overlay"></div>
+        <div class="gallery-caption">Participants · eXIOME 2026</div>
       </div>
     </div>
   </div>

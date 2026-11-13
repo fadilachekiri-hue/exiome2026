@@ -286,10 +286,6 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:3rem 2r
   .hero-btns{flex-direction:column;align-items:center;gap:.7rem;}
   .hero-btns a{width:100%;max-width:280px;text-align:center;}
 
-  /* Countdown */
-  #countdown{gap:.7rem;}
-  .cd-num{font-size:1.8rem;}
-  .cd-sep{font-size:1.5rem;}
 
   /* Sections */
   section{padding:4rem 1.2rem;}
@@ -362,9 +358,6 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:3rem 2r
   .hero-dates{padding:1rem 1.5rem;}
   .hero-date-main{font-size:1.3rem;}
   .section-title{font-size:1.5rem;}
-  #countdown{gap:.5rem;}
-  .cd-num{font-size:1.5rem;}
-  .cd-sep{display:none;}
   .prog-row{grid-template-columns:auto 1fr;align-items:center;column-gap:.55rem;row-gap:.4rem;padding:.75rem 1rem;}
   .prog-type{display:inline-block;justify-self:start;}
   .prog-content{grid-column:1/-1;}
@@ -470,13 +463,6 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:3rem 2r
 .btn-register:hover{opacity:.88;transform:translateY(-2px);}
 .btn-reg-close{background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer;padding:.2rem .5rem;flex-shrink:0;}
 .btn-reg-close:hover{color:var(--accent);}
-
-/* ── COUNTDOWN ── */
-#countdown{display:inline-flex;gap:1.2rem;margin-bottom:2.5rem;flex-wrap:wrap;justify-content:center;}
-.cd-unit{display:flex;flex-direction:column;align-items:center;gap:.3rem;}
-.cd-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--accent);line-height:1;min-width:3rem;text-align:center;}
-.cd-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
-.cd-sep{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--border);align-self:center;margin-top:-.5rem;}
 
 /* ── WHY ATTEND ── */
 #why{background:var(--navy);}
@@ -744,11 +730,6 @@ nav.scrolled{background:rgba(30,51,80,.88);box-shadow:0 10px 40px -20px rgba(0,0
 .abstract-box{box-shadow:var(--shadow-soft);}
 .sponsor-slot:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft);}
 
-/* ════════════ COUNTDOWN ════════════ */
-.cd-unit{background:var(--surface-1);border:1px solid var(--hairline);border-radius:12px;padding:.7rem 1rem;min-width:4.2rem;backdrop-filter:blur(8px);}
-.cd-sep{display:none;}
-#countdown{gap:.8rem;}
-
 /* ════════════ FOOTER ════════════ */
 footer{background:linear-gradient(180deg,var(--navy),var(--deep));}
 
@@ -834,14 +815,6 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
   letter-spacing:.01em;padding:.95rem 1.6rem .95rem 0;}
 .hero-date-sub{display:inline-flex;align-items:center;font-size:.64rem;letter-spacing:.22em;
   text-transform:uppercase;color:var(--ink-dim);padding:.95rem 0 .95rem 1.6rem;border-left:1px solid var(--rule);}
-/* Countdown — refined inline figures with tabular nums */
-#countdown{display:flex;gap:0;align-items:flex-end;margin:0;}
-.cd-unit{display:flex!important;flex-direction:column;align-items:flex-start;padding:0 1.9rem 0 0;
-  border:none!important;background:none!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important;}
-.cd-num{font-family:var(--serif);font-size:clamp(1.9rem,1.2rem + 2vw,2.7rem);color:var(--ink);line-height:1;
-  font-variant-numeric:tabular-nums;font-feature-settings:'tnum';}
-.cd-label{font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-dim);margin-top:.55rem;}
-.cd-sep{display:none!important;}
 /* Buttons — one solid CTA, two ghosts (editorial restraint) */
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin:.4rem 0 0;justify-content:flex-start;}
 .btn-primary,.btn-secondary,.btn-register{border-radius:2px;font-size:.7rem;letter-spacing:.2em;
@@ -889,8 +862,6 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
   .hero-dates{flex-direction:column;align-items:flex-start;}
   .hero-date-main{padding:.85rem 0 .6rem;}
   .hero-date-sub{padding:.6rem 0 .85rem;border-left:none;border-top:1px solid var(--rule);width:100%;}
-  #countdown{flex-wrap:wrap;gap:.4rem 0;}
-  .cd-unit{padding-right:1.4rem;}
   .hero-btns{gap:.7rem;width:100%;}
   .hero-btns a{flex:1 1 auto;text-align:center;}
 }
@@ -912,8 +883,6 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
 #hero .hero-inner{align-items:center;text-align:center;}
 .hero-tagline{margin-left:auto;margin-right:auto;text-align:center;}
 .hero-dates{justify-content:center;}
-#countdown{justify-content:center;}
-.cd-unit{align-items:center;padding:0 .95rem;}
 .hero-btns{justify-content:center;}
 .hero-sidetag{display:none;}
 .hero-scroll-cue{left:50%;transform:translateX(-50%);align-items:center;}
@@ -1004,15 +973,6 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
     <div class="hero-dates">
       <span class="hero-date-main">November 12–14, 2026</span>
       <span class="hero-date-sub">Marmara Taksim Hotel · Istanbul, Turkey</span>
-    </div>
-        <div id="countdown">
-      <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-label">Days</span></div>
-      <span class="cd-sep">:</span>
-      <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">Hours</span></div>
-      <span class="cd-sep">:</span>
-      <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">Minutes</span></div>
-      <span class="cd-sep">:</span>
-      <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">Seconds</span></div>
     </div>
     <div class="hero-btns">
       <a href="#programme" class="btn-primary">View Program</a>
@@ -2458,28 +2418,6 @@ function pepApply(){
 </div>
 
 <script>
-/* Countdown to Nov 12 2026 */
-(function(){
-  const target = new Date('2026-11-12T08:00:00').getTime();
-  function tick(){
-    const now = Date.now();
-    const diff = target - now;
-    if(diff <= 0){
-      ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id=>{ const el=document.getElementById(id); if(el) el.textContent='00'; });
-      return;
-    }
-    const d = Math.floor(diff/86400000);
-    const h = Math.floor((diff%86400000)/3600000);
-    const m = Math.floor((diff%3600000)/60000);
-    const s = Math.floor((diff%60000)/1000);
-    const fmt = n => String(n).padStart(2,'0');
-    const setEl = (id,v) => { const el=document.getElementById(id); if(el) el.textContent=fmt(v); };
-    setEl('cd-days',d); setEl('cd-hours',h); setEl('cd-mins',m); setEl('cd-secs',s);
-  }
-  tick();
-  setInterval(tick,1000);
-})();
-
 /* Show sticky reg bar after 3s */
 setTimeout(function(){
   const bar = document.getElementById('regBar');

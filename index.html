@@ -1088,17 +1088,17 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
     <h2 class="section-title">eXIOME 2026 — Moments from Istanbul</h2>
     <p class="gallery-intro">Moments from the 3rd edition of eXIOME, taking place November 12–14, 2026 in Istanbul.</p>
     <div class="gallery-grid">
-      <div class="gallery-item" onclick="openLightbox(7)">
+      <div class="gallery-item" onclick="openLightbox(6)">
         <img src="assets/img-c0a6229ff6f7.jpg" alt="eXIOME 2026 - A. Awada" loading="lazy">
         <div class="gallery-overlay"></div>
         <div class="gallery-caption">A.&nbsp;Awada (Belgium) · eXIOME 2026</div>
       </div>
-      <div class="gallery-item" onclick="openLightbox(8)">
+      <div class="gallery-item" onclick="openLightbox(7)">
         <img src="assets/img-4767fa4a5469.jpg" alt="eXIOME 2026 - Y. Erlap" loading="lazy">
         <div class="gallery-overlay"></div>
         <div class="gallery-caption">Y.&nbsp;Erlap (Turkey) · eXIOME 2026</div>
       </div>
-      <div class="gallery-item" onclick="openLightbox(10)">
+      <div class="gallery-item" onclick="openLightbox(8)">
         <img src="assets/img-c14e8ee77785.jpg" alt="eXIOME 2026 - Audience" loading="lazy">
         <div class="gallery-overlay"></div>
         <div class="gallery-caption">Audience · eXIOME 2026</div>
@@ -1108,7 +1108,7 @@ section{padding-top:clamp(4.5rem,3rem + 5vw,6.5rem);padding-bottom:clamp(4.5rem,
         <div class="gallery-overlay"></div>
         <div class="gallery-caption">Group Photo · eXIOME 2026</div>
       </div>
-      <div class="gallery-item" onclick="openLightbox(6)">
+      <div class="gallery-item" onclick="openLightbox(10)">
         <img src="assets/img-cb93fac5a4af.jpg" alt="eXIOME 2026 - Participants" loading="lazy">
         <div class="gallery-overlay"></div>
         <div class="gallery-caption">Participants · eXIOME 2026</div>
@@ -1970,8 +1970,8 @@ window.addEventListener('load',function(){
   }
 });
 
-var lbImages = ["assets/img-eb43fb4656fb.jpg","assets/img-e47c406fd5aa.webp","assets/img-8e5a46c9667f.webp","assets/img-aff4cf0cee68.jpg","assets/img-25f7c694c392.jpg","assets/img-d26cc7bdc568.jpg","assets/img-cb93fac5a4af.jpg","assets/img-c0a6229ff6f7.jpg","assets/img-4767fa4a5469.jpg","assets/img-3cd6781f329b.jpg","assets/img-c14e8ee77785.jpg","assets/img-e36a9c4e9dd2.jpg","assets/img-284ec6e6a5f4.jpg","assets/img-fd04fce8b63c.jpg"];
-var lbCaptions = ["Organising Committee · eXIOME 2025","Participants · eXIOME 2025","Group Photo · eXIOME 2025","Conference Session · eXIOME 2025","Speakers · eXIOME 2025","Participants · eXIOME 2025","Participants · eXIOME 2026","A. Awada (Belgium) · eXIOME 2026","Y. Erlap (Turkey) · eXIOME 2026","Group Photo · eXIOME 2026","Audience · eXIOME 2026","Panel Discussion · eXIOME 2026","B. Atalar (Turkey) · eXIOME 2026","Panel Discussion · eXIOME 2026"];
+var lbImages = ["assets/img-eb43fb4656fb.jpg","assets/img-e47c406fd5aa.webp","assets/img-8e5a46c9667f.webp","assets/img-aff4cf0cee68.jpg","assets/img-25f7c694c392.jpg","assets/img-d26cc7bdc568.jpg","assets/img-c0a6229ff6f7.jpg","assets/img-4767fa4a5469.jpg","assets/img-c14e8ee77785.jpg","assets/img-3cd6781f329b.jpg","assets/img-cb93fac5a4af.jpg","assets/img-e36a9c4e9dd2.jpg","assets/img-284ec6e6a5f4.jpg","assets/img-fd04fce8b63c.jpg"];
+var lbCaptions = ["Organising Committee · eXIOME 2025","Participants · eXIOME 2025","Group Photo · eXIOME 2025","Conference Session · eXIOME 2025","Speakers · eXIOME 2025","Participants · eXIOME 2025","A. Awada (Belgium) · eXIOME 2026","Y. Erlap (Turkey) · eXIOME 2026","Audience · eXIOME 2026","Group Photo · eXIOME 2026","Participants · eXIOME 2026","Panel Discussion · eXIOME 2026","B. Atalar (Turkey) · eXIOME 2026","Panel Discussion · eXIOME 2026"];
 var lbCurrent = 0;
 function openLightbox(i){lbCurrent=i;var im=document.getElementById('lbImg');im.src=lbImages[i];im.alt=lbCaptions[i]||'eXIOME 2025 photo';document.getElementById('lbCounter').textContent=(i+1)+' / '+lbImages.length;document.getElementById('lightbox').classList.add('open');}
 function closeLightbox(){document.getElementById('lightbox').classList.remove('open');}
